@@ -1,11 +1,26 @@
-.logo {
-	width: 100px;
-}
-
 .message {
 	color: blue;
 }
 
 .message:hover {
 	background-color: yellow;
+}
+
+.map{
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.icon{
+	fill: orange;
+	height:0;
+	width:0;
+	position: absolute;
+	top: 700px;
+	left: 500px;}
+
+.icon svg {
+	width: fit-content;
+	display: block;
 }

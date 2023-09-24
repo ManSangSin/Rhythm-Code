@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Home.css";
-import logo from "./logo.svg";
+import map from "./img/map.jpg";
 
 export function Home() {
 	const [message, setMessage] = useState("Loading...");
@@ -26,12 +26,13 @@ export function Home() {
 	return (
 		<main role="main">
 			<div>
-				<img
-					className="logo"
-					data-qa="logo"
-					src={logo}
-					alt="Just the React logo"
-				/>
+				<img className="map" src={map} alt="North America Map" />
+				<div className="icon">
+					<svg xmlns="http://www.w3.org/2000/svg">
+						<circle cx="10" cy="10" r="10" />
+					</svg>
+				</div>
+
 				<h1 className="message" data-qa="message">
 					{message}
 				</h1>

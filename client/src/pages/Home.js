@@ -36,7 +36,11 @@ export function Home() {
 						<circle cx="10" cy="10" r="10" />
 					</svg>
 				</div>
-
+				<div className="los-angeles-icon">
+					<svg onClick={handleSvgClick} width="20" height="20">
+						<circle cx="10" cy="10" r="10" />
+					</svg>
+				</div>
 
 				<h1 className="message" data-qa="message">
 					{message}

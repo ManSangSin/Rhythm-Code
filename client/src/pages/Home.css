@@ -12,15 +12,30 @@
 	left: 0;
 }
 
-.icon{
+.new-orleans-icon{
 	fill: orange;
 	height:0;
 	width:0;
 	position: absolute;
-	top: 700px;
-	left: 500px;}
+	top: 735px;
+	left: 470px;
+}
+
+.los-angeles-icon{
+	fill: rgb(42, 186, 112);
+	/* height:0;
+	width:0; */
+	position: absolute;
+	top: 690px;
+	left: 215px;
+}
 
 .icon svg {
 	width: fit-content;
 	display: block;
+}
+
+button {
+	background-color: aqua;
+	border: none;
 }

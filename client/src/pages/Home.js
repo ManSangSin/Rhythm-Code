@@ -23,15 +23,20 @@ export function Home() {
 			});
 	}, []);
 
+	const handleSvgClick = () => {
+		console.log("YAY! Clicked!");
+	};
+
 	return (
 		<main role="main">
 			<div>
 				<img className="map" src={map} alt="North America Map" />
-				<div className="icon">
-					<svg xmlns="http://www.w3.org/2000/svg">
+				<div className="new-orleans-icon">
+					<svg onClick={handleSvgClick} width="20" height="20">
 						<circle cx="10" cy="10" r="10" />
 					</svg>
 				</div>
+
 
 				<h1 className="message" data-qa="message">
 					{message}

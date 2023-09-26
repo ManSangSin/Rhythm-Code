@@ -31,12 +31,12 @@ export function Home() {
 		<main role="main">
 			<div>
 				<img className="map" src={map} alt="North America Map" />
-				<div className="new-orleans-icon">
+				<div className="havana-cuba-icon">
 					<svg onClick={handleSvgClick} width="20" height="20">
 						<circle cx="10" cy="10" r="10" />
 					</svg>
 				</div>
-				<div className="los-angeles-icon">
+				<div className="washington-dc-icon">
 					<svg onClick={handleSvgClick} width="20" height="20">
 						<circle cx="10" cy="10" r="10" />
 					</svg>

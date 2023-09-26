@@ -12,22 +12,22 @@
 	left: 0;
 }
 
-.new-orleans-icon{
+.havana-cuba-icon{ 
 	fill: orange;
 	height:0;
 	width:0;
 	position: absolute;
-	top: 735px;
-	left: 470px;
+	top: 795px;
+	left: 570px;
 }
 
-.los-angeles-icon{
+.washington-dc-icon{
 	fill: rgb(42, 186, 112);
 	/* height:0;
 	width:0; */
 	position: absolute;
-	top: 690px;
-	left: 215px;
+	top: 620px;
+	left: 570px;
 }
 
 .icon svg {

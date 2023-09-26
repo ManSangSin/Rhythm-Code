@@ -3,7 +3,20 @@ import { Pool } from "pg";
 import config from "./utils/config";
 import logger from "./utils/logger";
 
+// const pool = new Pool({
+// 	connectionString: config.dbUrl,
+// 	connectionTimeoutMillis: 5000,
+// 	ssl: config.dbUrl.includes("localhost")
+// 		? false
+// 		: { rejectUnauthorized: false },
+// });
+
 const pool = new Pool({
+	user: process.env.DB_USER,
+	host: process.env.DB_HOST,
+	database: process.env.DB_NAME,
+	password: process.env.DB_PASS,
+	port: process.env.DB_PORT,
 	connectionString: config.dbUrl,
 	connectionTimeoutMillis: 5000,
 	ssl: config.dbUrl.includes("localhost")

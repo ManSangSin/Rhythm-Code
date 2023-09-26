@@ -23,21 +23,26 @@ export function Home() {
 			});
 	}, []);
 
-	const handleSvgClick = () => {
-		console.log("YAY! Clicked!");
+	const havanaCubaClick = () => {
+		alert("Havana Cuba clicked!");
+	};
+
+	const washingtonDcClick = () => {
+		alert("Washington DC clicked!");
 	};
 
 	return (
 		<main role="main">
 			<div>
 				<img className="map" src={map} alt="North America Map" />
+
 				<div className="havana-cuba-icon">
-					<svg onClick={handleSvgClick} width="20" height="20">
+					<svg onClick={havanaCubaClick} width="20" height="20">
 						<circle cx="10" cy="10" r="10" />
 					</svg>
 				</div>
 				<div className="washington-dc-icon">
-					<svg onClick={handleSvgClick} width="20" height="20">
+					<svg onClick={washingtonDcClick} width="20" height="20">
 						<circle cx="10" cy="10" r="10" />
 					</svg>
 				</div>

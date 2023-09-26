@@ -16,23 +16,3 @@ server.on("listening", () => {
 process.on("SIGTERM", () => server.close(() => disconnectDb()));
 
 connectDb().then(() => server.listen(config.port));
-
-
-let rhythms = require("./rhythmsData.json");
-
-//Create a GET endpoint (rhythms)
-app.get("/rhythms", (req, res) => {
-	res.json(rhythms);
-});
-
-
-// app.get("/rhythms", function (req, res) {
-// 	pool.query("SELECT * FROM rhythmsTest", (error, result) => {
-// 		if (!error) {
-// 			res.json(result.rows);
-// 		} else {
-// 			console.log(error.message);
-// 		}
-// 		pool.end;
-// 	});
-// });

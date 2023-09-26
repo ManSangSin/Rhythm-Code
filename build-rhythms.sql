@@ -1,6 +1,8 @@
 -- build the Rhythm Code database
 --
 
+DROP TABLE IF EXISTS rhythms;
+
 CREATE TABLE rhythms (
     id		    serial PRIMARY KEY,
     title	    VARCHAR(255),

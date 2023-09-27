@@ -8,7 +8,7 @@ router.get("/", (_, res) => {
 	logger.debug("Welcoming everyone...");
 	res.json({ message: "Hello, world!" });
 });
-let rhythms = require("./rhythmsData.json");
+let rhythms = require("./data/rhythmsData.json");
 
 // Create a GET endpoint (rhythms)
 router.get("/rhythms", (req, res) => {

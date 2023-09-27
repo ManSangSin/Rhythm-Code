@@ -11,7 +11,6 @@ const pool = new Pool({
 		: { rejectUnauthorized: false },
 });
 
-
 export const connectDb = async () => {
 	let client;
 	try {

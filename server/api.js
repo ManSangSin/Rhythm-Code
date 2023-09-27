@@ -2,13 +2,14 @@ import { Router } from "express";
 
 import logger from "./utils/logger";
 
+import rhythms from "./data/rhythmsData.json";
+
 const router = Router();
 
 router.get("/", (_, res) => {
 	logger.debug("Welcoming everyone...");
 	res.json({ message: "Hello, world!" });
 });
-let rhythms = require("./data/rhythmsData.json");
 
 // Create a GET endpoint (rhythms)
 router.get("/rhythms", (req, res) => {

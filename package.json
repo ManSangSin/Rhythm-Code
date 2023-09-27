@@ -20,7 +20,12 @@
 		"start": "node dist/server.js",
 		"lint:eslint": "eslint .",
 		"lint:fix": "npm run lint:eslint -- --fix && npm run lint:prettier -- --write",
-		"lint:prettier": "prettier ."
+		"lint:prettier": "prettier .",
+		"docker:run": "docker compose up --detach",
+		"docker:stop": "docker-compose down --volumes",
+		"devtest": "npm run docker:run && npm run dev"
+		
+
 	},
 	"repository": {
 		"type": "git",

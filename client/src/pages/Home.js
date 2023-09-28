@@ -29,20 +29,29 @@ export function Home() {
 		alert(`${cityName} clicked!`);
 	};
 
+	const dataList = [
+		{ id: 1, title: "DC Hand Dancing", location: "Washington DC" },
+		{ id: 2, title: "Rumba Guaguanco", location: "Havana, Cuba" },
+	];
+
+
 	return (
 		<main role="main">
 			<div>
 				<img className="map" src={map} alt="North America Map" />
 
 				<div className="icons">
-					<CityIcon cityName="Havana Cuba"
-						onClick={() => handleCityClick("Havana Cuba")}
-					/>
-					<CityIcon
-						cityName="Washington DC"
-						onClick={() => handleCityClick("Washington DC")}
-					/>
+					{dataList.map((dataItem) => (
+						<CityIcon
+							cityName={dataItem.location}
+							onClick={() => handleCityClick(dataItem.location)}
+							key={dataItem.id}
+						/>
+					))}
+
 				</div>
+
+
 
 				<h1 className="message" data-qa="message">
 					{message}

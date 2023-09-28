@@ -1,7 +1,7 @@
 const CityIcon = ({ cityName, onClick }) => {
 
 	return (
-		<div className={`${cityName.toLowerCase().replace(" ", "-")}-icon`}>
+		<div className={`${cityName.toLowerCase().replace(/[,\s]+/g, "-")}-icon`}>
 			<svg onClick={onClick}>
 				<circle cx="10" cy="10" r="10" />
 			</svg>

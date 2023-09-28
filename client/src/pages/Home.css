@@ -14,8 +14,7 @@
 
 .havana-cuba-icon{ 
 	fill: orange;
-	height:0;
-	width:0;
+
 	position: absolute;
 	top: 795px;
 	left: 570px;
@@ -23,8 +22,6 @@
 
 .washington-dc-icon{
 	fill: rgb(42, 186, 112);
-	/* height:0;
-	width:0; */
 	position: absolute;
 	top: 620px;
 	left: 570px;

@@ -23,12 +23,8 @@ export function Home() {
 			});
 	}, []);
 
-	const havanaCubaClick = () => {
-		alert("Havana Cuba clicked!");
-	};
-
-	const washingtonDcClick = () => {
-		alert("Washington DC clicked!");
+	const handleCityClick = (cityName) => {
+		alert(`${cityName} clicked!`);
 	};
 
 	return (
@@ -37,12 +33,20 @@ export function Home() {
 				<img className="map" src={map} alt="North America Map" />
 
 				<div className="havana-cuba-icon">
-					<svg onClick={havanaCubaClick} width="20" height="20">
+					<svg
+						onClick={() => handleCityClick("Havana Cuba")}
+						width="20"
+						height="20"
+					>
 						<circle cx="10" cy="10" r="10" />
 					</svg>
 				</div>
 				<div className="washington-dc-icon">
-					<svg onClick={washingtonDcClick} width="20" height="20">
+					<svg
+						onClick={() => handleCityClick("Washington DC")}
+						width="20"
+						height="20"
+					>
 						<circle cx="10" cy="10" r="10" />
 					</svg>
 				</div>

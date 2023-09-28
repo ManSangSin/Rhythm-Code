@@ -1,6 +1,7 @@
 import React,{ useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import VideoCard from "./VideoCard";
 
 function ModalVideo() {
   const [show, setShow] = useState(false);
@@ -26,6 +27,7 @@ function ModalVideo() {
         <Modal.Body>
           I will not close if you click outside me. Don not even try to press
           escape key.
+          <VideoCard />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

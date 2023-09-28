@@ -11,7 +11,6 @@ const App = () => (
 		<Route path="/modaltesting" element={<ModalTestingPage />} />
 		<Route path="/about/this/site" element={<About />} />
 	</Routes>
-	<h1>WHATTTTTT</h1>
 	</>
 );
 

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 import "./Home.css";
 import logo from "./logo.svg";
 
@@ -35,6 +34,8 @@ export function Home() {
 				<h1 className="message" data-qa="message">
 					{message}
 				</h1>
+				<Link to="/DataFetchingTest">Fetch Data from backend</Link>
+				<br></br>
 				<Link to="/about/this/site">About</Link>
 			</div>
 		</main>

@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Home.css";
+
 import map from "./img/map.jpg";
+import CityIcon from "./CityIcon";
 
 export function Home() {
 	const [message, setMessage] = useState("Loading...");
@@ -32,23 +34,14 @@ export function Home() {
 			<div>
 				<img className="map" src={map} alt="North America Map" />
 
-				<div className="havana-cuba-icon">
-					<svg
+				<div className="icons">
+					<CityIcon cityName="Havana Cuba"
 						onClick={() => handleCityClick("Havana Cuba")}
-						width="20"
-						height="20"
-					>
-						<circle cx="10" cy="10" r="10" />
-					</svg>
-				</div>
-				<div className="washington-dc-icon">
-					<svg
+					/>
+					<CityIcon
+						cityName="Washington DC"
 						onClick={() => handleCityClick("Washington DC")}
-						width="20"
-						height="20"
-					>
-						<circle cx="10" cy="10" r="10" />
-					</svg>
+					/>
 				</div>
 
 				<h1 className="message" data-qa="message">

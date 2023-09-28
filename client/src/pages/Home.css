@@ -12,24 +12,21 @@
 	left: 0;
 }
 
-.havana-cuba-icon{ 
-	fill: orange;
+.icons svg {
+	width:20px;
+	height:20px; 
+}
 
-	position: absolute;
+.havana-cuba-icon{ 
+	position:absolute;
 	top: 795px;
 	left: 570px;
 }
 
 .washington-dc-icon{
-	fill: rgb(42, 186, 112);
 	position: absolute;
 	top: 620px;
 	left: 570px;
-}
-
-.icon svg {
-	width: fit-content;
-	display: block;
 }
 
 button {

@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import VideoCard from "./VideoCard";
 
-function ModalVideo() {
+function ModalVideo({ title, url, location }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -22,12 +22,13 @@ function ModalVideo() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title> Rhythms </Modal.Title>
+          <Modal.Title> {title} </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           I will not close if you click outside me. Don not even try to press
           escape key.
-          <VideoCard />
+          {location}
+          <VideoCard url={url} />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

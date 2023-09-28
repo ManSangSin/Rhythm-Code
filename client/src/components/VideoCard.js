@@ -1,15 +1,8 @@
 import React from "react";
 
-function VideoCard(){
-    const data = [
-        {
-            title: "Rumba Guaguanco",
-            url: "https://www.youtube.com/watch?v=gJVT_5swkhA",
-            location: "Havana, Cuba",
-        },
-    ];
+function VideoCard({ url }){
 
-    const urlId = data[0]?.url?.includes("v=") ? data[0].url.split("v=")[1]?.substring(0, 11) : "";
+    const urlId = url.includes("v=") ? url.split("v=")[1]?.substring(0, 11) : "";
 
 
     return <div className="card">

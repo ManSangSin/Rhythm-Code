@@ -23,7 +23,7 @@
 		"lint:prettier": "prettier .",
 		"docker:run": "docker compose up --detach",
 		"docker:stop": "docker-compose down --volumes",
-		"devtest": "npm run docker:run && npm run dev"
+		"devtest": "npm run docker:stop && npm run docker:run && npm run dev"
 		
 
 	},

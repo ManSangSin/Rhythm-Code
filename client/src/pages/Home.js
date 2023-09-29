@@ -30,10 +30,19 @@ export function Home() {
 	};
 
 	const dataList = [
-		{ id: 1, title: "DC Hand Dancing", location: "Washington DC" },
-		{ id: 2, title: "Rumba Guaguanco", location: "Havana, Cuba" },
+		{
+			id: 1,
+			title: "DC Hand Dancing",
+			url: "https://www.youtube.com/watch?v=M6uM0qrjetQ",
+			location: "Washington DC",
+		},
+		{
+			id: 2,
+			title: "Rumba Guaguanco",
+			url: "https://www.youtube.com/watch?v=gJVT_5swkhA",
+			location: "Havana, Cuba",
+		},
 	];
-
 
 	return (
 		<main role="main">
@@ -48,10 +57,7 @@ export function Home() {
 							key={dataItem.id}
 						/>
 					))}
-
 				</div>
-
-
 
 				<h1 className="message" data-qa="message">
 					{message}

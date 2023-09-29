@@ -10,24 +10,12 @@
 	position: relative;
 	top: 0;
 	left: 0;
-}
+} 
 
-.icons svg {
+ .icons svg{
 	width:20px;
 	height:20px; 
-}
-
-.havana-cuba-icon{ 
-	position:absolute;
-	top: 795px;
-	left: 570px;
-}
-
-.washington-dc-icon{
-	position: absolute;
-	top: 620px;
-	left: 570px;
-}
+}  
 
 button {
 	background-color: aqua;

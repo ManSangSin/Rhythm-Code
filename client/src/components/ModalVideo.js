@@ -16,8 +16,6 @@ function ModalVideo({ title, url, location, show, handleClose }) {
           <Modal.Title> {title} </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          I will not close if you click outside me. Don not even try to press
-          escape key.
           {location}
           <VideoCard url={url} />
         </Modal.Body>

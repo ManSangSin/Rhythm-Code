@@ -1,26 +1,17 @@
-import React,{ useState } from "react";
+import React from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import VideoCard from "./VideoCard";
 
-function ModalVideo({ title, url, location }) {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+function ModalVideo({ title, url, location, show, handleClose }) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Explore Rhythm
-      </Button>
 
-      <Modal
-        show={show}
+      <Modal show={show}
         onHide={handleClose}
         backdrop="static"
-        keyboard={false}
-      >
+        keyboard={false}>
         <Modal.Header closeButton>
           <Modal.Title> {title} </Modal.Title>
         </Modal.Header>

@@ -35,6 +35,8 @@ export function Home() {
 				<h1 className="message" data-qa="message">
 					{message}
 				</h1>
+				<Link to="/DataFetchingTest">Fetch Data from backend</Link>
+				<br></br>
 				<Link to="/about/this/site">About</Link>
 				<Link to="/modaltesting">Modal Testing</Link>
 			</div>

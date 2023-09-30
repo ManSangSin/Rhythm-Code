@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 function DataFetchingTest() {
     const [rhythms, setRhythms] = useState([]);
 
-    const API_URL = "http://localhost:3000/api/rhythms";
+    const API_URL = "/api/rhythms";
 
    useEffect(() => {
 	fetch(API_URL)

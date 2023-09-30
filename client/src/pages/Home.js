@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Home.css";
-import logo from "./logo.svg";
+
+import map from "./img/map.jpg";
+import CityIcon from "./CityIcon";
 
 export function Home() {
 	const [message, setMessage] = useState("Loading...");
@@ -23,15 +25,40 @@ export function Home() {
 			});
 	}, []);
 
+	const handleCityClick = (cityName) => {
+		alert(`${cityName} clicked!`);
+	};
+
+	const dataList = [
+		{
+			id: 1,
+			title: "DC Hand Dancing",
+			url: "https://www.youtube.com/watch?v=M6uM0qrjetQ",
+			location: "Washington DC",
+		},
+		{
+			id: 2,
+			title: "Rumba Guaguanco",
+			url: "https://www.youtube.com/watch?v=gJVT_5swkhA",
+			location: "Havana, Cuba",
+		},
+	];
+
 	return (
 		<main role="main">
 			<div>
-				<img
-					className="logo"
-					data-qa="logo"
-					src={logo}
-					alt="Just the React logo"
-				/>
+				<img className="map" src={map} alt="North America Map" />
+
+				<div className="icons">
+					{dataList.map((dataItem) => (
+						<CityIcon
+							cityName={dataItem.location}
+							onClick={() => handleCityClick(dataItem.location)}
+							key={dataItem.id}
+						/>
+					))}
+				</div>
+
 				<h1 className="message" data-qa="message">
 					{message}
 				</h1>

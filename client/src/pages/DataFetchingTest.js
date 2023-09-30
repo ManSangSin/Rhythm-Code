@@ -7,30 +7,36 @@ function DataFetchingTest() {
    useEffect(() => {
 	fetch(API_URL)
 	.then((response) => {
-	 return response.json();
+
+		return response.json();
+
 	})
         .then((data) => {
         console.log("Fetched Data:", data);
-	 setRhythms(data);
+			setRhythms(data);
+
 	})
 	.catch((error) => {
-	 console.error("Error fetching data:", error);
+		console.error("Error fetching data:", error);
+
 	});
    }, []);
      return (
 	<div>
-	 <h1>Rhythms</h1>
-	 <ul>
-	  {rhythms.map((rhythm, index) => (
-	   <li key={index}>
+		<h1>Rhythms</h1>
+		<ul>
+			{rhythms.map((rhythm, index) => (
+				<li key={index}>
+
 		<p>{rhythm.title}</p>
 		<p>Location: {rhythm.location}</p>
 		<a href={rhythm.url} >
-		 Link to Video
-	        </a>
-	  </li>
-		))}
-	  </ul>
+						Link to Video
+		</a>
+				</li>
+
+			))}
+	</ul>
 	</div>
  );
 }

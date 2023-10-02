@@ -7,12 +7,12 @@ const rhythms = [
         title: "DC Hand dancing",
         url: "https://www.youtube.com/watch?v=M6uM0qrjetQ",
         location: "Washington DC",
-        description: "This is a description of rhythm of ....",
+        description: "I have both Video and Description",
     },
     {
         title: "Rumba Guaguanco",
         location: "Havana, Cuba",
-        description: "This is a description of rhythm of ....",
+        description: "I have no video to play, for more information google me!",
     },
     {
         title: "DC Hand dancing 2",

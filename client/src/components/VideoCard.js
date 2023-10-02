@@ -1,8 +1,9 @@
 import React from "react";
 
 function VideoCard({ url }){
-
+    console.log({ url });
     const urlId = url.includes("v=") ? url.split("v=")[1]?.substring(0, 11) : "";
+    console.log({ urlId });
 
 
     return <div className="card">

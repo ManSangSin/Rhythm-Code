@@ -19,7 +19,8 @@ function ModalVideo({ title, url, description, show, handleClose, location }) {
       </Modal.Header>
       <Modal.Body>
         <p>
-        <img width="30" height="25" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" />  {location}</p>
+          <img width="30" height="25" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" />  {location}</p>
+        {/* check if a rhythm has both video and description, then add two tab */}
         {url && description ? (
           <Tab.Container activeKey={activeTab}>
             <Nav variant="tabs">

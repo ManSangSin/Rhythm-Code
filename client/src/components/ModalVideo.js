@@ -18,7 +18,8 @@ function ModalVideo({ title, url, description, show, handleClose, location }) {
         <Modal.Title>{title}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <p>{location}</p>
+        <p>
+        <img width="30" height="25" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" />  {location}</p>
         {url && description ? (
           <Tab.Container activeKey={activeTab}>
             <Nav variant="tabs">

@@ -32,10 +32,6 @@ export function Home() {
 			});
 	}, []);
 
-	// const handleCityClick = (cityName) => {
-	// 	alert(`${cityName} clicked!`);
-	// };
-
 const dataList = [
 		{   id: 1,
 			title: "DC Hand Dancing",
@@ -64,7 +60,12 @@ const dataList = [
 						/>
 						</div>
 					))}
-					<ModalVideo show={show} handleClose={handleClose} title={selectedIcon ? selectedIcon.title:""} url={selectedIcon ?selectedIcon.url: ""} location={selectedIcon ? selectedIcon.location:""} />
+					<ModalVideo
+					show={show}
+					handleClose={handleClose}
+					title={selectedIcon ? selectedIcon.title:""}
+					url={selectedIcon ?selectedIcon.url: ""}
+					location={selectedIcon ? selectedIcon.location:""} />
 				</div>
 
 				<h1 className="message" data-qa="message">

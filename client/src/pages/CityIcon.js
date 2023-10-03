@@ -1,3 +1,4 @@
+
 // city styling classes
 const cityStyles = {
 		"havana-cuba": {
@@ -20,7 +21,7 @@ const CityIcon = ({ cityName, onClick }) => {
     <div style={cityStyle}>
       <svg onClick={onClick}>
         <circle cx="10" cy="10" r="10" />
-      </svg>
+      </svg>;
     </div>
   );
 };

@@ -83,6 +83,7 @@ function ModalVideo({
 			</Modal.Header>
 			<Modal.Body>
 				<p>
+					{/* I know this is not perfect! */}
 					<img
 						width="30"
 						height="25"
@@ -97,6 +98,7 @@ function ModalVideo({
 				<Button variant="secondary" onClick={handleClose}>
 					Close
 				</Button>
+				{/* // Is this button required? */}
 				<Button variant="primary">Understood</Button>
 			</Modal.Footer>
 		</Modal>

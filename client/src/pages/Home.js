@@ -73,7 +73,6 @@ const dataList = [
 				<Link to="/DataFetchingTest">Fetch Data from backend</Link>
 				<br></br>
 				<Link to="/about/this/site">About</Link>
-				{/* <Link to="/modaltesting">Modal Testing</Link> */}
 			</div>
 		</main>
 	);

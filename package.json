@@ -11,7 +11,7 @@
 		"build:server": "babel server --copy-files --out-dir dist",
 		"postbuild:server": "del-cli ./dist/**/README.md",
 		"cleanup": "del-cli ./dist/*",
-		"dev": "concurrently --kill-others \"npm:dev:*\"",
+		"devOld": "concurrently --kill-others \"npm:dev:*\"",
 		"dev:client": "webpack serve --config client/webpack/dev.config.js",
 		"dev:server": "cross-env LOG_LEVEL=debug PORT=3100 nodemon --inspect server/server.js",
 		"lint": "npm run lint:eslint && npm run lint:prettier -- --check",
@@ -23,7 +23,8 @@
 		"lint:prettier": "prettier .",
 		"docker:run": "docker compose up --detach",
 		"docker:stop": "docker-compose down --volumes",
-		"devtest": "npm run docker:stop && npm run docker:run && npm run dev"
+		"dev": "npm run docker:stop && npm run docker:run && npm run devOld",
+		"prestart": "node \"./server/db/seed.js\""
 		
 
 	},

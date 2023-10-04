@@ -1,5 +1,35 @@
 # Starter Kit
 
+Rhythm Code Project Setup
+
+About:
+We will be using a standalone docker container to deploy a local SQL database. The database will be prepopulated with specific data on each project start up using a seed file which can be modified to insert whatever data we want to test/use. The database will be seeded with new data at each run instance. A few NPM command are avaiable to simplify the process which will automate the deployment of the docker image prior to starting the rest of the project.  
+
+Prerequisites:
+  - Docker
+  - .env
+    - set DATABASE_URL = "postgres://postgres:opensesame@localhost:5432/cyf"
+
+Seed file:
+  - File Name: "build-rhythms.sql"
+  - File Location: "./server/db/"
+
+Default database structure:
+  - table name: rhythms
+  - table column names:
+    - id (serial - primary key)
+    - title (varchar - with character limit of 255 imposed)
+    - url (varchar - with character limit of 512 imposed)
+    - location (varchar - with character limit of 255 imposed)
+
+How to start project locally:
+  - Make sure Docker Desktop is running
+  - Run "npm run dev" at the root of the project directory
+
+How to stop project locally:
+  - ctrl + c
+  - Run "npm run docker:stop" (ctrl+c sends sigint to project only. Docker needs to be stopped seperately)
+
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 
 - [x] Full stack ES8+ with [Babel]

@@ -46,7 +46,19 @@ function ModalVideo({
 					<Tab.Pane eventKey="video">
 						<VideoCard url={url} />
 					</Tab.Pane>
-					<Tab.Pane eventKey="description">{description}</Tab.Pane>
+					<Tab.Pane eventKey="description">
+						{" "}
+						<div>
+							<img
+								width="30"
+								height="25"
+								src="https://img.icons8.com/ios/50/marker--v1.png"
+								alt="marker--v1"
+							/>{" "}
+							{location}
+						</div>
+						{description}
+					</Tab.Pane>
 				</Tab.Content>
 			</Tab.Container>
 		);
@@ -59,7 +71,19 @@ function ModalVideo({
 						<ReactPlayer url={audioUrl} width="100%" height="auto" controls />
 					</div>
 				)}
-				{description && <div>Description: {description}</div>}
+				{description && (
+					<div>
+						<div>
+							<img
+								width="30"
+								height="25"
+								src="https://img.icons8.com/ios/50/marker--v1.png"
+								alt="marker--v1"></img>
+							{location}
+						</div>
+						{description}
+					</div>
+				)}
 			</div>
 		);
 	}
@@ -70,15 +94,6 @@ function ModalVideo({
 			<Modal.Title>{title}</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
-				<p>
-					<img
-						width="30"
-						height="25"
-						src="https://img.icons8.com/ios/50/marker--v1.png"
-						alt="marker--v1"
-					/>{" "}
-					{location}
-				</p>
 				{modalContent}
 			</Modal.Body>
 		</Modal>

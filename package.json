@@ -24,8 +24,6 @@
 		"docker:run": "docker compose up --detach",
 		"docker:stop": "docker-compose down --volumes",
 		"devtest": "npm run docker:stop && npm run docker:run && npm run dev"
-		
-
 	},
 	"repository": {
 		"type": "git",
@@ -85,6 +83,7 @@
 		"morgan": "^1.10.0",
 		"pg": "^8.11.1",
 		"react-bootstrap": "^2.8.0",
+		"react-slider": "^2.0.6",
 		"winston": "^3.10.0"
 	},
 	"engines": {

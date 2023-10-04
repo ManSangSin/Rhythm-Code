@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "./Home.css";
@@ -6,12 +6,29 @@ import ModalVideo from "../components/ModalVideo";
 import map from "./img/map.jpg";
 import CityIcon from "./CityIcon";
 
-import rhythmsJsonData from "./rhythmsData.json";
-
 export function Home() {
 
 	const [show, setShow] = useState(false);
 	const [selectedIcon, setSelectedIcon] = useState(null);
+
+    const [rhythms, setRhythms] = useState([]);
+
+		const API_URL = "/api/rhythms";
+
+		useEffect(() => {
+			fetch(API_URL)
+				.then((response) => {
+					return response.json();
+				})
+				.then((data) => {
+					console.log("Fetched Data:", data);
+					setRhythms(data);
+				})
+				.catch((error) => {
+					console.error("Error fetching data:", error);
+				});
+		}, []);
+
 
 	const handleClose = () => setShow(false);
 	const handleShow = (videoInfo) => {
@@ -19,15 +36,15 @@ export function Home() {
 		setSelectedIcon(videoInfo); // Use a state variable to store the selected video info
 	};
 
+
+
 	return (
 		<main role="main">
 			<div>
-				<Link to="/DataFetchingTest">Fetch Data from backend</Link>
-
 				<img className="map" src={map} alt="North America Map" />
 
 				<div className="icons">
-					{rhythmsJsonData.map((dataItem) => (
+					{rhythms.map((dataItem) => (
 						<div key={dataItem.id}>
 							<CityIcon
 								cityName={dataItem.location}

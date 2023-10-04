@@ -50,28 +50,16 @@ function ModalVideo({
 				</Tab.Content>
 			</Tab.Container>
 		);
-	} else if (audioUrl && description) {
-		modalContent = (
-			<div>
-				{audioUrl && (
-					<div>
-						<ReactPlayer url={audioUrl} width="100%" height="auto" controls />
-						<br></br>
-						<div>Description: {description}</div>
-					</div>
-				)}
-			</div>
-		);
 	} else {
 		modalContent = (
 			<div>
 				{url && <VideoCard url={url} />}
-				{description && <div>Description: {description}</div>}
 				{audioUrl && (
 					<div>
 						<ReactPlayer url={audioUrl} width="100%" height="auto" controls />
 					</div>
 				)}
+				{description && <div>Description: {description}</div>}
 			</div>
 		);
 	}
@@ -83,7 +71,6 @@ function ModalVideo({
 			</Modal.Header>
 			<Modal.Body>
 				<p>
-					{/* I know this is not perfect! */}
 					<img
 						width="30"
 						height="25"
@@ -94,13 +81,6 @@ function ModalVideo({
 				</p>
 				{modalContent}
 			</Modal.Body>
-			<Modal.Footer>
-				<Button variant="secondary" onClick={handleClose}>
-					Close
-				</Button>
-				{/* // Is this button required? */}
-				<Button variant="primary">Understood</Button>
-			</Modal.Footer>
 		</Modal>
 	);
 }

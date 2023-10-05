@@ -25,9 +25,6 @@
 		"docker:stop": "docker-compose down --volumes",
 		"dev": "npm run docker:stop && npm run docker:run && npm run devOld",
 		"prestart": "node \"./server/db/seed.js\""
-		
-
-		
 	},
 	"repository": {
 		"type": "git",

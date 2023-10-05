@@ -9,4 +9,4 @@ services:
     ports:
       - "5432:5432"
     volumes:
-     - "./build-rhythms.sql:/docker-entrypoint-initdb.d/build-rhythms.sql"
+     - "./server/db/build-rhythms.sql:/docker-entrypoint-initdb.d/build-rhythms.sql"

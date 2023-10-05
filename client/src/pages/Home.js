@@ -2,12 +2,19 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Home.css";
-
+import ModalVideo from "../components/ModalVideo";
 import map from "./img/map.jpg";
 import CityIcon from "./CityIcon";
 
 export function Home() {
 	const [message, setMessage] = useState("Loading...");
+	const [show, setShow] = useState(false);
+	const [selectedIcon, setSelectedIcon] = useState(null);
+    const handleClose = () => setShow(false);
+    const handleShow = (videoInfo) => {
+		setShow(true);
+		setSelectedIcon(videoInfo); // Use a state variable to store the selected video info
+	};
 
 	useEffect(() => {
 		fetch("/api")
@@ -25,13 +32,8 @@ export function Home() {
 			});
 	}, []);
 
-	const handleCityClick = (cityName) => {
-		alert(`${cityName} clicked!`);
-	};
-
-	const dataList = [
-		{
-			id: 1,
+const dataList = [
+		{   id: 1,
 			title: "DC Hand Dancing",
 			url: "https://www.youtube.com/watch?v=M6uM0qrjetQ",
 			location: "Washington DC",
@@ -51,12 +53,19 @@ export function Home() {
 
 				<div className="icons">
 					{dataList.map((dataItem) => (
+						<div key={dataItem.id}>
 						<CityIcon
 							cityName={dataItem.location}
-							onClick={() => handleCityClick(dataItem.location)}
-							key={dataItem.id}
+							onClick={() => handleShow(dataItem)}
 						/>
+						</div>
 					))}
+					<ModalVideo
+					show={show}
+					handleClose={handleClose}
+					title={selectedIcon ? selectedIcon.title:""}
+					url={selectedIcon ?selectedIcon.url: ""}
+					location={selectedIcon ? selectedIcon.location:""} />
 				</div>
 
 				<h1 className="message" data-qa="message">
@@ -65,7 +74,6 @@ export function Home() {
 				<Link to="/DataFetchingTest">Fetch Data from backend</Link>
 				<br></br>
 				<Link to="/about/this/site">About</Link>
-				<Link to="/modaltesting">Modal Testing</Link>
 			</div>
 		</main>
 	);

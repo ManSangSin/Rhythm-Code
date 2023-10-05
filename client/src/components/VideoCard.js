@@ -1,9 +1,7 @@
 import React from "react";
 
 function VideoCard({ url }){
-
     const urlId = url.includes("v=") ? url.split("v=")[1]?.substring(0, 11) : "";
-
 
     return <div className="card">
         <iframe

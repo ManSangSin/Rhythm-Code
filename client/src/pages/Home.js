@@ -5,7 +5,7 @@ import "./Home.css";
 import ModalVideo from "../components/ModalVideo";
 import map from "./img/map.jpg";
 import CityIcon from "./CityIcon";
-import ModalTestingPage from "./ModalTestingPage";
+
 
 export function Home() {
 

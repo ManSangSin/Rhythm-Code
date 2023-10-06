@@ -43,6 +43,17 @@ const DualRangeSlider = ({ selectedRange, onChangeRange }) => {
 							}}
 						>
 							{children}
+							<div
+								style={{
+									position: "absolute",
+									height: "6px",
+									width: `${
+										((selectedRange[1] - selectedRange[0]) / (max - min)) * 100
+									}%`,
+									backgroundColor: "#007bbb",
+									left: `${((selectedRange[0] - min) / (max - min)) * 100}%`,
+								}}
+							></div>
 							{railLabels.map((label, index) => (
 								<div
 									key={index}

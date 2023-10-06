@@ -14,8 +14,8 @@ CREATE TABLE rhythm_codes (
 
 CREATE TABLE mappings (
     id              SERIAL NOT NULL PRIMARY KEY,
-    lon             INTEGER,
-    lat             INTEGER
+    leftpx            INTEGER,
+    toppx             INTEGER
 );
 
 CREATE TABLE regions (
@@ -48,7 +48,7 @@ CREATE TABLE rhythms (
 );
 
 INSERT INTO rhythm_codes (rhythm_code) VALUES('Rumba'), ('Gwo-Ka'), ('Second Line'), ('Gwo-Ka'), ('Blues / Early Jazz / Trad Jazz'), ('Swing');
-INSERT INTO mappings (lon, lat) VALUES(570, 795), (650, 580), (540, 820), (570, 620);
+INSERT INTO mappings (leftpx, toppx) VALUES(570, 795), (650, 580), (540, 820), (570, 620);
 INSERT INTO regions (region) VALUES('Carribean'), ('USA');
 INSERT INTO locations (location, mapping_id, region_id) VALUES('Cuba', 1, 1), ('Guadeloupe', 2, 1), ('NOLA', 3, 2), ('Washington DC', 4, 2);
 INSERT INTO rhythms (rhythm_code_id, location_id, rhythm, language, year_start, year_end, video, description) VALUES(1, 1, 'Columbia', 'Spanish', 1880, 2020, 'https://youtu.be/W4aMl4HpKIQ','Columbia: rápida y solo para hombres, solo tambores y no se canta');

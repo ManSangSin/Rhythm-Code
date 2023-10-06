@@ -47,3 +47,12 @@ CREATE TABLE rhythms (
     CONSTRAINT      rhy_location_fk  FOREIGN KEY (location_id) REFERENCES locations (id)
 );
 
+INSERT INTO rhythm_codes (rhythm_code) VALUES('Rumba'), ('Gwo-Ka'), ('Second Line'), ('Gwo-Ka'), ('Blues / Early Jazz / Trad Jazz'), ('Swing');
+INSERT INTO mappings (lon, lat) VALUES(570, 795), (570, 620);
+INSERT INTO regions (region) VALUES('Carribean'), ('USA');
+INSERT INTO locations (location) VALUES('Cuba'), ('Guadeloupe'), ('NOLA'), ('Washington DC');
+INSERT INTO rhythms (rhythm, language, year_start, year_end, video, description) VALUES('Columbia', 'Spanish', 1880, 2020, 'https://youtu.be/W4aMl4HpKIQ','Columbia: rápida y solo para hombres, solo tambores y no se canta');
+INSERT INTO rhythms (rhythm, language, year_start, year_end, video, description) VALUES('Yambu', 'Spanish', 1880, 2020, 'https://youtu.be/Mux8ibZWbrg','Yambu: más lento, en pareja (and heteronormative) but traditionally not touching');
+INSERT INTO rhythms (rhythm, language, year_start, year_end, video, description) VALUES('Guaguanco', 'Spanish', 1880, 2020, 'https://youtu.be/gJVT_5swkhA','Guaguanco: faster, most popular and well known : similar flirtatious narrative and motifs to Yambu');
+INSERT INTO rhythms (rhythm, language, year_start, year_end, video, description) VALUES('Habanera', 'Spanish', 1880, 2020, 'https://youtu.be/iLGuLEqtq7g','Habanera: more baile de salon');
+INSERT INTO rhythms (rhythm, language, year_start, year_end, audio, description) VALUES('Graj', 'French', 1880, 2020, 'https://drive.google.com/file/d/1MoZXjAO2cqPU3IssoP40PYrAsshT4PVm/view','The graj accompanies the agricultural work');

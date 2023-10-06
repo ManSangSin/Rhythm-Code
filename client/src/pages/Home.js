@@ -55,7 +55,7 @@ export function Home() {
 						show={show}
 						handleClose={handleClose}
 						title={selectedIcon ? selectedIcon.title : ""}
-						url={selectedIcon ? selectedIcon.url : ""}
+						url={selectedIcon ? selectedIcon.video : ""}
 						location={selectedIcon ? selectedIcon.location : ""}
 					/>
 				</div>

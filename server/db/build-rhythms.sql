@@ -3,6 +3,11 @@
 
 DROP TABLE IF EXISTS rhythms;
 
+CREATE TABLE rhythm_codes (
+    id		        SERIAL NOT NULL PRIMARY KEY,
+    rhythm_code     VARCHAR(255)
+);
+
 CREATE TABLE mappings (
     id              SERIAL NOT NULL PRIMARY KEY,
     lon             INTEGER,
@@ -23,6 +28,7 @@ CREATE TABLE locations (
 
 CREATE TABLE rhythms (
     id		        SERIAL NOT NULL PRIMARY KEY,
+    rhythm_code_id  INTEGER REFERENCES rhythm_codes (id),
     location_id     INTEGER REFERENCES locations (id),
     rhythm	        VARCHAR(255),
     date            YEAR,

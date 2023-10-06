@@ -3,9 +3,15 @@
 
 DROP TABLE IF EXISTS rhythms;
 
+CREATE TABLE regions (
+    id              SERIAL NOT NULL PRIMARY KEY,
+    region          VARCHAR(255)
+);
+
 CREATE TABLE locations (
     id             SERIAL NOT NULL PRIMARY KEY,
-    location       VARCHAR(255)
+    location       VARCHAR(255),
+    region_id      INTEGER REFERENCES regions (id)
 );
 
 CREATE TABLE rhythms (

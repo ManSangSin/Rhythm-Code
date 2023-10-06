@@ -56,9 +56,11 @@ export function Home() {
 					<ModalVideo
 						show={show}
 						handleClose={handleClose}
-						title={selectedIcon ? selectedIcon.title : ""}
+						title={selectedIcon ? selectedIcon.rhythm : ""}
 						url={selectedIcon ? selectedIcon.video : ""}
 						location={selectedIcon ? selectedIcon.location : ""}
+						audiourl={selectedIcon ? selectedIcon.audio : ""}
+						description={selectedIcon ? selectedIcon.description: ""}
 					/>
 				</div>
 

@@ -31,9 +31,10 @@ CREATE TABLE rhythms (
     rhythm_code_id  INTEGER REFERENCES rhythm_codes (id),
     location_id     INTEGER REFERENCES locations (id),
     rhythm	        VARCHAR(255),
-    date            YEAR,
+    language        VARCHAR(255),
+    year_start      YEAR,
+    year_end        YEAR,
     video		    VARCHAR(512),
     audio           VARCHAR(512),
     description     TEXT
 );
-

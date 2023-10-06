@@ -7,6 +7,15 @@ const RhythmsDropDown = () => {
 		setOpen(!open); // negates value of open
 	};
 
+	const handleMenuOne = () => {
+		console.log("menu1");
+		setOpen(false);
+	};
+
+	const handleMenuTwo = () => {
+		console.log("menu2");
+		setOpen(false);
+	};
 
 	return (
 		<div className="dropdown">
@@ -14,10 +23,10 @@ const RhythmsDropDown = () => {
 			{open ? (
 				<ul className="menu">
 					<li className="menu-item">
-						<button>Menu 1</button>
+						<button onClick={handleMenuOne}>Menu 1</button>
 					</li>
 					<li className="menu-item">
-						<button>Menu 2</button>
+						<button onClick={handleMenuTwo}>Menu 2</button>
 					</li>
 				</ul>
 			) : null}

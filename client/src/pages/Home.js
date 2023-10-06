@@ -64,8 +64,11 @@ export function Home() {
 				</h1>
 				<Link to="/DataFetchingTest">Fetch Data from backend</Link>
 				<br></br>
+				<Link to="/ModalTestingPage">Modal Testing</Link>
+				<br></br>
+				<Link to="/SliderTest">slider test</Link>
+				<br></br>
 				<Link to="/about/this/site">About</Link>
-				<Link to="/modaltesting">Modal Testing</Link>
 			</div>
 		</main>
 	);

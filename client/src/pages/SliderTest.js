@@ -37,11 +37,11 @@ import RhythmsWithSlider from "../components/RhythmsWithSlider";
 			timePeriod: "1900-2008",
 		},
  ];
-
+// timePeriod is different from what Man has put in Rhythms Table.(year_start/year_end)
 const SliderTest = () => {
 	return (
 		<div>
-			<h1>Testing the date filtering </h1>
+			<h1>Testing the Date Filtering </h1>
 			<RhythmsWithSlider rhythms={rhythms} />
 		</div>
 	);

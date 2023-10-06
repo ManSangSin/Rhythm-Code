@@ -1,9 +1,12 @@
 import { useState } from "react";
 
+import CityIcon from "./CityIcon";
+
 const RhythmsDropDown = () => {
 	const [open, setOpen] = useState(false);
 
-	const handleOpen = () => { // toggles value of open
+	const handleOpen = () => {
+		// toggles value of open
 		setOpen(!open); // negates value of open
 	};
 
@@ -18,19 +21,34 @@ const RhythmsDropDown = () => {
 	};
 
 	return (
+		<Dropdown
+			open={open}
+			trigger={
+				<button onClick={handleOpen}>
+					{/* <CityIcon cityName="Havana, Cuba" />  HELP!!!! SVG icon not showing!!  */}
+				</button>
+			}
+			menu={[
+				<button onClick={handleMenuOne}>Menu 1</button>,
+				<button onClick={handleMenuTwo}>Menu 2</button>,
+			]}
+		/>
+	);
+};
+
+const Dropdown = ({ open, trigger, menu }) => {
+	return (
 		<div className="dropdown">
-			<button onClick={handleOpen}>Dropdown</button>
+			{trigger}
 			{open ? (
 				<ul className="menu">
-					<li className="menu-item">
-						<button onClick={handleMenuOne}>Menu 1</button>
-					</li>
-					<li className="menu-item">
-						<button onClick={handleMenuTwo}>Menu 2</button>
-					</li>
+					{menu.map((menuItem, index) => (
+						<li key={index} className="menu-item">
+							{menuItem}
+						</li>
+					))}
 				</ul>
 			) : null}
-			{open ? <div>Is Open</div> : <div>Is Closed</div>}
 		</div>
 	);
 };

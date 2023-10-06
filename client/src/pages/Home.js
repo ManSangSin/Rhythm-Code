@@ -47,6 +47,8 @@ export function Home() {
 						<div key={dataItem.id}>
 							<CityIcon
 								cityName={dataItem.location}
+								leftpx={dataItem.leftpx}
+								toppx={dataItem.toppx}
 								onClick={() => handleShow(dataItem)}
 							/>
 						</div>
@@ -54,9 +56,11 @@ export function Home() {
 					<ModalVideo
 						show={show}
 						handleClose={handleClose}
-						title={selectedIcon ? selectedIcon.title : ""}
-						url={selectedIcon ? selectedIcon.url : ""}
+						title={selectedIcon ? selectedIcon.rhythm : ""}
+						url={selectedIcon ? selectedIcon.video : ""}
 						location={selectedIcon ? selectedIcon.location : ""}
+						audiourl={selectedIcon ? selectedIcon.audio : ""}
+						description={selectedIcon ? selectedIcon.description: ""}
 					/>
 				</div>
 

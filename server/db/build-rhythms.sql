@@ -2,6 +2,10 @@
 --
 
 DROP TABLE IF EXISTS rhythms;
+DROP TABLE IF EXISTS locations;
+DROP TABLE IF EXISTS regions;
+DROP TABLE IF EXISTS mappings;
+DROP TABLE IF EXISTS rhythm_codes;
 
 CREATE TABLE rhythm_codes (
     id		        SERIAL NOT NULL PRIMARY KEY,

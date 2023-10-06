@@ -6,6 +6,7 @@ const RhythmsWithSlider = ({ rhythms }) => {
 	const [filteredRhythms, setFilteredRhythms] = useState([]);
 
 	// Update rhythms when user change the slider
+	// This strictly just shows the rhythms in selected range(for now!)
 	useEffect(() => {
 		const updatedRhythms = rhythms.filter((rhythm) => {
 			const rhythmStartYear = parseInt(rhythm.timePeriod.split("-")[0]);
@@ -28,7 +29,6 @@ const RhythmsWithSlider = ({ rhythms }) => {
 					<div key={index} style={{ display: "flex", alignItems: "center" }}>
 						<div
 							// all inline styles are just for testing
-							// This strictly just shows the rhythms in selected range(for now!)
 							style={{
 								width: "20px",
 								height: "20px",
@@ -36,7 +36,7 @@ const RhythmsWithSlider = ({ rhythms }) => {
 								borderRadius: "50%",
 								marginRight: "10px",
 							}}
-						></div> 
+						></div>
 						<span>{rhythm.title}</span>
 					</div>
 				))}

@@ -5,6 +5,7 @@ import "./Home.css";
 import ModalVideo from "../components/ModalVideo";
 import map from "./img/map.jpg";
 import CityIcon from "./CityIcon";
+import ModalTestingPage from "./ModalTestingPage";
 
 export function Home() {
 
@@ -62,6 +63,7 @@ export function Home() {
 
 				<br></br>
 				<Link to="/about/this/site">About</Link>
+				<Link to="/testingpage">Modal Testing Page</Link>
 			</div>
 		</main>
 	);

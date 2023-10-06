@@ -47,6 +47,8 @@ export function Home() {
 						<div key={dataItem.id}>
 							<CityIcon
 								cityName={dataItem.location}
+								leftpx={dataItem.leftpx}
+								toppx={dataItem.toppx}
 								onClick={() => handleShow(dataItem)}
 							/>
 						</div>

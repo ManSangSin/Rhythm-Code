@@ -28,6 +28,7 @@ const RhythmsWithSlider = ({ rhythms }) => {
 					<div key={index} style={{ display: "flex", alignItems: "center" }}>
 						<div
 							// all inline styles are just for testing
+							// This strictly just shows the rhythms in selected range(for now!)
 							style={{
 								width: "20px",
 								height: "20px",

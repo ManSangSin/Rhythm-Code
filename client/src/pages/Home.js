@@ -39,7 +39,7 @@ export function Home() {
 
 	return (
 		<main role="main">
-			<div>
+			<div className="home">
 				<img className="map" src={map} alt="North America Map" />
 
 				<div className="icons">

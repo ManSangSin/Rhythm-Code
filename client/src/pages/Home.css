@@ -1,9 +1,10 @@
-.message {
-	color: blue;
-}
-
-.message:hover {
-	background-color: yellow;
+.home {
+	display: flex;
+	max-width: 1440px;
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
 
 .map{
@@ -16,8 +17,3 @@
 	width:20px;
 	height:20px; 
 }  
-
-button {
-	background-color: aqua;
-	border: none;
-}

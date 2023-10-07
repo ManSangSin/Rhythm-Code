@@ -37,7 +37,7 @@ const RhythmsWithSlider = ({ rhythms }) => {
 								marginRight: "10px",
 							}}
 						></div>
-						<span>{rhythm.title}</span>
+						<span>{rhythm.title} {rhythm.timePeriod }</span>
 					</div>
 				))}
 			</div>

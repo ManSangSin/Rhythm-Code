@@ -7,7 +7,7 @@ const RhythmsDropDown = () => {
 
 	const [rhythms, setRhythms] = useState([]);
 
-	const API_URL = "/api/rhythms";
+	const API_URL = "/api/rhythms/rumba";
 
 	useEffect(() => {
 		fetch(API_URL)
@@ -29,8 +29,8 @@ const RhythmsDropDown = () => {
 		setOpen(!open); // negates value of open
 	};
 
-	const handleMenuClick = (rhythms) => {
-		console.log(`Clicked rhythm: ${rhythms.rhythm}`);
+	const handleMenuClick = (rhythmObject) => {
+		console.log(`Clicked rhythm: ${rhythmObject.rhythm}`);
 		setOpen(false);
 	};
 
@@ -44,24 +44,27 @@ const RhythmsDropDown = () => {
 					<CityIcon />
 				</button>
 			}
-			menu={rhythms.map((rhythm) => (
-				<button key={rhythm.id} onClick={() => handleMenuClick(rhythm)}>
-					{rhythm.rhythm}
+			rhythmMenuList={rhythms.map((rhythmObject) => (
+				<button
+					key={rhythmObject.id}
+					onClick={() => handleMenuClick(rhythmObject)}
+				>
+					{rhythmObject.rhythm}
 				</button>
 			))}
 		/>
 	);
 };
 
-const Dropdown = ({ open, trigger, menu }) => {
+const Dropdown = ({ open, trigger, rhythmMenuList }) => {
 	return (
 		<div className="dropdown">
 			{trigger}
 			{open ? (
-				<ul className="menu">
-					{menu.map((rhythmItem, index) => (
-						<li key={index} className="menu-item">
-							{rhythmItem}
+				<ul className="rhythmMenuList">
+					{rhythmMenuList.map((singleRhythm, index) => (
+						<li key={index} className="rhythmMenuItem">
+							{singleRhythm}
 						</li>
 					))}
 				</ul>

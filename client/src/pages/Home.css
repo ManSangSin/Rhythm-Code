@@ -22,25 +22,26 @@
   position: relative;
 }
 
-.menu {
+.rhythmMenuList {
   position: absolute;
   list-style-type: none;
   margin: 5px 0;
-  padding: 0;
-  border: 1px solid #f06a0a;
+  padding: 10px;
+  background-color: rgb(240, 106, 10, 0.3);
+  border: 1px solid transparent;
+  border-radius: 10px;
   width: 150px;
 }
 
-.menu > li {
+.rhythmMenuList > li {
   margin: 0;
-  background-color: white;
 }
 
-.menu > li:hover {
-  background-color: rgb(255, 236, 167);
+.rhythmMenuList > li:hover {
+  background-color: rgb(240, 106, 10);
 }
 
-.menu > li > button {
+.rhythmMenuList > li > button {
   width: 100%;
   height: 100%;
   text-align: left;

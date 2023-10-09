@@ -19,4 +19,16 @@ router.get("/rhythms", function (req, res) {
 		});
 });
 
+router.get("/rhythms/rumba", function (req, res) {
+	db.query(
+		"SELECT rhythms.id, rhythms.rhythm, rhythm_codes.rhythm_code FROM rhythms INNER JOIN rhythm_codes ON rhythm_codes.id = rhythm_code_id WHERE rhythm_code = 'Rumba' ORDER BY id;"
+	)
+		.then((result) => {
+			res.json(result.rows);
+		})
+		.catch((error) => {
+			return res.status(500).json({ error: error });
+		});
+});
+
 export default router;

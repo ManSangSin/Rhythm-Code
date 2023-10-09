@@ -10,7 +10,7 @@ const CityIcon = ({ toppx, leftpx, onClick }) => {
 	return (
 	// applying city styling classes to div
     <div style={style(toppx, leftpx)}>
-      <svg onClick={onClick}>
+      <svg className="cityIconSVG" onClick={onClick}>
         <circle cx="10" cy="10" r="10" />
       </svg>
     </div>

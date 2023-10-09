@@ -60,7 +60,7 @@ export function Home() {
 						url={selectedIcon ? selectedIcon.video : ""}
 						location={selectedIcon ? selectedIcon.location : ""}
 						audiourl={selectedIcon ? selectedIcon.audio : ""}
-						description={selectedIcon ? selectedIcon.description: ""}
+						description={selectedIcon ? selectedIcon.description : ""}
 					/>
 				</div>
 
@@ -68,7 +68,7 @@ export function Home() {
 				<Link to="/about/this/site">About</Link>
 				<br></br>
 				<Link to="/RhythmsPanelTestingPage">RhythmsPanelTestingPage</Link>
-
+				<br></br>
 				<Link to="/testingpage">Modal Testing Page</Link>
 			</div>
 		</main>

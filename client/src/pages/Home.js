@@ -6,6 +6,7 @@ import ModalVideo from "../components/ModalVideo";
 import map from "./img/map.jpg";
 import CityIcon from "./CityIcon";
 
+
 export function Home() {
 
 	const [show, setShow] = useState(false);
@@ -38,7 +39,7 @@ export function Home() {
 
 	return (
 		<main role="main">
-			<div>
+			<div className="home">
 				<img className="map" src={map} alt="North America Map" />
 
 				<div className="icons">
@@ -67,6 +68,8 @@ export function Home() {
 				<Link to="/about/this/site">About</Link>
 				<br></br>
 				<Link to="/RhythmsPanelTestingPage">RhythmsPanelTestingPage</Link>
+
+				<Link to="/testingpage">Modal Testing Page</Link>
 			</div>
 		</main>
 	);

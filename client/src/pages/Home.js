@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 
 import "./Home.css";
 import ModalVideo from "../components/ModalVideo";
-import map from "./img/map.jpg";
 import CityIcon from "./CityIcon";
-
+import DotMap from "../components/DotMap";
 
 export function Home() {
 
@@ -41,8 +40,7 @@ export function Home() {
 	return (
 		<main role="main">
 			<div>
-				<img className="map" src={map} alt="North America Map" />
-
+				<DotMap className="map" />
 				<div className="icons">
 					{rhythms.map((dataItem) => (
 						<div key={dataItem.id}>
@@ -64,7 +62,6 @@ export function Home() {
 						description={selectedIcon ? selectedIcon.description: ""}
 					/>
 				</div>
-
 				<br></br>
 				<Link to="/about/this/site">About</Link>
 				<Link to="/testingpage">Modal Testing Page</Link>

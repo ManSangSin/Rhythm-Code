@@ -2,7 +2,7 @@ import React from "react";
 
 export default function DotMap() {
     return (
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2853.81 1426.91"><g fill="#333"><g>
+<svg id="dotmap" data-name="Dot Map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2853.81 1426.91"><g fill="#333"><g>
           <path className="cls-2" d="m1045.46,39.41c3,0,5.42,2.43,5.42,5.42s-2.42,5.43-5.42,5.43c-3,0-5.42-2.42-5.42-5.43s2.42-5.42,5.42-5.42Z" />
           <path className="cls-2" d="m1062.8,39.41c2.99,0,5.41,2.43,5.41,5.42s-2.42,5.43-5.41,5.43c-3,0-5.42-2.42-5.42-5.43s2.42-5.42,5.42-5.42Z" />
           <path className="cls-2" d="m1080.13,39.41c2.99,0,5.42,2.43,5.42,5.42,0,3-2.43,5.43-5.42,5.43s-5.42-2.42-5.42-5.43,2.43-5.42,5.42-5.42Z" />

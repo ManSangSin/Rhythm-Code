@@ -13,7 +13,7 @@ export function Home() {
 
     const [rhythms, setRhythms] = useState([]);
 
-		const API_URL = "/api/rhythms";
+		const API_URL = "/api/rhythm_codes";
 
 		useEffect(() => {
 			fetch(API_URL)
@@ -32,6 +32,7 @@ export function Home() {
 
 	const handleClose = () => setShow(false);
 	const handleShow = (videoInfo) => {
+// dropdown and useEffect to fetch from rhythms
 		setShow(true);
 		setSelectedIcon(videoInfo); // useState to store the selected video info
 	};

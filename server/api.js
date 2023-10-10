@@ -10,7 +10,7 @@ router.get("/", (_, res) => {
 });
 
 router.get("/rhythms", function (req, res) {
-	db.query("SELECT rhythms.id, rhythms.rhythm, rhythms.language, rhythms.year_start, rhythms.year_end, rhythms.video, rhythms.audio, rhythms.description, locations.location, regions.region, mappings.leftpx, mappings.toppx, rhythm_codes.rhythm_code FROM rhythms INNER JOIN locations ON locations.id = location_id INNER JOIN regions ON regions.id = region_id INNER JOIN mappings ON mappings.id = mapping_id INNER JOIN rhythm_codes ON rhythm_codes.id = rhythm_code_id ORDER BY id")
+	db.query("SELECT rhythms.id, rhythms.rhythm, rhythms.language, rhythms.year_start, rhythms.year_end, rhythms.video, rhythms.audio, rhythms.description, rhythm_codes.location, rhythm_codes.region, rhythm_codes.leftpx, rhythm_codes.toppx, rhythm_codes.rhythm_code FROM rhythms INNER JOIN rhythm_codes ON rhythm_codes.id = rhythm_code_id ORDER BY id")
 		.then((result) => {
 			res.json(result.rows);
 		})
@@ -18,5 +18,16 @@ router.get("/rhythms", function (req, res) {
 			return res.status(500).json({ error: error });
 		});
 });
+
+router.get("/rhythm_codes", function (req, res) {
+	db.query("SELECT * FROM rhythm_codes")
+		.then((result) => {
+			res.json(result.rows);
+		})
+		.catch((error) => {
+			return res.status(500).json({ error: error });
+		});
+});
+
 
 export default router;

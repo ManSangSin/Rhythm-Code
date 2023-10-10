@@ -82,3 +82,9 @@ button {
 #dotmap > g > g > path:nth-child(1873) {
   fill: green;
 }
+
+
+/* NOLA marker */
+#dotmap > g > g > path:nth-child(1608) {
+  fill: yellow;
+}

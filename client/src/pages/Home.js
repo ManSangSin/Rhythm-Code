@@ -33,9 +33,8 @@ export function Home() {
 	const handleClose = () => setShow(false);
 	const handleShow = (videoInfo) => {
 		setShow(true);
-		setSelectedIcon(videoInfo); // Use a state variable to store the selected video info
+		setSelectedIcon(videoInfo); // useState to store the selected video info
 	};
-
 
 	return (
 		<main role="main">
@@ -64,6 +63,9 @@ export function Home() {
 				</div>
 				<br></br>
 				<Link to="/about/this/site">About</Link>
+				<br></br>
+				<Link to="/RhythmsPanelTestingPage">RhythmsPanelTestingPage</Link>
+
 				<Link to="/testingpage">Modal Testing Page</Link>
 			</div>
 		</main>

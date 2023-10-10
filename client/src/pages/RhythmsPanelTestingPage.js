@@ -40,7 +40,6 @@ const RhythmsDropDown = () => {
 			open={open}
 			trigger={
 				<button onClick={handleOpen}>
-					{" "}
 					<CityIcon />
 				</button>
 			}

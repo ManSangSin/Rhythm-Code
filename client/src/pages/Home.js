@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 
 import "./Home.css";
 import ModalVideo from "../components/ModalVideo";
-import map from "./img/map.jpg";
 import CityIcon from "./CityIcon";
-
+import DotMap from "../components/DotMap";
 
 export function Home() {
 
@@ -14,7 +13,7 @@ export function Home() {
 
     const [rhythms, setRhythms] = useState([]);
 
-		const API_URL = "/api/rhythms";
+		const API_URL = "/api/rhythm_codes";
 
 		useEffect(() => {
 			fetch(API_URL)
@@ -33,15 +32,15 @@ export function Home() {
 
 	const handleClose = () => setShow(false);
 	const handleShow = (videoInfo) => {
+// dropdown and useEffect to fetch from rhythms
 		setShow(true);
 		setSelectedIcon(videoInfo); // useState to store the selected video info
 	};
 
 	return (
 		<main role="main">
-			<div className="home">
-				<img className="map" src={map} alt="North America Map" />
-
+			<div>
+				<DotMap className="map" />
 				<div className="icons">
 					{rhythms.map((dataItem) => (
 						<div key={dataItem.id}>
@@ -63,7 +62,6 @@ export function Home() {
 						description={selectedIcon ? selectedIcon.description : ""}
 					/>
 				</div>
-
 				<br></br>
 				<Link to="/about/this/site">About</Link>
 				<br></br>

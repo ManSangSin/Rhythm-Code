@@ -19,15 +19,15 @@ router.get("/rhythms", function (req, res) {
 		});
 });
 
-router.get("/rhythm_codes", function (req, res) {
-	db.query("SELECT * FROM rhythm_codes")
-		.then((result) => {
-			res.json(result.rows);
-		})
-		.catch((error) => {
-			return res.status(500).json({ error: error });
-		});
-});
+// router.get("/rhythm_codes", function (req, res) {
+// 	db.query("SELECT * FROM rhythm_codes")
+// 		.then((result) => {
+// 			res.json(result.rows);
+// 		})
+// 		.catch((error) => {
+// 			return res.status(500).json({ error: error });
+// 		});
+// });
 
 
 export default router;

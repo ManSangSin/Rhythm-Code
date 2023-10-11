@@ -16,20 +16,6 @@ export function Home() {
 	const [openDropdown, setOpenDropdown] = useState(false); // dropdown
 	const [showModal, setShowModal] = useState(false); // modal
 
-	const API_RhythmCodes_URL = "/api/rhythm_codes";
-	useEffect(() => {
-		fetch(API_RhythmCodes_URL)
-			.then((response) => {
-				return response.json();
-			})
-			.then((data) => {
-				console.log("Rhythm Codes:", data);
-				setRhythmCodes(data);
-			})
-			.catch((error) => {
-				console.error("Error fetching data:", error);
-			});
-	}, []);
 
 	const API_Rhythms_URL = "/api/rhythms";
 	useEffect(() => {
@@ -37,14 +23,37 @@ export function Home() {
 			.then((response) => {
 				return response.json();
 			})
-			.then((data) => {
-				console.log("YAY! Rhythmsss:", data);
-				setRhythms(data);
+			// .then((data) => {
+			// 	console.log("YAY! Rhythmsss:", data);
+			// 	setRhythms(data);
+			// })
+			.then((rhythms)=>{
+				// let testreduce = rhythms.reduce((acc, rhythms) => {
+				// 	acc[rhythms.rhythm_code] = [rhythms.leftpx, rhythms.toppx];
+				// 	return acc;
+				// },[{}]);
+				let uniqueRhythms = rhythms.reduce((acc, rhythm) => {
+					const existingRhythm = acc.find((item) => item.rhythm_code === rhythm.rhythm_code);
+					if (!existingRhythm) {
+						acc.push({
+							rhythm_code: rhythm.rhythm_code,
+							leftpx: rhythm.leftpx,
+							toppx: rhythm.toppx,
+						});
+					}
+					return acc;
+				}, []);
+				console.log(uniqueRhythms);
+				setRhythmCodes(uniqueRhythms);
 			})
 			.catch((error) => {
 				console.error("NOPE! Rhythmssss:", error);
 			});
 	}, []);
+
+
+
+	// console.log(rhythmCodeArray);
 
 	// toggles value of open for dropdown
 	const handleCloseDropdown = () => { // --> when you click the li this closes (go in dropdown component?)

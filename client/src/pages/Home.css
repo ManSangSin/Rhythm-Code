@@ -61,3 +61,9 @@ button{
 	border-radius: 6px;
 }
 
+
+.artist{
+  background-image: url(../images/dot_background.png);
+  background-repeat: repeat;
+}
+

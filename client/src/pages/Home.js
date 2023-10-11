@@ -5,6 +5,7 @@ import "./Home.css";
 import ModalVideo from "../components/ModalVideo";
 import CityIcon from "./CityIcon";
 import DotMap from "../components/DotMap";
+import ArtistSection from "../components/ArtistSection";
 
 export function Home() {
 
@@ -65,8 +66,9 @@ export function Home() {
 				<Link to="/about/this/site">About</Link>
 				<br></br>
 				<Link to="/RhythmsPanelTestingPage">RhythmsPanelTestingPage</Link>
-
+				<br></br>
 				<Link to="/testingpage">Modal Testing Page</Link>
+				<ArtistSection />
 			</div>
 		</main>
 	);

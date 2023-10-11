@@ -10,11 +10,11 @@ import RhythmsPanelTestingPage from "./pages/RhythmsPanelTestingPage";
 const App = () => (
 	<>
 	<Routes>
-		<Route path="/" element={<Home />} />
-		<Route path="/about/this/site" element={<About />} />
-		<Route path="/testingpage" element={<ModalTestingPage />} />
-	  <Route path="/RhythmsPanelTestingPage" element={<RhythmsPanelTestingPage />}
-			/></Routes>
+	<Route path="/" element={<Home />} />
+	<Route path="/about/this/site" element={<About />} />
+	<Route path="/testingpage" element={<ModalTestingPage />} />
+	<Route path="/RhythmsPanelTestingPage" element={<RhythmsPanelTestingPage />} />
+	</Routes>
 	</>
 );
 

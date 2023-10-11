@@ -10,6 +10,11 @@ function MapSection() {
 		setFullScreen(!isFullScreen);
 	};
 
+	const handleKeyDown = (e) => {
+		if (e.key === "Enter") {
+			toggleFullScreen();
+		}
+	};
 
 return (
 	<div className={`map-section ${isFullScreen ? "fullscreen" : ""}`}>
@@ -21,6 +26,11 @@ return (
 				<div
 					className="exit-fullscreen-button"
 					onClick={toggleFullScreen}
+					//added this part to prevent Eslint rule error and also for accessability
+					onKeyDown={handleKeyDown}
+					tabIndex={0}
+					role="button"
+					aria-pressed={isFullScreen}
 				>
 					Click to exit full screen mode
 				</div>
@@ -34,6 +44,10 @@ return (
 						src={ExpandIcon}
 						alt="Expand Icon"
 						onClick={toggleFullScreen}
+						onKeyDown={handleKeyDown}
+						tabIndex={0}
+						role="button"
+						aria-pressed={isFullScreen}
 					/>
 				</div>
 				<img src={dotMapImage} alt="Dot Map" />

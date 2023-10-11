@@ -22,7 +22,7 @@
   position: relative;
 }
 
-.rhythmMenuList {
+.rhythmObject {
   position: absolute;
   list-style-type: none;
   margin: 5px 0;
@@ -33,15 +33,15 @@
   width: 150px;
 }
 
-.rhythmMenuList > li {
+.rhythmObject > li {
   margin: 0;
 }
 
-.rhythmMenuList > li:hover {
+.rhythmObject > li:hover {
   background-color: rgb(240, 106, 10);
 }
 
-.rhythmMenuList > li > button {
+.rhythmObject > li > button {
   width: 100%;
   height: 100%;
   text-align: left;

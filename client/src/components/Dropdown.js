@@ -1,17 +1,18 @@
 import React from "react";
 
-const Dropdown = ({ open, trigger, rhythmMenuList }) => {
+const Dropdown = ({ rhythms, handleShowModal, open, trigger }) => {
 
 	return (
 		<div className="dropdown">
 			{trigger}
 			{open ? (
-				<ul className="rhythmMenuList">
-					{rhythmMenuList.map((rhythmObject) => (
+				<ul className="rhythmObject">
+					{rhythms.map((rhythmObject) => (
 						<button
 							key={rhythmObject.id}
-							onClick={() => handleShow(rhythmObject)}>
-							<li className="rhythmMenuItem">{rhythmObject.rhythm}</li>
+							onClick={() => handleShowModal(rhythmObject)}
+						>
+							<li className="rhythmObject">{rhythmObject.rhythm}</li>
 						</button>
 					))}
 				</ul>

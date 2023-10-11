@@ -13,8 +13,8 @@ export function Home() {
 
 	const [selectedIcon, setSelectedIcon] = useState(null);
 
-	const [open, setOpen] = useState(false); // dropdown
-	const [show, setShow] = useState(false); // modal
+	const [openDropdown, setOpenDropdown] = useState(false); // dropdown
+	const [showModal, setShowModal] = useState(false); // modal
 
 	const API_RhythmCodes_URL = "/api/rhythm_codes";
 	useEffect(() => {
@@ -23,14 +23,13 @@ export function Home() {
 				return response.json();
 			})
 			.then((data) => {
-				console.log("Fetched Rhythm Codes:", data);
+				console.log("Rhythm Codes:", data);
 				setRhythmCodes(data);
 			})
 			.catch((error) => {
 				console.error("Error fetching data:", error);
 			});
 	}, []);
-
 
 	const API_Rhythms_URL = "/api/rhythms";
 	useEffect(() => {
@@ -47,59 +46,68 @@ export function Home() {
 			});
 	}, []);
 
+	// toggles value of open for dropdown
+	const handleCloseDropdown = () => { // --> when you click the li this closes (go in dropdown component?)
+		console.log("OPEN DROPDOWN NOW");
+		setOpenDropdown(!open); // negates value of open
+	};
+
 	// handleclick for dropdown
 	const handleShowDropdown = (rhythmObject) => {
 		console.log(`Clicked rhythm: ${rhythmObject.rhythm}`);
-		setOpen(false);
-		<ModalVideo
-			show={show}
-			handleClose={handleClose}
-			title={selectedIcon ? selectedIcon.rhythm : ""}
-			url={selectedIcon ? selectedIcon.video : ""}
-			location={selectedIcon ? selectedIcon.location : ""}
-			audiourl={selectedIcon ? selectedIcon.audio : ""}
-			description={selectedIcon ? selectedIcon.description : ""}
-		/>;
+		setOpenDropdown(true); // needs to be negated to close - TODO! see above - condense with this
 	};
 
 	// handleclick for modal
-	const handleClose = () => setShow(false); // modal close button
-	const handleShow = (rhythmObject) => {
-		// modal show modal
-		setShow(true);
+	const handleCloseModal = () => setShowModal(false); // close modal
+	const handleShowModal = (rhythmObject) => {
+		// show modal
+		setShowModal(true);
 		setSelectedIcon(rhythmObject); // useState to store the selected video info
 	};
 
-	// const handleOpen = () => {
-	// 	// toggles value of open for dropdown
-	// 	console.log("OPEN DROPDOWN NOW");
-	// 	setOpen(!open); // negates value of open
-	// };
+	<ModalVideo
+		showModal={showModal}
+		handleCloseModal={handleCloseModal}
+		title={selectedIcon ? selectedIcon.rhythm : ""}
+		url={selectedIcon ? selectedIcon.video : ""}
+		location={selectedIcon ? selectedIcon.location : ""}
+		audiourl={selectedIcon ? selectedIcon.audio : ""}
+		description={selectedIcon ? selectedIcon.description : ""}
+	/>;
 
 	return (
 		<main role="main">
 			<div>
 				<DotMap className="map" />
 				<div className="icons">
-					{rhythmCodes.map((rhythmObject) => (
-						<div key={rhythmObject.id}>
-							<Dropdown
-								setOpen={setOpen}
-								setShow={setShow}
-								setSelectedIcon={setSelectedIcon}
-								open={open}
-								trigger={
-									<button onClick={() => handleShowDropdown(rhythmObject)}>
-										<CityIcon
-											cityName={rhythmObject.location}
-											leftpx={rhythmObject.leftpx}
-											toppx={rhythmObject.toppx}
-										/>
-									</button>
-								}
-							/>
-						</div>
-					))}
+					{rhythmCodes.map(
+						(
+							rhythmCodeObject // do I need a map within a map here? How can I map over RhythmCodes but pass down rhythmObject not rhythmCodeObject as props to the dropdown component?
+						) => (
+							<div key={rhythmCodeObject.id}>
+								<Dropdown
+									rhythms={rhythms}
+									handleShowModal={handleShowModal}
+									open={open}
+									trigger={
+										<button
+											onClick={() => {
+												console.log("rhythmCodeObject:", rhythmCodeObject);
+												handleShowDropdown(rhythmCodeObject);
+											}}
+										>
+											<CityIcon
+												cityName={rhythmCodeObject.location}
+												leftpx={rhythmCodeObject.leftpx}
+												toppx={rhythmCodeObject.toppx}
+											/>
+										</button>
+									}
+								/>
+							</div>
+						)
+					)}
 				</div>
 
 				<br></br>

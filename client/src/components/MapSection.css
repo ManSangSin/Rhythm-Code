@@ -1,0 +1,49 @@
+
+.map-section {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #CB3100;
+}
+
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 40, 40, 0.8);
+}
+
+.help-text {
+  margin-bottom: 70px;
+  padding-left: 82px;
+  padding-top: 20px;
+}
+.expand-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  
+}
+
+.expand-icon {
+  width: 40px;
+  height: 40px;
+  margin: 128px 31px 724px 1357px;
+  cursor: pointer;
+}
+.exit-fullscreen-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+
+

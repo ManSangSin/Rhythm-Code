@@ -72,22 +72,22 @@ button {
 
 /* dot map classes & ids */
 
-/* Cuba marker */
+/* Cuba marker - can also use id #cuba */
 #dotmap > path:nth-child(1823) {
 	fill: red;
 }
 
-/* Guadeloupe marker */
+/* Guadeloupe marker - can also use id #guadeloupe */
 #dotmap > path:nth-child(1873) {
 	fill: green;
 }
 
-/* NOLA marker */
+/* NOLA marker - can also use id #nola */
 #dotmap > path:nth-child(1608) {
 	fill: yellow;
 }
 
-/* Washington DC marker */
+/* Washington DC marker - can also use id #washingtondc */
 #dotmap > path:nth-child(1308) {
 	fill: blue;
 }

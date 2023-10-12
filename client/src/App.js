@@ -1,9 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-import ModalTestingPage from "./pages/ModalTestingPage";
 import About from "./pages/About";
+import ModalTestingPage from "./pages/ModalTestingPage";
 import Home from "./pages/Home";
 import SliderTest from "./pages/SliderTest";
 import DataFetchingTest from "./pages/DataFetchingTest";
+
+import RhythmsPanelTestingPage from "./pages/RhythmsPanelTestingPage";
+
 
 
 const App = () => (
@@ -12,9 +15,10 @@ const App = () => (
 	<Route path="/" element={<Home />} />
 		<Route path="/SliderTest" element={<SliderTest />} />
 		<Route path="/ModalTestingPage" element={<ModalTestingPage />} />
+		<Route path="/" element={<Home />} />
 		<Route path="/about/this/site" element={<About />} />
-		<Route path="/DataFetchingTest" element={<DataFetchingTest />} />
-	</Routes>
+		<Route path="/RhythmsPanelTestingPage" element={<RhythmsPanelTestingPage />}
+			/></Routes>
 	</>
 );
 

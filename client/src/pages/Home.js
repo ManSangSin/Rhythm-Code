@@ -5,6 +5,7 @@ import "./Home.css";
 import ModalVideo from "../components/ModalVideo";
 import CityIcon from "./CityIcon";
 import DotMap from "../components/DotMap";
+import Header from "../components/Header";
 
 export function Home() {
 
@@ -39,6 +40,7 @@ export function Home() {
 
 	return (
 		<main role="main">
+			<Header />
 			<div>
 				<DotMap className="map" />
 				<div className="icons">

@@ -3,7 +3,6 @@ import About from "./pages/About";
 import ModalTestingPage from "./pages/ModalTestingPage";
 import Home from "./pages/Home";
 import SliderTest from "./pages/SliderTest";
-import DataFetchingTest from "./pages/DataFetchingTest";
 
 import RhythmsPanelTestingPage from "./pages/RhythmsPanelTestingPage";
 

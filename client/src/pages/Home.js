@@ -63,11 +63,15 @@ export function Home() {
 					/>
 				</div>
 				<br></br>
+				<Link to="/ModalTestingPage">Modal Testing</Link>
+				<br></br>
+				<Link to="/SliderTest">slider test</Link>
+				<br></br>
 				<Link to="/about/this/site">About</Link>
 				<br></br>
 				<Link to="/RhythmsPanelTestingPage">RhythmsPanelTestingPage</Link>
 
-				<Link to="/testingpage">Modal Testing Page</Link>
+				<Link to="/ModalTestingPage">Modal Testing Page</Link>
 			</div>
 		</main>
 	);

@@ -1,6 +1,6 @@
-import React from "react";
+// import React from "react";
 
-const Dropdown = ({ rhythms, handleShowModal, open, trigger }) => {
+const Dropdown = ({ open, trigger, handleCloseDropdown, handleShowModal, rhythms }) => {
 
 	return (
 		<div className="dropdown">
@@ -10,7 +10,10 @@ const Dropdown = ({ rhythms, handleShowModal, open, trigger }) => {
 					{rhythms.map((rhythmObject) => (
 						<button
 							key={rhythmObject.id}
-							onClick={() => handleShowModal(rhythmObject)}
+							onClick={() => {
+								handleShowModal(rhythmObject);
+								handleCloseDropdown();
+							}}
 						>
 							<li className="rhythmObject">{rhythmObject.rhythm}</li>
 						</button>

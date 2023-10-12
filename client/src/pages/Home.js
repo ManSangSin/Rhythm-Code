@@ -4,121 +4,129 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 import CityIcon from "./CityIcon";
 import DotMap from "../components/DotMap";
-import Dropdown from "../components/Dropdown";
 import ModalVideo from "../components/ModalVideo";
 
-export function Home() {
-	const [rhythms, setRhythms] = useState([]);
+function MyMap() {
 	const [rhythmCodes, setRhythmCodes] = useState([]);
+	const [rhythms, setRhythms] = useState([]);
 
-	const [selectedIcon, setSelectedIcon] = useState(null);
-
-	const [openDropdown, setOpenDropdown] = useState(false); // dropdown
-	const [showModal, setShowModal] = useState(false); // modal
-
-	const API_RhythmCodes_URL = "/api/rhythm_codes";
-	useEffect(() => {
-		fetch(API_RhythmCodes_URL)
-			.then((response) => {
-				return response.json();
-			})
-			.then((data) => {
-				console.log("Rhythm Codes:", data);
-				setRhythmCodes(data);
-			})
-			.catch((error) => {
-				console.error("Error fetching data:", error);
-			});
-	}, []);
+	const [isModalOpen, setModalOpen] = useState(false);
+	const [selectedRhythm, setSelectedRhythm] = useState({});
 
 	const API_Rhythms_URL = "/api/rhythms";
+
 	useEffect(() => {
 		fetch(API_Rhythms_URL)
-			.then((response) => {
-				return response.json();
-			})
-			.then((data) => {
-				console.log("YAY! Rhythmsss:", data);
-				setRhythms(data);
+			.then((response) => response.json())
+			.then((rhythms) => {
+				setRhythms(rhythms);
+				let rhythmsCodes = rhythms.reduce((acc, rhythm) => {
+					const existingRhythm = acc.find(
+						(item) => item.rhythm_code === rhythm.rhythm_code
+					);
+					if (!existingRhythm) {
+						acc.push({
+							rhythm_code: rhythm.rhythm_code,
+							leftpx: rhythm.leftpx,
+							toppx: rhythm.toppx,
+						});
+					}
+					return acc;
+				}, []);
+				console.log(rhythmsCodes);
+				setRhythmCodes(rhythmsCodes);
 			})
 			.catch((error) => {
-				console.error("NOPE! Rhythmssss:", error);
+				console.error("NOPE! Rhythms:", error);
 			});
 	}, []);
 
-	// toggles value of open for dropdown
-	const handleCloseDropdown = () => { // --> when you click the li this closes (go in dropdown component?)
-		console.log("OPEN DROPDOWN NOW");
-		setOpenDropdown(!open); // negates value of open
-	};
+	return (
+		<div>
+			{/* where to close DotMap to have icons on and not under? */}
+				{rhythmCodes.map((rhythmCodeObject) => {
+					return (
+						<CityIcon
+							key={rhythmCodeObject.rhythm_code}
+							rhythmCodeName={rhythmCodeObject.rhythm_code}
+							rhythmsList={rhythms}
+							setModalOpen={setModalOpen}
+							setSelectedRhythm={setSelectedRhythm}
+						/>
+					);
+				})}
+				{isModalOpen &&
+					<ModalVideo setModalOpen={setModalOpen} rhythm={selectedRhythm} />
+				};
+			<DotMap className="map" />
+		</div>
+	);
+}
 
-	// handleclick for dropdown
-	const handleShowDropdown = (rhythmObject) => {
-		console.log(`Clicked rhythm: ${rhythmObject.rhythm}`);
-		setOpenDropdown(true); // needs to be negated to close - TODO! see above - condense with this
-	};
+// return <div>
+//         <span>map</span>
+//         {rhythmCodes.map((item)=>{
+//            return <MyRhythmCode key={item.rhythm_code} name={item.rhythm_code} rhythmsList={rhythms} setModalOpen={setModalOpen} setSelectedRhythm={setSelectedRhythm} />;
+//         })}
+//         {isModalOpen && <MyModal setModalOpen={setModalOpen} rhythm={selectedRhythm} />}
+//     </div>;
+// }
 
-	// handleclick for modal
-	const handleCloseModal = () => setShowModal(false); // close modal
-	const handleShowModal = (rhythmObject) => {
-		// show modal
-		setShowModal(true);
-		setSelectedIcon(rhythmObject); // useState to store the selected video info
-	};
 
-	<ModalVideo
-		showModal={showModal}
-		handleCloseModal={handleCloseModal}
-		title={selectedIcon ? selectedIcon.rhythm : ""}
-		url={selectedIcon ? selectedIcon.video : ""}
-		location={selectedIcon ? selectedIcon.location : ""}
-		audiourl={selectedIcon ? selectedIcon.audio : ""}
-		description={selectedIcon ? selectedIcon.description : ""}
-	/>;
-
+function Home() {
 	return (
 		<main role="main">
-			<div>
-				<DotMap className="map" />
-				<div className="icons">
-					{rhythmCodes.map(
-						(
-							rhythmCodeObject // do I need a map within a map here? How can I map over RhythmCodes but pass down rhythmObject not rhythmCodeObject as props to the dropdown component?
-						) => (
-							<div key={rhythmCodeObject.id}>
-								<Dropdown
-									rhythms={rhythms}
-									handleShowModal={handleShowModal}
-									open={open}
-									trigger={
-										<button
-											onClick={() => {
-												console.log("rhythmCodeObject:", rhythmCodeObject);
-												handleShowDropdown(rhythmCodeObject);
-											}}
-										>
-											<CityIcon
-												cityName={rhythmCodeObject.location}
-												leftpx={rhythmCodeObject.leftpx}
-												toppx={rhythmCodeObject.toppx}
-											/>
-										</button>
-									}
-								/>
-							</div>
-						)
-					)}
-				</div>
-
-				<br></br>
-				<Link to="/about/this/site">About</Link>
-				<br></br>
-				{/* <Link to="/RhythmsPanelTestingPage">RhythmsPanelTestingPage</Link> */}
-				<br></br>
-				<Link to="/testingpage">Modal Testing Page</Link>
-			</div>
+			<MyMap />
+			<br />
+			<br />
+			<br />
+			<Link to="/about/this/site">About</Link>
+			<br />
+			<Link to="/RhythmsPanelTestingPage">RhythmsPanelTestingPage</Link>
+			<br />
+			<Link to="/testingpage">Modal Testing Page</Link>
 		</main>
 	);
 }
 
 export default Home;
+
+
+
+
+///////////////////////////////////////////////////////////////////////////
+
+	// // toggles value of open for dropdown
+	// const handleCloseDropdown = () => {
+	// 	// --> when you click the li this closes (go in dropdown component?)
+	// 	console.log("OPEN DROPDOWN NOW");
+	// 	setOpenDropdown(!open); // negates value of open
+	// };
+
+	// // handleclick for dropdown
+	// const handleShowDropdown = (rhythmObject) => {
+	// 	console.log(`Clicked rhythm: ${rhythmObject.rhythm}`);
+	// 	setOpenDropdown(false); // needs to be negated to close - TODO! see above - condense with this
+	// };
+
+	// // handleclick for modal
+	// const handleCloseModal = () => setShowModal(false); // close modal
+	// const handleShowModal = (rhythmObject) => {
+	// 	// show modal
+	// 	setShowModal(true);
+	// 	setSelectedIcon(rhythmObject); // useState to store the selected video info
+	// };
+
+	//////////////////////////////////////////////////////////////////////////////
+
+	// <ModalVideo
+	// 	showModal={showModal}
+	// 	handleCloseModal={handleCloseModal}
+	// 	title={selectedIcon ? selectedIcon.rhythm : ""}
+	// 	url={selectedIcon ? selectedIcon.video : ""}
+	// 	location={selectedIcon ? selectedIcon.location : ""}
+	// 	audiourl={selectedIcon ? selectedIcon.audio : ""}
+	// 	description={selectedIcon ? selectedIcon.description : ""}
+	// />;
+
+	//////////////////////////////////////////////////////////////////////////////

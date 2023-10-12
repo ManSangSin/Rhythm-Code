@@ -6,15 +6,18 @@ import ReactPlayer from "react-player";
 
 import VideoCard from "./VideoCard";
 
-function ModalVideo({
-	title,
-	url,
-	audioUrl,
-	description,
-	show,
-	handleClose,
-	location,
-}) {
+
+// function ModalVideo({ rhythm, setModalOpen }) {
+// 	return (
+// 		<div>
+// 			{rhythm.description} HELOOOOOOOOO
+// 			<button onClick={() => setModalOpen(false)}>CLOSE</button>
+// 		</div>
+// 	);
+// }
+////////////////////////////
+
+function ModalVideo({ rhythm, setModalOpen }) {
 	const [activeTab, setActiveTab] = useState("video");
 
 	const handleTabChange = (tab) => {
@@ -23,7 +26,7 @@ function ModalVideo({
 
 	let modalContent;
 
-	if (url && description) {
+	if (rhythm.url && rhythm.description) {
 		modalContent = (
 			<Tab.Container activeKey={activeTab}>
 				<Nav variant="tabs">
@@ -43,7 +46,7 @@ function ModalVideo({
 				</Nav>
 				<Tab.Content>
 					<Tab.Pane eventKey="video">
-						<VideoCard url={url} />
+						<VideoCard url={rhythm.url} />
 					</Tab.Pane>
 					<Tab.Pane eventKey="description">
 						{" "}
@@ -54,9 +57,9 @@ function ModalVideo({
 								src="https://img.icons8.com/ios/50/marker--v1.png"
 								alt="marker--v1"
 							/>{" "}
-							{location}
+							{rhythm.location}
 						</div>
-						{description}
+						{rhythm.description}
 					</Tab.Pane>
 				</Tab.Content>
 			</Tab.Container>
@@ -64,23 +67,29 @@ function ModalVideo({
 	} else {
 		modalContent = (
 			<div>
-				{url && <VideoCard url={url} />}
-				{audioUrl && (
+				{rhythm.url && <VideoCard url={rhythm.url} />}
+				{rhythm.audio && (
 					<div>
-						<ReactPlayer url={audioUrl} width="100%" height="auto" controls />
+						<ReactPlayer
+							url={rhythm.audio}
+							width="100%"
+							height="auto"
+							controls
+						/>
 					</div>
 				)}
-				{description && (
+				{rhythm.description && (
 					<div>
 						<div>
 							<img
 								width="30"
 								height="25"
 								src="https://img.icons8.com/ios/50/marker--v1.png"
-								alt="marker--v1"></img>
-							{location}
+								alt="marker--v1"
+							></img>
+							{rhythm.location}
 						</div>
-						{description}
+						{rhythm.description}
 					</div>
 				)}
 			</div>
@@ -88,13 +97,14 @@ function ModalVideo({
 	}
 
 	return (
-		<Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
+		<Modal show={true}>
 			<Modal.Header closeButton>
-			<Modal.Title>{title}</Modal.Title>
+				<Modal.Title>
+					{rhythm.rhythm}
+					<button onClick={() => setModalOpen(false)}>CLOSE</button>
+				</Modal.Title>
 			</Modal.Header>
-			<Modal.Body>
-				{modalContent}
-			</Modal.Body>
+			<Modal.Body>{modalContent}</Modal.Body>
 		</Modal>
 	);
 }

@@ -7,12 +7,12 @@
 	border: 0;
 }
 
-.map{
+ .map{
 	position: relative;
 	top: 0;
 	left: 0;
 } 
-
+/*
  .cityIconSVG{
 	width:20px;
 	height:20px; 
@@ -52,10 +52,16 @@
   margin: 0;
   font: inherit;
   cursor: pointer;
-}
+}*/
 
 button{
-	background-color:transparent;
+	color:olive;
 	border: none;
-}
+  background-color: transparent;
+} 
 
+.SEE-HERE{
+  width: 400px;
+  font-size: larger;
+  z-index: 100;
+}

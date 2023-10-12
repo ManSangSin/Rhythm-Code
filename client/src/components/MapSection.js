@@ -16,44 +16,48 @@ function MapSection() {
 		}
 	};
 
-return (
-	<div className={`map-section ${isFullScreen ? "fullscreen" : ""}`}>
-		<div className="help-text">
-			Click on locations to learn more about local rhythms
-		</div>
-		{isFullScreen ? (
-			<div>
-				<div
-					className="exit-fullscreen-button"
-					onClick={toggleFullScreen}
-					//added this part to prevent Eslint rule error and also for accessability
-					onKeyDown={handleKeyDown}
-					tabIndex={0}
-					role="button"
-					aria-pressed={isFullScreen}
-				>
-					Click to exit full screen mode
-				</div>
-				<img src={dotMapImage} alt="Dot Map" />
+	return (
+		<div className={`map-section ${isFullScreen ? "fullscreen" : ""}`}>
+			<div className="help-text">
+				Click on locations to learn more about local rhythms
 			</div>
-		) : (
-			<div>
-				<div className="expand-button">
-					<img
-						className="expand-icon"
-						src={ExpandIcon}
-						alt="Expand Icon"
+			{isFullScreen ? (
+				<div>
+					<div
+						className="exit-fullscreen-button"
 						onClick={toggleFullScreen}
 						onKeyDown={handleKeyDown}
 						tabIndex={0}
 						role="button"
 						aria-pressed={isFullScreen}
-					/>
+					>
+						Click to exit full screen mode
+					</div>
+					<div className="full-screen-map">
+						<img src={dotMapImage} alt="Dot Map" />
+					</div>
 				</div>
-				<img src={dotMapImage} alt="Dot Map" />
-			</div>
-		)}
-	</div>
-);
+			) : (
+				<div>
+					<div className="expand-button">
+						<img
+							className="expand-icon"
+							src={ExpandIcon}
+							alt="Expand Icon"
+							onClick={toggleFullScreen}
+							onKeyDown={handleKeyDown}
+							tabIndex={0}
+							role="button"
+							aria-pressed={isFullScreen}
+						/>
+					</div>
+					<div className="map-container">
+						<img src={dotMapImage} alt="Dot Map" />
+					</div>
+				</div>
+			)}
+		</div>
+	);
 }
+
 export default MapSection;

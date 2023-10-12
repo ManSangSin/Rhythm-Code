@@ -63,16 +63,6 @@ function MyMap() {
 	);
 }
 
-// return <div>
-//         <span>map</span>
-//         {rhythmCodes.map((item)=>{
-//            return <MyRhythmCode key={item.rhythm_code} name={item.rhythm_code} rhythmsList={rhythms} setModalOpen={setModalOpen} setSelectedRhythm={setSelectedRhythm} />;
-//         })}
-//         {isModalOpen && <MyModal setModalOpen={setModalOpen} rhythm={selectedRhythm} />}
-//     </div>;
-// }
-
-
 function Home() {
 	return (
 		<main role="main">
@@ -90,43 +80,3 @@ function Home() {
 }
 
 export default Home;
-
-
-
-
-///////////////////////////////////////////////////////////////////////////
-
-	// // toggles value of open for dropdown
-	// const handleCloseDropdown = () => {
-	// 	// --> when you click the li this closes (go in dropdown component?)
-	// 	console.log("OPEN DROPDOWN NOW");
-	// 	setOpenDropdown(!open); // negates value of open
-	// };
-
-	// // handleclick for dropdown
-	// const handleShowDropdown = (rhythmObject) => {
-	// 	console.log(`Clicked rhythm: ${rhythmObject.rhythm}`);
-	// 	setOpenDropdown(false); // needs to be negated to close - TODO! see above - condense with this
-	// };
-
-	// // handleclick for modal
-	// const handleCloseModal = () => setShowModal(false); // close modal
-	// const handleShowModal = (rhythmObject) => {
-	// 	// show modal
-	// 	setShowModal(true);
-	// 	setSelectedIcon(rhythmObject); // useState to store the selected video info
-	// };
-
-	//////////////////////////////////////////////////////////////////////////////
-
-	// <ModalVideo
-	// 	showModal={showModal}
-	// 	handleCloseModal={handleCloseModal}
-	// 	title={selectedIcon ? selectedIcon.rhythm : ""}
-	// 	url={selectedIcon ? selectedIcon.video : ""}
-	// 	location={selectedIcon ? selectedIcon.location : ""}
-	// 	audiourl={selectedIcon ? selectedIcon.audio : ""}
-	// 	description={selectedIcon ? selectedIcon.description : ""}
-	// />;
-
-	//////////////////////////////////////////////////////////////////////////////

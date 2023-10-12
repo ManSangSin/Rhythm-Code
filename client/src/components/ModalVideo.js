@@ -6,17 +6,6 @@ import ReactPlayer from "react-player";
 
 import VideoCard from "./VideoCard";
 
-
-// function ModalVideo({ rhythm, setModalOpen }) {
-// 	return (
-// 		<div>
-// 			{rhythm.description} HELOOOOOOOOO
-// 			<button onClick={() => setModalOpen(false)}>CLOSE</button>
-// 		</div>
-// 	);
-// }
-////////////////////////////
-
 function ModalVideo({ rhythm, setModalOpen }) {
 	const [activeTab, setActiveTab] = useState("video");
 
@@ -97,12 +86,9 @@ function ModalVideo({ rhythm, setModalOpen }) {
 	}
 
 	return (
-		<Modal show={true}>
+		<Modal show={true} onHide={() => setModalOpen(false)}>
 			<Modal.Header closeButton>
-				<Modal.Title>
-					{rhythm.rhythm}
-					<button onClick={() => setModalOpen(false)}>CLOSE</button>
-				</Modal.Title>
+				<Modal.Title>{rhythm.rhythm}</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>{modalContent}</Modal.Body>
 		</Modal>

@@ -27,7 +27,6 @@
 	width: 20px;
 	height: 20px;
 }
-
 .dropdown {
 	position: relative;
 }
@@ -104,6 +103,7 @@ button {
 	stroke-width: 12px;
 	stroke-linejoin: round;
 	transition: 0.3s;
+	cursor: pointer;
 }
 
 #dotmap > path:nth-child(1823):hover,

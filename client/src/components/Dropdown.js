@@ -1,6 +1,6 @@
 import React from "react";
 
-const Dropdown = ({ rhythms, handleShowModal, open, trigger }) => {
+const Dropdown = ({ rhythms, handleShowModal, open, trigger, handleCloseDropdown }) => {
 
 	return (
 		<div className="dropdown">
@@ -10,7 +10,10 @@ const Dropdown = ({ rhythms, handleShowModal, open, trigger }) => {
 					{rhythms.map((rhythmObject) => (
 						<button
 							key={rhythmObject.id}
-							onClick={() => handleShowModal(rhythmObject)}
+							onClick={() => {
+								handleShowModal(rhythmObject);
+								handleCloseDropdown();
+							}}
 						>
 							<li className="rhythmObject">{rhythmObject.rhythm}</li>
 						</button>
@@ -23,3 +26,4 @@ const Dropdown = ({ rhythms, handleShowModal, open, trigger }) => {
 
 
 export default Dropdown;
+

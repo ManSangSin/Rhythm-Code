@@ -23,15 +23,7 @@ export function Home() {
 			.then((response) => {
 				return response.json();
 			})
-			// .then((data) => {
-			// 	console.log("YAY! Rhythmsss:", data);
-			// 	setRhythms(data);
-			// })
 			.then((rhythms)=>{
-				// let testreduce = rhythms.reduce((acc, rhythms) => {
-				// 	acc[rhythms.rhythm_code] = [rhythms.leftpx, rhythms.toppx];
-				// 	return acc;
-				// },[{}]);
 				let uniqueRhythms = rhythms.reduce((acc, rhythm) => {
 					const existingRhythm = acc.find((item) => item.rhythm_code === rhythm.rhythm_code);
 					if (!existingRhythm) {
@@ -52,9 +44,6 @@ export function Home() {
 	}, []);
 
 
-
-	// console.log(rhythmCodeArray);
-
 	// toggles value of open for dropdown
 	const handleCloseDropdown = () => { // --> when you click the li this closes (go in dropdown component?)
 		console.log("OPEN DROPDOWN NOW");
@@ -64,7 +53,7 @@ export function Home() {
 	// handleclick for dropdown
 	const handleShowDropdown = (rhythmObject) => {
 		console.log(`Clicked rhythm: ${rhythmObject.rhythm}`);
-		setOpenDropdown(true); // needs to be negated to close - TODO! see above - condense with this
+		setOpenDropdown(false); // needs to be negated to close - TODO! see above - condense with this
 	};
 
 	// handleclick for modal
@@ -98,6 +87,7 @@ export function Home() {
 								<Dropdown
 									rhythms={rhythms}
 									handleShowModal={handleShowModal}
+									handleCloseDropdown={handleCloseDropdown}
 									open={open}
 									trigger={
 										<button
@@ -122,7 +112,7 @@ export function Home() {
 				<br></br>
 				<Link to="/about/this/site">About</Link>
 				<br></br>
-				{/* <Link to="/RhythmsPanelTestingPage">RhythmsPanelTestingPage</Link> */}
+				<Link to="/RhythmsPanelTestingPage">RhythmsPanelTestingPage</Link>
 				<br></br>
 				<Link to="/testingpage">Modal Testing Page</Link>
 			</div>

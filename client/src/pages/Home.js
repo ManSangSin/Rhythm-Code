@@ -59,7 +59,7 @@ export function Home() {
 						url={selectedIcon ? selectedIcon.video : ""}
 						location={selectedIcon ? selectedIcon.location : ""}
 						audiourl={selectedIcon ? selectedIcon.audio : ""}
-						description={selectedIcon ? selectedIcon.description: ""}
+						description={selectedIcon ? selectedIcon.description : ""}
 					/>
 				</div>
 				<br></br>
@@ -68,8 +68,8 @@ export function Home() {
 				<Link to="/MapSection"> Map Section Test</Link>
 				<br></br>
 				<Link to="/RhythmsPanelTestingPage">RhythmsPanelTestingPage</Link>
-                <br></br>
-				<Link to="/testingpage">Modal Testing Page</Link>
+				<br></br>
+				<Link to="/ModalTestingPage">Modal Testing Page</Link>
 			</div>
 		</main>
 	);

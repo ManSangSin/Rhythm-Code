@@ -4,11 +4,11 @@ import logo from "../assets/cyf_logo.png";
 
 const Header = () => {
     return (
-        <div>
+        <header>
             <span>decodenoir.org</span>
             <img src={cross} alt="cross icon" />
             <img src={logo} alt="cyf logo" />
-        </div>
+        </header>
     );
 };
 

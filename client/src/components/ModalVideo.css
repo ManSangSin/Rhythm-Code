@@ -1,0 +1,42 @@
+.modal-content{
+  width: 1014px;
+  height: 640px;
+  border-radius: 16px;
+  border: 2px solid #000;
+  background: #FFF;
+  padding:2px 103px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+color: #000;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.modal-header{
+border: none;
+padding-top: 50px;
+}
+.modal-title{
+font-size: 32px;
+font-weight: 700;
+}
+.modal-header .btn-close {
+  position: absolute;
+  width: 30.845px;
+  height: 20.442px;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.text{
+    padding-top: 30px;
+}
+.audio-player{
+    display: flex;
+    flex-direction: row;
+}
+

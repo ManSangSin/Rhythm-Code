@@ -47,7 +47,8 @@ footer {
 
 a {
     color: #ffffff;
-    text-decoration: none;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
 }
 
 a:hover {

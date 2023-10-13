@@ -79,6 +79,7 @@ function Home() {
 			<Link to="/RhythmsPanelTestingPage">RhythmsPanelTestingPage</Link>
 			<br />
 			<Link to="/testingpage">Modal Testing Page</Link>
+
 		</main>
 	);
 }

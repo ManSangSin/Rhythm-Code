@@ -1,9 +1,11 @@
 import React from "react";
 
-const OrganisationLink = ({ organisationName, organisationText }) => {
+const OrganisationLink = ({ organisationName, organisationText, organisationUrl  }) => {
     return (
         <div className="organisation-container">
-            <h3 className="bold-font">{organisationName}</h3>
+            <a href={organisationUrl}>
+                <h3 className="bold-font">{organisationName}</h3>
+            </a>
             <p>{organisationText}</p>
         </div>
     );

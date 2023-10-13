@@ -6,9 +6,9 @@ function RhythmItem({ setModalOpen, setSelectedRhythm, rhythms }) {
 		console.log("Clicked selected rhythmmmmmmm", `${rhythms.rhythm}`);
 	};
 	return (
-		<li>
-			<button onClick={handleRhythmClick}>{rhythms.rhythm}</button>
-		</li>
+			<li>
+				<button onClick={handleRhythmClick}>{rhythms.rhythm}</button>
+			</li>
 	);
 }
 

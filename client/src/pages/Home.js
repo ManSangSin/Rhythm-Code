@@ -19,6 +19,8 @@ function MyMap() {
 		fetch(API_Rhythms_URL)
 			.then((response) => response.json())
 			.then((rhythms) => {
+				console.log("API resultsssss:", rhythms);
+
 				setRhythms(rhythms);
 				let rhythmsCodes = rhythms.reduce((acc, rhythm) => {
 					const existingRhythm = acc.find(
@@ -43,21 +45,23 @@ function MyMap() {
 
 	return (
 		<div>
-			{/* where to close DotMap to have icons on and not under? */}
 				{rhythmCodes.map((rhythmCodeObject) => {
 					return (
 						<CityIcon
 							key={rhythmCodeObject.rhythm_code}
 							rhythmCodeName={rhythmCodeObject.rhythm_code}
 							rhythmsList={rhythms}
+							toppx={rhythmCodeObject.toppx}
+							leftpx={rhythmCodeObject.leftpx}
 							setModalOpen={setModalOpen}
 							setSelectedRhythm={setSelectedRhythm}
+
 						/>
 					);
 				})}
 				{isModalOpen &&
 					<ModalVideo setModalOpen={setModalOpen} rhythm={selectedRhythm} />
-				};
+				}
 			<DotMap className="map" />
 		</div>
 	);

@@ -1,8 +1,8 @@
 import React from "react";
 
-const ExternalLinks = () => {
+const ExternalLinks = ({ companyIcon, text }) => {
     return (
-        <p>I am an External Link Component</p>
+        <p><img src={companyIcon} alt="company logo" />{text}</p>
     );
 };
 

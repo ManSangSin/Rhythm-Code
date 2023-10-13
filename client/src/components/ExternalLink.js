@@ -1,8 +1,10 @@
 import React from "react";
 
-const ExternalLinks = ({ companyIcon, text }) => {
+const ExternalLinks = ({ companyIcon, text, linkUrl }) => {
     return (
-        <p className="link"><img className="link-icon" src={companyIcon} alt="company logo" />{text}</p>
+        <a href={linkUrl}>
+            <p className="link"><img className="link-icon" src={companyIcon} alt="company logo" />{text}</p>
+        </a>
     );
 };
 

@@ -15,13 +15,13 @@ const Footer = () => {
             <div className="external-links-container">
                 <div>
                     <p className="medium-font">Engineered by Team Rhythm Code</p>
-                    <ExternalLink companyIcon={linkedinIcon} text="Christina Mifsud" />
-                    <ExternalLink companyIcon={linkedinIcon} text="Delnia Alipour" />
-                    <ExternalLink companyIcon={linkedinIcon} text="Irianni Munoz" />
-                    <ExternalLink companyIcon={linkedinIcon} text="Man Sang Sin" />
+                    <ExternalLink companyIcon={linkedinIcon} text="Christina Mifsud" linkUrl="https://github.com/christina-mifsud" />
+                    <ExternalLink companyIcon={linkedinIcon} text="Delnia Alipour" linkUrl="https://github.com/DelniaAlipour" />
+                    <ExternalLink companyIcon={linkedinIcon} text="Irianni Munoz" linkUrl="https://github.com/munozirianni1988" />
+                    <ExternalLink companyIcon={linkedinIcon} text="Man Sang Sin" linkUrl="https://github.com/ManSangSin" />
                 </div>
                 <div>
-                    <ExternalLink companyIcon={githubIcon} text="See source code on Github" />
+                    <ExternalLink companyIcon={githubIcon} text="See source code on Github" linkUrl="https://github.com/ManSangSin/Rhythm-Code" />
                 </div>
             </div>
         </footer>

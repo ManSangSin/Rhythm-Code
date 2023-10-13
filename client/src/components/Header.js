@@ -1,6 +1,7 @@
 import React from "react";
 import cross from "../assets/cross.svg";
 import logo from "../assets/cyf_logo.png";
+import "./Header.css";
 
 const decodenoir_url = "https://www.decodenoir.org/";
 const cyf_url = "https://codeyourfuture.io/";

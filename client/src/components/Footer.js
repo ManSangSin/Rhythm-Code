@@ -1,4 +1,5 @@
 import React from "react";
+import OrganisationLink from "./OrganisationLink";
 
 const Footer = () => {
     return (
@@ -11,6 +12,8 @@ const Footer = () => {
             <p>
                 A UK based non-profit organisation that trains refugees & disadvantaged people to become web developers and helps them to find work in the tech industry.
             </p>
+            <OrganisationLink />
+            <OrganisationLink />
         </footer>
     );
 };

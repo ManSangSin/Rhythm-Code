@@ -4,6 +4,7 @@ import OrganisationLink from "./OrganisationLink";
 import linkedinIcon from "../assets/linkedin-icon.svg";
 import githubIcon from "../assets/github-icon.svg";
 import ExternalLink from "./ExternalLink";
+import instagramIcon from "../assets/instagram-icon.svg";
 
 const Footer = () => {
     return (
@@ -11,6 +12,7 @@ const Footer = () => {
             <p className="footer-disclaimer">
                 Working under the artistic name Unity, Deirdre Molloy will exhibit the Black Atlantic Rhythm Codes map in Nantes, France in 2024. All contributors will be credited, with permission, including the creators of this Code Your Future prototype. The exhibition will be co-produced by Gerador and promoted by Project Manifest.
             </p>
+            <ExternalLink companyIcon={instagramIcon} text="@projectmanifesteu" linkUrl="https://www.instagram.com/projectmanifesteu/" />
             <div className="flex-container">
                 <div className="organisation-links-container">
                     <OrganisationLink organisationName="decodenoir.org" organisationText="This interactive map is part an ethnography exhibition concept that aims to seed a coherent African Diaspora identity narrative in hearts and minds worldwide" organisationUrl="https://www.decodenoir.org/" />

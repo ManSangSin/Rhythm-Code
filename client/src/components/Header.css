@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
 header {
     background-color: #ffffff;
     height: 72px;
@@ -9,4 +11,10 @@ header {
     flex-shrink: 0;
     gap: 34px;
     margin-left: 82px;
+}
+
+.header-text {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
 }

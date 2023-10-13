@@ -12,7 +12,7 @@ const Header = () => {
         <header>
             <div className="header-logo_container">
                 <a href={decodenoir_url}>
-                    <span>decodenoir.org</span>
+                    <span className="header-text">decodenoir.org</span>
                 </a>
                 <img src={cross} alt="cross icon" />
                 <a href={cyf_url}>

@@ -1,4 +1,9 @@
 footer {
     display: flex;
+    justify-content: space-between;
     background-color: gold;
+}
+
+.organisation-container {
+    width: 533px
 }

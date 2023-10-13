@@ -16,6 +16,7 @@ footer {
 
 .footer-disclaimer {
     width: 824px;
+    margin-bottom: 80px;
 }
 
 .bold-font {
@@ -29,11 +30,12 @@ footer {
 .organisation-links-container {
     display: flex;
     flex-direction: column;
-    gap: 50px
+    gap: 40px
 }
 
 .organisation-container {
-    width: 533px
+    width: 533px;
+    margin: 16px;
 }
 
 .external-links-container {

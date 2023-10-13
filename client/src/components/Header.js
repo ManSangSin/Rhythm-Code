@@ -16,7 +16,7 @@ const Header = () => {
                 </a>
                 <img src={cross} alt="cross icon" />
                 <a href={cyf_url}>
-                    <img src={logo} alt="cyf logo" />
+                    <img className="header-logo_cyf" src={logo} alt="cyf logo" />
                 </a>
             </div>
         </header>

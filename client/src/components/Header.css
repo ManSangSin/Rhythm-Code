@@ -18,3 +18,8 @@ header {
     font-weight: bold;
     font-size: 32px;
 }
+
+.header-logo_cyf {
+    width: 200px;
+    height: 60px;
+}

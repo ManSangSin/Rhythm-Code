@@ -5,6 +5,7 @@ import "./Home.css";
 import ModalVideo from "../components/ModalVideo";
 import CityIcon from "./CityIcon";
 import DotMap from "../components/DotMap";
+import Footer from "../components/Footer";
 
 export function Home() {
 
@@ -73,6 +74,7 @@ export function Home() {
 
 				<Link to="/ModalTestingPage">Modal Testing Page</Link>
 			</div>
+			<Footer />
 		</main>
 	);
 }

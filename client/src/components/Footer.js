@@ -2,6 +2,7 @@ import React from "react";
 import OrganisationLink from "./OrganisationLink";
 import linkedinIcon from "../assets/linkedin-icon.svg";
 import githubIcon from "../assets/github-icon.svg";
+import ExternalLink from "./ExternalLink";
 
 const Footer = () => {
     return (
@@ -14,6 +15,11 @@ const Footer = () => {
             <p><img src={linkedinIcon} alt="linkedin company logo" />Irianni Munoz</p>
             <p><img src={linkedinIcon} alt="linkedin company logo" />Man Sang Sin</p>
             <p><img src={githubIcon} alt="github company logo" />See source code on Github</p>
+            <ExternalLink />
+            <ExternalLink />
+            <ExternalLink />
+            <ExternalLink />
+            <ExternalLink />
         </footer>
     );
 };

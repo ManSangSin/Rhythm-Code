@@ -8,12 +8,13 @@ import ExternalLink from "./ExternalLink";
 const Footer = () => {
     return (
         <footer>
-            <div>
+            <div className="organisation-links-container">
                 <OrganisationLink organisationName="decodenoir.org" organisationText="This interactive map is part an ethnography exhibition concept that aims to seed a coherent African Diaspora identity narrative in hearts and minds worldwide" />
                 <OrganisationLink organisationName="codeyourfuture.io" organisationText="A UK based non-profit organisation that trains refugees & disadvantaged people to become web developers and helps them to find work in the tech industry." />
             </div>
             <div className="external-links-container">
                 <div>
+                    <p className="medium-font">Engineered by Team Rhythm Code</p>
                     <ExternalLink companyIcon={linkedinIcon} text="Christina Mifsud" />
                     <ExternalLink companyIcon={linkedinIcon} text="Delnia Alipour" />
                     <ExternalLink companyIcon={linkedinIcon} text="Irianni Munoz" />

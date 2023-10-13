@@ -2,7 +2,8 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 71px 78px; 
-    background-color: gold;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .organisation-container {

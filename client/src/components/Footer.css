@@ -44,3 +44,12 @@ footer {
     width: 24px;
     height: 24px;
 }
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}

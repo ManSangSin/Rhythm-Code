@@ -24,8 +24,8 @@ const RhythmsDropDown = () => {
 		<Dropdown
 			open={open}
 			trigger={
-				<button onClick={handleOpen}> Dropdown
-					{/* <CityIcon cityName="Havana, Cuba" />  HELP!!!! SVG icon not showing!!  */}
+				<button onClick={handleOpen}>
+					<CityIcon />
 				</button>
 			}
 			menu={[

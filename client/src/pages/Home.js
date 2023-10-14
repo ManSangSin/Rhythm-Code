@@ -69,8 +69,8 @@ export function Home() {
 				<br></br>
 				<Link to="/about/this/site">About</Link>
 				<br></br>
+				<br></br>
 				<Link to="/RhythmsPanelTestingPage">RhythmsPanelTestingPage</Link>
-
 				<Link to="/ModalTestingPage">Modal Testing Page</Link>
 			</div>
 		</main>

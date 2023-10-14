@@ -35,8 +35,5 @@
 .text{
     padding-top: 30px;
 }
-.audio-player{
-    display: flex;
-    flex-direction: row;
-}
+
 

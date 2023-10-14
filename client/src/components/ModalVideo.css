@@ -9,20 +9,20 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-color: #000;
-font-family: Roboto;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  color: #000;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .modal-header{
-border: none;
-padding-top: 50px;
+  border: none;
+  padding-top: 50px;
 }
 .modal-title{
-font-size: 32px;
-font-weight: 700;
+ font-size: 32px;
+ font-weight: 700;
 }
 .modal-header .btn-close {
   position: absolute;

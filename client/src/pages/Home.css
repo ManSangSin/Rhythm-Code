@@ -61,9 +61,54 @@ button{
 	border-radius: 6px;
 }
 
-
 .artist{
-  background-image: url(../images/dot_background.png);
-  background-repeat: repeat;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
+.text h4{
+  width: 602px;
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.text p{
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  padding-top: 32px;
+  width: 585px;
+}
+
+.text{
+  width: 585px;
+}
+
+.backgroundImage{
+  width: 100%;
+  
+  
+}
+
+.image{
+  position: relative;
+  /* top: 80px; */
+  left: 15px;
+  width: 539px;
+  height: 539px;
+}
+
+.portrait{
+  width: 180px;
+  position: absolute;
+  border-radius: 50%;
+  border: 5px solid red;
+  top: 80%;
+  left: 20%;
+}

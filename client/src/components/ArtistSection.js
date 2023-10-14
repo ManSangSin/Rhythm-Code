@@ -1,6 +1,5 @@
 import React from "react";
 import Group from "../images/Group.png";
-import Dot from "../images/dot_background.png";
 import Deidre from "../images/deidre_profile.png";
 
 function ArtistSection(){

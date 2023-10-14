@@ -1,7 +1,7 @@
 import React from "react";
 import Group from "../images/Group.png";
 import Deidre from "../images/deidre_profile.png";
-
+import Dot from "../images/dot_background.png";
 function ArtistSection(){
     return <div className="artist">
         <div className="text">
@@ -11,10 +11,10 @@ function ArtistSection(){
                 This Afrocentric arts research is suited to film, photography, music and performance collaborations – so be in touch!
             </p>
             <a href="https://www.ucc.ie/en/fmt/doctoralschool/phdcandidates/#deirdre-molloy">
-            <button>Learn more</button>
+            <button className="learn">Learn more</button>
             </a>
             <a href="https://www.linkedin.com/in/deirdre-clare-molloy/">
-                <button><img src={Group} alt="envelope"></img>Get in touch</button>
+                <button className="contact"><img src={Group} alt="envelope"></img>Get in touch</button>
             </a>
         </div>
         <div className="image" >

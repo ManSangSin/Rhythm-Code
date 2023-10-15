@@ -1,78 +1,18 @@
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 * {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 :root {
-  --font-roboto: "Roboto", sans-serif;
-  --copy-color: #CB3100;
+	--font-roboto: "Roboto", sans-serif;
+	--copy-color: #cb3100;
 }
-
-/* .App {
-  text-align: center;
-  padding: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-} */
 
 .home {
 	display: flex;
 	max-width: 1440px;
 	font-family: var(--font-roboto);
 }
-
-.map{
-	position: relative;
-	top: 0;
-	left: 0;
-} 
-
-/* .dropdown {
-  position: relative;
-  background-color: aqua;
-} */
-
-.rhythmCodeIcon{
-  width:40px;
-	height:40px;
-}
-
-.rhythmItemList {
-  position: absolute;
-  list-style-type: none;
-  padding: 15px;
-  background-color: rgba(255, 255, 255, 0.80);
-  border: 1px solid transparent;
-  border-radius: 10px;
-  width: 120px;
-  color: var(--copy-color);
-  
-}
-
-.rhythmCodeName {
-  font-weight: 700;
-  list-style-type: none;
-  margin: 5px 0;
-  padding-bottom: 8px;
-} 
-
-.rhythmItemList > li > button {
-  text-align: left;
-  background: none;
-  border: none;
-  padding: 1px;
-  font: var(--font-roboto);
-  color: var(--copy-color);
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.rhythmItemList > li:hover {
-  font-weight: 700;
-}
-

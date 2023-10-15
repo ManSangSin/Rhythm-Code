@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Nav from "react-bootstrap/Nav";
 import Tab from "react-bootstrap/Tab";
-import ReactPlayer from "react-player";
-
+import "./ModalVideo.css";
 import VideoCard from "./VideoCard";
+import CustomAudioPlayer from "./CustomAudioPlayer";
 
 function ModalVideo({ rhythm, setModalOpen }) {
 	const [activeTab, setActiveTab] = useState("video");
@@ -21,7 +21,12 @@ function ModalVideo({ rhythm, setModalOpen }) {
 				<Nav variant="tabs">
 					<Nav.Item>
 						<Nav.Link eventKey="video" onClick={() => handleTabChange("video")}>
-							Video
+							<img
+								width="25"
+								height="20"
+								src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
+								alt="play--v1"
+							/>
 						</Nav.Link>
 					</Nav.Item>
 					<Nav.Item>
@@ -29,7 +34,12 @@ function ModalVideo({ rhythm, setModalOpen }) {
 							eventKey="description"
 							onClick={() => handleTabChange("description")}
 						>
-							Description
+							<img
+								width="25"
+								height="20"
+								src="https://img.icons8.com/external-febrian-hidayat-glyph-febrian-hidayat/64/external-paragraph-ui-essential-febrian-hidayat-glyph-febrian-hidayat.png"
+								alt="external-paragraph-ui-essential-febrian-hidayat-glyph-febrian-hidayat"
+							/>
 						</Nav.Link>
 					</Nav.Item>
 				</Nav>
@@ -37,17 +47,7 @@ function ModalVideo({ rhythm, setModalOpen }) {
 					<Tab.Pane eventKey="video">
 						<VideoCard url={rhythm.url} />
 					</Tab.Pane>
-					<Tab.Pane eventKey="description">
-						{" "}
-						<div>
-							<img
-								width="30"
-								height="25"
-								src="https://img.icons8.com/ios/50/marker--v1.png"
-								alt="marker--v1"
-							/>{" "}
-							{rhythm.location}
-						</div>
+					<Tab.Pane className="text" eventKey="description">
 						{rhythm.description}
 					</Tab.Pane>
 				</Tab.Content>
@@ -57,30 +57,10 @@ function ModalVideo({ rhythm, setModalOpen }) {
 		modalContent = (
 			<div>
 				{rhythm.url && <VideoCard url={rhythm.url} />}
-				{rhythm.audio && (
-					<div>
-						<ReactPlayer
-							url={rhythm.audio}
-							width="100%"
-							height="auto"
-							controls
-						/>
-					</div>
+				{audioUrl && (
+					<CustomAudioPlayer audioUrl={rhythm.audioUrl} />
 				)}
-				{rhythm.description && (
-					<div>
-						<div>
-							<img
-								width="30"
-								height="25"
-								src="https://img.icons8.com/ios/50/marker--v1.png"
-								alt="marker--v1"
-							></img>
-							{rhythm.location}
-						</div>
-						{rhythm.description}
-					</div>
-				)}
+				{description && <div className="text">{description}</div>}
 			</div>
 		);
 	}

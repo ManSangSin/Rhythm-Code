@@ -5,34 +5,33 @@ import "./Home.css";
 import ModalVideo from "../components/ModalVideo";
 import CityIcon from "./CityIcon";
 import DotMap from "../components/DotMap";
+import Hero from "../components/Hero";
 
 export function Home() {
-
 	const [show, setShow] = useState(false);
 	const [selectedIcon, setSelectedIcon] = useState(null);
 
-    const [rhythms, setRhythms] = useState([]);
+	const [rhythms, setRhythms] = useState([]);
 
-		const API_URL = "/api/rhythm_codes";
+	const API_URL = "/api/rhythm_codes";
 
-		useEffect(() => {
-			fetch(API_URL)
-				.then((response) => {
-					return response.json();
-				})
-				.then((data) => {
-					console.log("Fetched Data:", data);
-					setRhythms(data);
-				})
-				.catch((error) => {
-					console.error("Error fetching data:", error);
-				});
-		}, []);
-
+	useEffect(() => {
+		fetch(API_URL)
+			.then((response) => {
+				return response.json();
+			})
+			.then((data) => {
+				console.log("Fetched Data:", data);
+				setRhythms(data);
+			})
+			.catch((error) => {
+				console.error("Error fetching data:", error);
+			});
+	}, []);
 
 	const handleClose = () => setShow(false);
 	const handleShow = (videoInfo) => {
-// dropdown and useEffect to fetch from rhythms
+		// dropdown and useEffect to fetch from rhythms
 		setShow(true);
 		setSelectedIcon(videoInfo); // useState to store the selected video info
 	};
@@ -40,6 +39,7 @@ export function Home() {
 	return (
 		<main role="main">
 			<div>
+				<Hero />
 				<DotMap className="map" />
 				<div className="icons">
 					{rhythms.map((dataItem) => (
@@ -59,7 +59,7 @@ export function Home() {
 						url={selectedIcon ? selectedIcon.video : ""}
 						location={selectedIcon ? selectedIcon.location : ""}
 						audiourl={selectedIcon ? selectedIcon.audio : ""}
-						description={selectedIcon ? selectedIcon.description: ""}
+						description={selectedIcon ? selectedIcon.description : ""}
 					/>
 				</div>
 				<br></br>

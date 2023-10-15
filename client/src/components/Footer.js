@@ -27,6 +27,34 @@ const organisationLinksData = [
 	},
 ];
 
+const externalLinksData = [
+	{
+		icon: linkedinIcon,
+		text: "Christina Mifsud",
+		url: "https://github.com/christina-mifsud",
+	},
+	{
+		icon: linkedinIcon,
+		text: "Delnia Alipour",
+		url: "https://github.com/DelniaAlipour",
+	},
+	{
+		icon: linkedinIcon,
+		text: "Irianni Munoz",
+		url: "https://github.com/munozirianni1988",
+	},
+	{
+		icon: linkedinIcon,
+		text: "Man Sang Sin",
+		url: "https://github.com/ManSangSin",
+	},
+	{
+		icon: githubIcon,
+		text: "See source code on Github",
+		url: "https://github.com/ManSangSin/Rhythm-Code",
+	},
+];
+
 const Footer = () => {
 	return (
 		<footer>
@@ -55,31 +83,31 @@ const Footer = () => {
 					<div>
 						<p className="medium-font">Engineered by Team Rhythm Code</p>
 						<ExternalLink
-							companyIcon={linkedinIcon}
-							text="Christina Mifsud"
-							linkUrl="https://github.com/christina-mifsud"
+							companyIcon={externalLinksData[0].icon}
+							text={externalLinksData[0].text}
+							linkUrl={externalLinksData[0].url}
 						/>
 						<ExternalLink
-							companyIcon={linkedinIcon}
-							text="Delnia Alipour"
-							linkUrl="https://github.com/DelniaAlipour"
+							companyIcon={externalLinksData[1].icon}
+							text={externalLinksData[1].text}
+							linkUrl={externalLinksData[1].url}
 						/>
 						<ExternalLink
-							companyIcon={linkedinIcon}
-							text="Irianni Munoz"
-							linkUrl="https://github.com/munozirianni1988"
+							companyIcon={externalLinksData[2].icon}
+							text={externalLinksData[2].text}
+							linkUrl={externalLinksData[2].url}
 						/>
 						<ExternalLink
-							companyIcon={linkedinIcon}
-							text="Man Sang Sin"
-							linkUrl="https://github.com/ManSangSin"
+							companyIcon={externalLinksData[3].icon}
+							text={externalLinksData[3].text}
+							linkUrl={externalLinksData[3].url}
 						/>
 					</div>
 					<div>
 						<ExternalLink
-							companyIcon={githubIcon}
-							text="See source code on Github"
-							linkUrl="https://github.com/ManSangSin/Rhythm-Code"
+							companyIcon={externalLinksData[4].icon}
+							text={externalLinksData[4].text}
+							linkUrl={externalLinksData[4].url}
 						/>
 					</div>
 				</div>

@@ -11,11 +11,11 @@ const Header = () => {
     return (
         <header>
             <div className="header-logo_container">
-                <a href={decodenoir_url}>
+                <a href={decodenoir_url} target="_blank" rel="noreferrer">
                     <span className="header-text">decodenoir.org</span>
                 </a>
                 <img src={cross} alt="cross icon" />
-                <a href={cyf_url}>
+                <a href={cyf_url} target="_blank" rel="noreferrer">
                     <img className="header-logo_cyf" src={logo} alt="cyf logo" />
                 </a>
             </div>

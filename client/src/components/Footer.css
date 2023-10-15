@@ -1,65 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 footer {
-    padding: 71px 78px; 
-    background-color: #000000;
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+	padding: 71px 78px;
+	background-color: #000000;
+	color: #ffffff;
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+	font-weight: 400;
 }
 
 .flex-container {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .footer-disclaimer {
-    width: 824px;
-    margin-bottom: 80px;
+	width: 824px;
+	margin-bottom: 80px;
 }
 
 .bold-font {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .medium-font {
-    font-weight: 500;
+	font-weight: 500;
 }
 
 .organisation-links-container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
 }
 
 .organisation-container {
-    width: 533px;
-    margin: 16px;
+	width: 533px;
+	margin: 16px;
 }
 
 .external-links-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .link {
-    display: flex;
-    gap: 20px;
+	display: flex;
+	gap: 20px;
 }
 
 .link-icon {
-    width: 24px;
-    height: 24px;
+	width: 24px;
+	height: 24px;
 }
 
 a {
-    color: #ffffff;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
+	color: #ffffff;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
 }
 
 a:hover {
-    color: red;
+	color: red;
 }

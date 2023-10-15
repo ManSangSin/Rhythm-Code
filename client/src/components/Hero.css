@@ -1,0 +1,63 @@
+:root {
+	font-size: 16px;
+}
+
+.hero-container {
+	height: 26em;
+	background: #000;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.hero-text {
+	padding-left: 5.125em;
+}
+
+.subheader {
+	display: flex;
+	flex-direction: column;
+}
+
+.subheader h1 {
+	color: #fff;
+	text-shadow: 4px 0.4px 0.4px rgba(0, 0, 0, 0.25);
+	font-family: Roboto;
+	font-size: 3.06em;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.subheader h2 {
+	color: #fff;
+	font-family: Roboto;
+	font-size: 2.18em;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	padding-bottom: 2.5em;
+}
+
+.quote {
+	height: 3.125em;
+	color: #e0e0e0;
+	text-align: right;
+	font-family: Roboto;
+	font-size: 1.31em;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.sentence {
+	margin-bottom: 2px;
+}
+
+.hero-image img {
+	vertical-align: 0;
+	object-fit: cover;
+	padding-right: 6em;
+}

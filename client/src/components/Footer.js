@@ -9,9 +9,9 @@ import instagramIcon from "../assets/instagram-icon.svg";
 const disclaimerData = {
 	content:
 		"Working under the artistic name Unity, Deirdre Molloy will exhibit the Black Atlantic Rhythm Codes map in Nantes, France in 2024. All contributors will be credited, with permission, including the creators of this Code Your Future prototype. The exhibition will be co-produced by Gerador and promoted by Project Manifest.",
-	companyIcon: instagramIcon,
+	icon: instagramIcon,
 	text: "@projectmanifesteu",
-	linkUrl: "https://www.instagram.com/projectmanifesteu/",
+	url: "https://www.instagram.com/projectmanifesteu/",
 };
 
 const OrganisationLinkData = [
@@ -33,9 +33,9 @@ const Footer = () => {
 			<div className="footer-disclaimer">
 				<p>{disclaimerData.content}</p>
 				<ExternalLink
-					companyIcon={disclaimerData.companyIcon}
+					companyIcon={disclaimerData.icon}
 					text={disclaimerData.text}
-					linkUrl={disclaimerData.linkUrl}
+					linkUrl={disclaimerData.url}
 				/>
 			</div>
 			<div className="flex-container">

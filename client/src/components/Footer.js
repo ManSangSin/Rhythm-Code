@@ -14,6 +14,19 @@ const disclaimerData = {
 	linkUrl: "https://www.instagram.com/projectmanifesteu/",
 };
 
+const OrganisationLinkData = [
+	{
+		name: "decodenoir.org",
+		text: "This interactive map is part an ethnography exhibition concept that aims to seed a coherent African Diaspora identity narrative in hearts and minds worldwide",
+		url: "https://www.decodenoir.org/",
+	},
+	{
+		name: "codeyourfuture.io",
+		text: "A UK based non-profit organisation that trains refugees & disadvantaged people to become web developers and helps them to find work in the tech industry.",
+		url: "https://codeyourfuture.io/",
+	},
+];
+
 const Footer = () => {
 	return (
 		<footer>
@@ -28,14 +41,14 @@ const Footer = () => {
 			<div className="flex-container">
 				<div className="organisation-links-container">
 					<OrganisationLink
-						organisationName="decodenoir.org"
-						organisationText="This interactive map is part an ethnography exhibition concept that aims to seed a coherent African Diaspora identity narrative in hearts and minds worldwide"
-						organisationUrl="https://www.decodenoir.org/"
+						organisationName={OrganisationLinkData[0].name}
+						organisationText={OrganisationLinkData[0].text}
+						organisationUrl={OrganisationLinkData[0].url}
 					/>
 					<OrganisationLink
-						organisationName="codeyourfuture.io"
-						organisationText="A UK based non-profit organisation that trains refugees & disadvantaged people to become web developers and helps them to find work in the tech industry."
-						organisationUrl="https://codeyourfuture.io/"
+						organisationName={OrganisationLinkData[1].name}
+						organisationText={OrganisationLinkData[1].text}
+						organisationUrl={OrganisationLinkData[1].url}
 					/>
 				</div>
 				<div className="external-links-container">

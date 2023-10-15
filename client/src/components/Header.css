@@ -1,6 +1,6 @@
 header {
 	background-color: #ffffff;
-	height: 72px;
+	height: 4.5em;
 }
 
 header a,
@@ -13,17 +13,17 @@ header a:visited {
 	display: flex;
 	align-items: flex-end;
 	flex-shrink: 0;
-	gap: 34px;
+	gap: 2.125em;
 	margin-left: 5.125em;
 }
 
 .header-text {
 	font-family: "Oswald", sans-serif;
 	font-weight: bold;
-	font-size: 32px;
+	font-size: 2em;
 }
 
 .header-logo_cyf {
-	width: 200px;
-	height: 60px;
+	width: 12.5em;
+	height: 3.75em;
 }

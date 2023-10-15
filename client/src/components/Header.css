@@ -13,7 +13,7 @@ a, a:visited {
     align-items: flex-end;
     flex-shrink: 0;
     gap: 34px;
-    margin-left: 82px;
+    margin-left: 5.125em;
 }
 
 .header-text {

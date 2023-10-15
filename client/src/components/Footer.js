@@ -6,21 +6,23 @@ import githubIcon from "../assets/github-icon.svg";
 import ExternalLink from "./ExternalLink";
 import instagramIcon from "../assets/instagram-icon.svg";
 
+const disclaimerData = {
+	content:
+		"Working under the artistic name Unity, Deirdre Molloy will exhibit the Black Atlantic Rhythm Codes map in Nantes, France in 2024. All contributors will be credited, with permission, including the creators of this Code Your Future prototype. The exhibition will be co-produced by Gerador and promoted by Project Manifest.",
+	companyIcon: instagramIcon,
+	text: "@projectmanifesteu",
+	linkUrl: "https://www.instagram.com/projectmanifesteu/",
+};
+
 const Footer = () => {
 	return (
 		<footer>
 			<div className="footer-disclaimer">
-				<p>
-					Working under the artistic name Unity, Deirdre Molloy will exhibit the
-					Black Atlantic Rhythm Codes map in Nantes, France in 2024. All
-					contributors will be credited, with permission, including the creators
-					of this Code Your Future prototype. The exhibition will be co-produced
-					by Gerador and promoted by Project Manifest.
-				</p>
+				<p>{disclaimerData.content}</p>
 				<ExternalLink
-					companyIcon={instagramIcon}
-					text="@projectmanifesteu"
-					linkUrl="https://www.instagram.com/projectmanifesteu/"
+					companyIcon={disclaimerData.companyIcon}
+					text={disclaimerData.text}
+					linkUrl={disclaimerData.linkUrl}
 				/>
 			</div>
 			<div className="flex-container">

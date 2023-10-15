@@ -14,7 +14,7 @@ const disclaimerData = {
 	url: "https://www.instagram.com/projectmanifesteu/",
 };
 
-const OrganisationLinkData = [
+const organisationLinksData = [
 	{
 		name: "decodenoir.org",
 		text: "This interactive map is part an ethnography exhibition concept that aims to seed a coherent African Diaspora identity narrative in hearts and minds worldwide",
@@ -41,14 +41,14 @@ const Footer = () => {
 			<div className="flex-container">
 				<div className="organisation-links-container">
 					<OrganisationLink
-						organisationName={OrganisationLinkData[0].name}
-						organisationText={OrganisationLinkData[0].text}
-						organisationUrl={OrganisationLinkData[0].url}
+						organisationName={organisationLinksData[0].name}
+						organisationText={organisationLinksData[0].text}
+						organisationUrl={organisationLinksData[0].url}
 					/>
 					<OrganisationLink
-						organisationName={OrganisationLinkData[1].name}
-						organisationText={OrganisationLinkData[1].text}
-						organisationUrl={OrganisationLinkData[1].url}
+						organisationName={organisationLinksData[1].name}
+						organisationText={organisationLinksData[1].text}
+						organisationUrl={organisationLinksData[1].url}
 					/>
 				</div>
 				<div className="external-links-container">

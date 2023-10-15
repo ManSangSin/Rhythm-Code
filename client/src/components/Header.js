@@ -10,6 +10,7 @@ const Header = () => {
 	return (
 		<header>
 			<div className="header-logo_container">
+				{/* rel needs to be specified when target is used as security risk for older browsers */}
 				<a href={decodenoir_url} target="_blank" rel="noreferrer">
 					<span className="header-text">decodenoir.org</span>
 				</a>

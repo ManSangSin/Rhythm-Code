@@ -1,76 +1,76 @@
 .custom-audio-player {
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  width: 100%;
-  padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 20px;
 }
 
 .stop-button,
 .play-button {
-  width: 58.209px;
-  height: 58.209px;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  padding-right: 0;
-  fill: #CB3100;
+	width: 58.209px;
+	height: 58.209px;
+	flex-shrink: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	padding-right: 0;
+	fill: #cb3100;
 }
 
 .stop-rectangles {
-  width: 13.92px;
-  height: 50.617px;
-  flex-shrink: 0;
-  background: #CB3100;
-  margin-right: 3px;
-  margin-left: 0;
+	width: 13.92px;
+	height: 50.617px;
+	flex-shrink: 0;
+	background: #cb3100;
+	margin-right: 3px;
+	margin-left: 0;
 }
 
 .play-button {
- padding: 0%;
+	padding: 0%;
 }
 .seek-bar-container {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .seek-bar-start,
 .seek-bar-end {
-width: 4px;
-height: 45.555px;
-  background: #CB3100;
+	width: 4px;
+	height: 45.555px;
+	background: #cb3100;
 }
 
 .seek-bar {
-  flex: 1;
-  -webkit-appearance: none;
-  width: 346.724px;
-  height: 4px;
-  background: #CB3100;
-  outline: none;
-  -webkit-transition: 0.2s;
-  border-radius: 3px;
+	flex: 1;
+	-webkit-appearance: none;
+	width: 346.724px;
+	height: 4px;
+	background: #cb3100;
+	outline: none;
+	-webkit-transition: 0.2s;
+	border-radius: 3px;
 }
 
 .seek-bar::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #CB3100;
-  cursor: pointer;
+	-webkit-appearance: none;
+	appearance: none;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #cb3100;
+	cursor: pointer;
 }
 
 .seek-bar::-moz-range-thumb {
-  width: 12px;
-  height: 12px;
-  border: none;
-  border-radius: 50%;
-  background: #CB3100;
-  cursor: pointer;
+	width: 12px;
+	height: 12px;
+	border: none;
+	border-radius: 50%;
+	background: #cb3100;
+	cursor: pointer;
 }

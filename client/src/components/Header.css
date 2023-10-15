@@ -1,29 +1,29 @@
 header {
-    background-color: #ffffff;
-    height: 72px;
+	background-color: #ffffff;
+	height: 72px;
 }
 
-header a, header a:visited {
-    color: #000000;
-    text-decoration: none;
+header a,
+header a:visited {
+	color: #000000;
+	text-decoration: none;
 }
 
 .header-logo_container {
-    display: flex;
-    align-items: flex-end;
-    flex-shrink: 0;
-    gap: 34px;
-    margin-left: 5.125em;
+	display: flex;
+	align-items: flex-end;
+	flex-shrink: 0;
+	gap: 34px;
+	margin-left: 5.125em;
 }
 
 .header-text {
-    font-family: 'Oswald', sans-serif;
-    font-weight: bold;
-    font-size: 32px;
+	font-family: "Oswald", sans-serif;
+	font-weight: bold;
+	font-size: 32px;
 }
 
-
 .header-logo_cyf {
-    width: 200px;
-    height: 60px;
+	width: 200px;
+	height: 60px;
 }

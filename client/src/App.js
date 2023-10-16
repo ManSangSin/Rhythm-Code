@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import MapSection from "./components/MapSection";
 import SliderTest from "./pages/SliderTest";
 
-
 const App = () => (
 	<>
 	<Routes>

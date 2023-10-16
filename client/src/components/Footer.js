@@ -27,7 +27,7 @@ const organisationLinksData = [
 	},
 ];
 
-const githubUserData = [
+const teamGithubData = [
 	{
 		icon: linkedinIcon,
 		text: "Christina Mifsud",
@@ -48,12 +48,13 @@ const githubUserData = [
 		text: "Man Sang Sin",
 		url: "https://github.com/ManSangSin",
 	},
-	{
-		icon: githubIcon,
-		text: "See source code on Github",
-		url: "https://github.com/ManSangSin/Rhythm-Code",
-	},
 ];
+
+const projectData = {
+	icon: githubIcon,
+	text: "See source code on Github",
+	url: "https://github.com/ManSangSin/Rhythm-Code",
+};
 
 const organisationLinkElements = organisationLinksData.map((organisation) => {
 	console.log(organisation);
@@ -67,7 +68,7 @@ const organisationLinkElements = organisationLinksData.map((organisation) => {
 	);
 });
 
-const externalLinkElements = externalLinksData.map((link) => {
+const teamGithubElements = teamGithubData.map((link) => {
 	return (
 		<ExternalLink
 			key={link.text}
@@ -96,13 +97,13 @@ const Footer = () => {
 				<div className="external-links-container">
 					<div>
 						<p className="medium-font">Engineered by Team Rhythm Code</p>
-						{externalLinkElements}
+						{teamGithubElements}
 					</div>
 					<div>
 						<ExternalLink
-							companyIcon={externalLinksData[4].icon}
-							text={externalLinksData[4].text}
-							linkUrl={externalLinksData[4].url}
+							companyIcon={projectData.icon}
+							text={projectData.text}
+							linkUrl={projectData.url}
 						/>
 					</div>
 				</div>

@@ -15,7 +15,7 @@ function ModalVideo({ rhythm, setModalOpen }) {
 
 	let modalContent;
 
-	if (rhythm.url && rhythm.description) {
+	if (rhythm.video && rhythm.description) {
 		modalContent = (
 			<Tab.Container activeKey={activeTab}>
 				<Nav variant="tabs">
@@ -45,7 +45,7 @@ function ModalVideo({ rhythm, setModalOpen }) {
 				</Nav>
 				<Tab.Content>
 					<Tab.Pane eventKey="video">
-						<VideoCard url={rhythm.url} />
+						<VideoCard url={rhythm.video} />
 					</Tab.Pane>
 					<Tab.Pane className="text" eventKey="description">
 						{rhythm.description}
@@ -56,11 +56,9 @@ function ModalVideo({ rhythm, setModalOpen }) {
 	} else {
 		modalContent = (
 			<div>
-				{rhythm.url && <VideoCard url={rhythm.url} />}
-				{audioUrl && (
-					<CustomAudioPlayer audioUrl={rhythm.audioUrl} />
-				)}
-				{description && <div className="text">{description}</div>}
+				{rhythm.video && <VideoCard url={rhythm.video} />}
+				{rhythm.audio && <CustomAudioPlayer audioUrl={rhythm.audio} />}
+				{rhythm.description && <div className="text">{rhythm.description}</div>}
 			</div>
 		);
 	}

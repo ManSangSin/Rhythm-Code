@@ -33,16 +33,6 @@ footer {
 	justify-content: space-between;
 }
 
-.link {
-	display: flex;
-	gap: 20px;
-}
-
-.link-icon {
-	width: 24px;
-	height: 24px;
-}
-
 a {
 	color: #ffffff;
 	text-decoration-thickness: 1px;

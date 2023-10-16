@@ -6,6 +6,7 @@ import ModalVideo from "../components/ModalVideo";
 import CityIcon from "./CityIcon";
 import DotMap from "../components/DotMap";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export function Home() {
 
@@ -75,6 +76,7 @@ export function Home() {
 				<Link to="/RhythmsPanelTestingPage">RhythmsPanelTestingPage</Link>
 				<Link to="/ModalTestingPage">Modal Testing Page</Link>
 			</div>
+			<Footer />
 		</main>
 	);
 }

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./CustomAudioPlayer.css";
 
 function CustomAudioPlayer({ audioUrl }) {
@@ -6,6 +6,19 @@ function CustomAudioPlayer({ audioUrl }) {
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [currentTime, setCurrentTime] = useState(0);
 
+	useEffect(() => {
+		const audioElement = audioRef.current;
+
+		const onTimeUpdate = () => {
+			setCurrentTime(audioElement.currentTime);
+		};
+
+		audioElement.addEventListener("timeupdate", onTimeUpdate);
+
+		return () => {
+			audioElement.removeEventListener("timeupdate", onTimeUpdate);
+		};
+	}, [audioRef]);
 	const playAudio = () => {
 		audioRef.current.play();
 		setIsPlaying(true);

@@ -27,7 +27,7 @@ const organisationLinksData = [
 	},
 ];
 
-const externalLinksData = [
+const githubUserData = [
 	{
 		icon: linkedinIcon,
 		text: "Christina Mifsud",
@@ -67,6 +67,17 @@ const organisationLinkElements = organisationLinksData.map((organisation) => {
 	);
 });
 
+const externalLinkElements = externalLinksData.map((link) => {
+	return (
+		<ExternalLink
+			key={link.text}
+			companyIcon={link.icon}
+			text={link.text}
+			linkUrl={link.url}
+		/>
+	);
+});
+
 const Footer = () => {
 	return (
 		<footer>
@@ -85,26 +96,7 @@ const Footer = () => {
 				<div className="external-links-container">
 					<div>
 						<p className="medium-font">Engineered by Team Rhythm Code</p>
-						<ExternalLink
-							companyIcon={externalLinksData[0].icon}
-							text={externalLinksData[0].text}
-							linkUrl={externalLinksData[0].url}
-						/>
-						<ExternalLink
-							companyIcon={externalLinksData[1].icon}
-							text={externalLinksData[1].text}
-							linkUrl={externalLinksData[1].url}
-						/>
-						<ExternalLink
-							companyIcon={externalLinksData[2].icon}
-							text={externalLinksData[2].text}
-							linkUrl={externalLinksData[2].url}
-						/>
-						<ExternalLink
-							companyIcon={externalLinksData[3].icon}
-							text={externalLinksData[3].text}
-							linkUrl={externalLinksData[3].url}
-						/>
+						{externalLinkElements}
 					</div>
 					<div>
 						<ExternalLink

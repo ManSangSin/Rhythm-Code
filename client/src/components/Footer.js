@@ -57,7 +57,6 @@ const projectData = {
 };
 
 const organisationLinkElements = organisationLinksData.map((organisation) => {
-	console.log(organisation);
 	return (
 		<OrganisationLink
 			key={organisation.name}

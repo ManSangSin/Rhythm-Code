@@ -19,6 +19,7 @@ function CustomAudioPlayer({ audioUrl }) {
 			audioElement.removeEventListener("timeupdate", onTimeUpdate);
 		};
 	}, [audioRef]);
+
 	const playAudio = () => {
 		audioRef.current.play();
 		setIsPlaying(true);
@@ -26,7 +27,6 @@ function CustomAudioPlayer({ audioUrl }) {
 
 	const stopAudio = () => {
 		audioRef.current.pause();
-		audioRef.current.currentTime = 0;
 		setIsPlaying(false);
 	};
 

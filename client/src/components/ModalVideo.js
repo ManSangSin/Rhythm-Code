@@ -6,15 +6,7 @@ import "./ModalVideo.css";
 import VideoCard from "./VideoCard";
 import CustomAudioPlayer from "./CustomAudioPlayer";
 
-function ModalVideo({
-	title,
-	url,
-	audioUrl,
-	description,
-	show,
-	handleClose,
-	location,
-}) {
+function ModalVideo({ rhythm, setModalOpen }) {
 	const [activeTab, setActiveTab] = useState("video");
 
 	const handleTabChange = (tab) => {
@@ -23,7 +15,7 @@ function ModalVideo({
 
 	let modalContent;
 
-	if (url && description) {
+	if (rhythm.video && rhythm.description) {
 		modalContent = (
 			<Tab.Container activeKey={activeTab}>
 				<Nav variant="tabs">
@@ -53,10 +45,10 @@ function ModalVideo({
 				</Nav>
 				<Tab.Content>
 					<Tab.Pane eventKey="video">
-						<VideoCard url={url} />
+						<VideoCard url={rhythm.video} />
 					</Tab.Pane>
 					<Tab.Pane className="text" eventKey="description">
-						{description}
+						{rhythm.description}
 					</Tab.Pane>
 				</Tab.Content>
 			</Tab.Container>
@@ -64,24 +56,17 @@ function ModalVideo({
 	} else {
 		modalContent = (
 			<div>
-				{url && <VideoCard url={url} />}
-				{audioUrl && (
-					<CustomAudioPlayer audioUrl={audioUrl} />
-				)}
-				{description && <div className="text">{description}</div>}
+				{rhythm.video && <VideoCard url={rhythm.video} />}
+				{rhythm.audio && <CustomAudioPlayer audioUrl={rhythm.audio} />}
+				{rhythm.description && <div className="text">{rhythm.description}</div>}
 			</div>
 		);
 	}
 
 	return (
-		<Modal
-			show={show}
-			onHide={handleClose}
-			backdrop="static"
-			keyboard={false}
-		>
+		<Modal show={true} onHide={() => setModalOpen(false)}>
 			<Modal.Header closeButton>
-				<Modal.Title>{title}</Modal.Title>
+				<Modal.Title>{rhythm.rhythm}</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>{modalContent}</Modal.Body>
 		</Modal>

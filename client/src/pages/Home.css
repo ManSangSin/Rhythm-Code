@@ -58,10 +58,7 @@ a {
 }
 
 button{
-	padding: 0.5rem 1rem;
-	background-color: #f06a0a;
-	color: antiquewhite;
-	border: 1px #f06a0a solid;
-	border-radius: 6px;
+	background-color: transparent;
+	border: 0;
 }
 

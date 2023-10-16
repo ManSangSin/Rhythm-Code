@@ -7,7 +7,7 @@ footer {
 	font-weight: 400;
 }
 
-.flex-container {
+footer .flex-container {
 	display: flex;
 	justify-content: space-between;
 }
@@ -17,7 +17,7 @@ footer {
 	margin-bottom: 80px;
 }
 
-.medium-font {
+.footer-medium-font {
 	font-weight: 500;
 }
 
@@ -33,12 +33,12 @@ footer {
 	justify-content: space-between;
 }
 
-a {
+footer a {
 	color: #ffffff;
 	text-decoration-thickness: 1px;
 	text-underline-offset: 3px;
 }
 
-a:hover {
+footer a:hover {
 	color: red;
 }

@@ -95,7 +95,7 @@ const Footer = () => {
 				</div>
 				<div className="external-links-container">
 					<div>
-						<p className="medium-font">Engineered by Team Rhythm Code</p>
+						<p className="footer-medium-font">Engineered by Team Rhythm Code</p>
 						{teamGithubElements}
 					</div>
 					<div>

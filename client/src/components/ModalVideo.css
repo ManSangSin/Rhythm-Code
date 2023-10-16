@@ -35,7 +35,3 @@
 .text {
 	padding-top: 30px;
 }
-/* added this to fix the modal delay transition-not sure should it be in this branch or not! */
-.modal.fade .modal-dialog {
-	transition: none;
-}

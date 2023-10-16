@@ -1,0 +1,99 @@
+.artist-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .artist-text-container h4{
+    width: 602px;
+    font-family: 'Roboto';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  .artist-text-container p{
+    font-family: 'Roboto';
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    padding-top: 32px;
+    width: 585px;
+  }
+  
+  .artist-text-container span{
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  .artist-text-container{
+    width: 585px;
+  }
+  
+  .artist-backgroundImage{
+    width: 100%;
+    
+    
+  }
+  
+  .artist-image-container{
+    position: relative;
+    left: 15px;
+    width: 539px;
+    height: 539px;
+  }
+  
+  .artist-portrait{
+    width: 396px;
+    height: 396px;
+    position: absolute;
+    border-radius: 198px;
+    margin-left: 16px;
+    margin-top: 72px;
+    margin-right: 207px;
+    margin-bottom: 175px;
+    top: 2%;
+    right: -15%;
+  }
+  
+  .artist-learn{
+    width: 190px;
+    padding: 11px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #000;
+    margin-right: 91px;
+  }
+  
+  .artist-contact{
+    width: 293px;
+    padding: 11px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #CB3100;
+  }
+  
+  .artist-contact img {
+    margin-right: 10px;
+  }
+  
+  .artist-section button{
+    margin-top: 64px;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }

@@ -55,6 +55,18 @@ const externalLinksData = [
 	},
 ];
 
+const organisationLinkElements = organisationLinksData.map((organisation) => {
+	console.log(organisation);
+	return (
+		<OrganisationLink
+			key={organisation.name}
+			organisationName={organisation.name}
+			organisationText={organisation.text}
+			organisationUrl={organisation.url}
+		/>
+	);
+});
+
 const Footer = () => {
 	return (
 		<footer>
@@ -68,16 +80,7 @@ const Footer = () => {
 			</div>
 			<div className="flex-container">
 				<div className="organisation-links-container">
-					<OrganisationLink
-						organisationName={organisationLinksData[0].name}
-						organisationText={organisationLinksData[0].text}
-						organisationUrl={organisationLinksData[0].url}
-					/>
-					<OrganisationLink
-						organisationName={organisationLinksData[1].name}
-						organisationText={organisationLinksData[1].text}
-						organisationUrl={organisationLinksData[1].url}
-					/>
+					{organisationLinkElements}
 				</div>
 				<div className="external-links-container">
 					<div>

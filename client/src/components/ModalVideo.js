@@ -2,19 +2,11 @@ import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Nav from "react-bootstrap/Nav";
 import Tab from "react-bootstrap/Tab";
-import ReactPlayer from "react-player";
-
+import "./ModalVideo.css";
 import VideoCard from "./VideoCard";
+import CustomAudioPlayer from "./CustomAudioPlayer";
 
-function ModalVideo({
-	title,
-	url,
-	audioUrl,
-	description,
-	show,
-	handleClose,
-	location,
-}) {
+function ModalVideo({ rhythm, setModalOpen }) {
 	const [activeTab, setActiveTab] = useState("video");
 
 	const handleTabChange = (tab) => {
@@ -23,13 +15,18 @@ function ModalVideo({
 
 	let modalContent;
 
-	if (url && description) {
+	if (rhythm.video && rhythm.description) {
 		modalContent = (
 			<Tab.Container activeKey={activeTab}>
 				<Nav variant="tabs">
 					<Nav.Item>
 						<Nav.Link eventKey="video" onClick={() => handleTabChange("video")}>
-							Video
+							<img
+								width="25"
+								height="20"
+								src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
+								alt="play--v1"
+							/>
 						</Nav.Link>
 					</Nav.Item>
 					<Nav.Item>
@@ -37,26 +34,21 @@ function ModalVideo({
 							eventKey="description"
 							onClick={() => handleTabChange("description")}
 						>
-							Description
+							<img
+								width="25"
+								height="20"
+								src="https://img.icons8.com/external-febrian-hidayat-glyph-febrian-hidayat/64/external-paragraph-ui-essential-febrian-hidayat-glyph-febrian-hidayat.png"
+								alt="external-paragraph-ui-essential-febrian-hidayat-glyph-febrian-hidayat"
+							/>
 						</Nav.Link>
 					</Nav.Item>
 				</Nav>
 				<Tab.Content>
 					<Tab.Pane eventKey="video">
-						<VideoCard url={url} />
+						<VideoCard url={rhythm.video} />
 					</Tab.Pane>
-					<Tab.Pane eventKey="description">
-						{" "}
-						<div>
-							<img
-								width="30"
-								height="25"
-								src="https://img.icons8.com/ios/50/marker--v1.png"
-								alt="marker--v1"
-							/>{" "}
-							{location}
-						</div>
-						{description}
+					<Tab.Pane className="text" eventKey="description">
+						{rhythm.description}
 					</Tab.Pane>
 				</Tab.Content>
 			</Tab.Container>
@@ -64,37 +56,19 @@ function ModalVideo({
 	} else {
 		modalContent = (
 			<div>
-				{url && <VideoCard url={url} />}
-				{audioUrl && (
-					<div>
-						<ReactPlayer url={audioUrl} width="100%" height="auto" controls />
-					</div>
-				)}
-				{description && (
-					<div>
-						<div>
-							<img
-								width="30"
-								height="25"
-								src="https://img.icons8.com/ios/50/marker--v1.png"
-								alt="marker--v1"></img>
-							{location}
-						</div>
-						{description}
-					</div>
-				)}
+				{rhythm.video && <VideoCard url={rhythm.video} />}
+				{rhythm.audio && <CustomAudioPlayer audioUrl={rhythm.audio} />}
+				{rhythm.description && <div className="text">{rhythm.description}</div>}
 			</div>
 		);
 	}
 
 	return (
-		<Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
+		<Modal show={true} onHide={() => setModalOpen(false)}>
 			<Modal.Header closeButton>
-			<Modal.Title>{title}</Modal.Title>
+				<Modal.Title>{rhythm.rhythm}</Modal.Title>
 			</Modal.Header>
-			<Modal.Body>
-				{modalContent}
-			</Modal.Body>
+			<Modal.Body>{modalContent}</Modal.Body>
 		</Modal>
 	);
 }

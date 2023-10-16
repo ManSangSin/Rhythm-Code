@@ -8,7 +8,7 @@ function VideoCard({ url }){
         <iframe
           className="card-thumb"
           width="100%"
-          height="320"
+          height="383"
           src={`https://www.youtube.com/embed/${urlId}`}
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -1,0 +1,29 @@
+header {
+	background-color: #ffffff;
+	height: 4.5em;
+}
+
+header a,
+header a:visited {
+	color: #000000;
+	text-decoration: none;
+}
+
+.header-logo_container {
+	display: flex;
+	align-items: flex-end;
+	flex-shrink: 0;
+	gap: 2.125em;
+	margin-left: 5.125em;
+}
+
+.header-text {
+	font-family: "Oswald", sans-serif;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.header-logo_cyf {
+	width: 12.5em;
+	height: 3.75em;
+}

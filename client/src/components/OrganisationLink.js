@@ -1,4 +1,5 @@
 import React from "react";
+import "./OrganisationLink.css";
 
 const OrganisationLink = ({
 	organisationName,
@@ -9,7 +10,7 @@ const OrganisationLink = ({
 		<div className="organisation-container">
 			{/* rel needs to be specified when target is used as security risk for older browsers */}
 			<a href={organisationUrl} target="_blank" rel="noreferrer">
-				<h3 className="bold-font">{organisationName}</h3>
+				<h3 className="organisation-title">{organisationName}</h3>
 			</a>
 			<p>{organisationText}</p>
 		</div>

@@ -1,0 +1,9 @@
+.organisation-container {
+	width: 533px;
+	margin: 16px;
+}
+
+.organisation-title {
+	font-size: 1.25em;
+	font-weight: bold;
+}

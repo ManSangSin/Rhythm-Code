@@ -17,10 +17,6 @@ footer {
 	margin-bottom: 80px;
 }
 
-.bold-font {
-	font-weight: bold;
-}
-
 .medium-font {
 	font-weight: 500;
 }
@@ -29,11 +25,6 @@ footer {
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
-}
-
-.organisation-container {
-	width: 533px;
-	margin: 16px;
 }
 
 .external-links-container {

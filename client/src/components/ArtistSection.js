@@ -13,21 +13,21 @@ const content={
 };
 
 function ArtistSection(){
-    return <div className="artist">
-        <div className="text">
+    return <div className="artist-section">
+        <div className="artist-text-container">
             <h4>{content.title}</h4>
             <span>{content.subtitle}</span>
             <p>{content.paragraph}</p>
             <a href={content.learnLink}>
-            <button className="learn">Learn more</button>
+            <button className="artist-learn">Learn more</button>
             </a>
             <a href={content.contactLink}>
-                <button className="contact"><img src={Group} alt="envelope"></img>Get in touch</button>
+                <button className="artist-contact"><img src={Group} alt="envelope"></img>Get in touch</button>
             </a>
         </div>
-        <div className="image" >
-            <img className="backgroundImage" src={Dot} alt="dots"></img>
-            <img className="portrait" src={Deidre} alt="Deidre Molloy"></img>
+        <div className="artist-image-container" >
+            <img className="artist-backgroundImage" src={Dot} alt="dots"></img>
+            <img className="artist-portrait" src={Deidre} alt="Deidre Molloy"></img>
         </div>
     </div>;
 }

@@ -1,20 +1,20 @@
-.artist{
+.artist-section{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
   }
   
-  .text h4{
+  .artist-text-container h4{
     width: 602px;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
   }
   
-  .text p{
+  .artist-text-container p{
     font-family: 'Roboto';
     font-size: 21px;
     font-style: normal;
@@ -23,7 +23,7 @@
     width: 585px;
   }
   
-  .text span{
+  .artist-text-container span{
     font-family: 'Roboto';
     font-size: 24px;
     font-style: normal;
@@ -31,25 +31,24 @@
     line-height: normal;
   }
   
-  .text{
+  .artist-text-container{
     width: 585px;
   }
   
-  .backgroundImage{
+  .artist-backgroundImage{
     width: 100%;
     
     
   }
   
-  .image{
+  .artist-image-container{
     position: relative;
-    /* top: 80px; */
     left: 15px;
     width: 539px;
     height: 539px;
   }
   
-  .portrait{
+  .artist-portrait{
     width: 396px;
     height: 396px;
     position: absolute;
@@ -62,7 +61,7 @@
     right: -15%;
   }
   
-  .learn{
+  .artist-learn{
     width: 190px;
     padding: 11px 30px;
     justify-content: center;
@@ -73,7 +72,7 @@
     margin-right: 91px;
   }
   
-  .contact {
+  .artist-contact{
     width: 293px;
     padding: 11px 30px;
     justify-content: center;
@@ -83,16 +82,16 @@
     background: #CB3100;
   }
   
-  .contact img {
+  .artist-contact img {
     margin-right: 10px;
   }
   
-  .artist button{
+  .artist-section button{
     margin-top: 64px;
     font-weight: 500;
     font-size: 24px;
     color: white;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 24px;
     font-style: normal;
     font-weight: 500;

@@ -5,6 +5,7 @@ import "./Home.css";
 import ModalVideo from "../components/ModalVideo";
 import CityIcon from "./CityIcon";
 import DotMap from "../components/DotMap";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export function Home() {
@@ -40,6 +41,7 @@ export function Home() {
 
 	return (
 		<main role="main">
+			<Header />
 			<div>
 				<DotMap className="map" />
 				<div className="icons">
@@ -70,8 +72,8 @@ export function Home() {
 				<br></br>
 				<Link to="/about/this/site">About</Link>
 				<br></br>
+				<br></br>
 				<Link to="/RhythmsPanelTestingPage">RhythmsPanelTestingPage</Link>
-
 				<Link to="/ModalTestingPage">Modal Testing Page</Link>
 			</div>
 			<Footer />

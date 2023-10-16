@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import About from "./pages/About";
 import ModalTestingPage from "./pages/ModalTestingPage";
 import Home from "./pages/Home";
+import MapSection from "./components/MapSection";
 import SliderTest from "./pages/SliderTest";
 
 import RhythmsPanelTestingPage from "./pages/RhythmsPanelTestingPage";
@@ -16,8 +17,10 @@ const App = () => (
 		<Route path="/ModalTestingPage" element={<ModalTestingPage />} />
 		<Route path="/" element={<Home />} />
 		<Route path="/about/this/site" element={<About />} />
-		<Route path="/RhythmsPanelTestingPage" element={<RhythmsPanelTestingPage />}
-			/></Routes>
+		<Route path="/ModalTestingPage" element={<ModalTestingPage />} />
+		<Route path="/RhythmsPanelTestingPage" element={<RhythmsPanelTestingPage />} />
+		<Route path="/MapSection" element={<MapSection />}></Route>
+	</Routes>
 	</>
 );
 

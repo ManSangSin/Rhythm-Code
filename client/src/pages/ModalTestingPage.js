@@ -22,13 +22,13 @@ const rhythms = [
 	{
 		title: "Adaha and Konkoma",
 		audioUrl:
-			"https://soundcloud.com/shugo_srd/shugz-king-of-my-castle?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+			"https://drive.google.com/uc?export=download&id=1MoZXjAO2cqPU3IssoP40PYrAsshT4PVm",
 		location: "Washington DC",
 	},
 	{
 		title: "Dance Band Highlife",
 		audioUrl:
-			"https://soundcloud.com/eduleon42/are-we-going-out-tonight-vol-3?si=0cd23cdd892b41c6ad451505b21c0d3f&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+			"https://drive.google.com/uc?id=1MoZXjAO2cqPU3IssoP40PYrAsshT4PVm",
 		location: "Washington DC",
 		description:
 			"Dance band likely had its immediate roots in the orchestras founded and popularized by West African coastal elites who lived in the region’s expanding colonial and cosmopolitan cities",

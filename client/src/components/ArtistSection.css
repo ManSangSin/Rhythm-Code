@@ -24,7 +24,7 @@
   }
   
   .text span{
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
@@ -90,5 +90,11 @@
   .artist button{
     margin-top: 64px;
     font-weight: 500;
-    font-size: 24px
+    font-size: 24px;
+    color: white;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
   }

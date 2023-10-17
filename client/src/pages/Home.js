@@ -1,9 +1,9 @@
 import "./Home.css";
-import MyMap from "../components/MyMap";
 import Header from "../components/Header";
 import AboutSection from "../components/AboutSection";
 import ArtistSection from "../components/ArtistSection";
 import Footer from "../components/Footer";
+import MyMap from "../components/MyMap";
 
 function Home() {
 	return (

@@ -1,0 +1,40 @@
+.about-section {
+	height: 544px;
+	background-color: #000;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.about-image-container {
+	padding-top: 42px;
+	padding-bottom: 42px;
+	padding-right: 142px;
+	padding-left: 94px;
+}
+
+.about-dancers-image {
+	width: 100%;
+	height: 100%;
+}
+
+.about-text-container {
+	width: 735px;
+	height: 412px;
+	margin-top: 78px;
+	margin-bottom: 54px;
+	color: #fff;
+	font-family: var(--font-roboto);
+	font-weight: 700;
+	text-align: left;
+	line-height: normal;
+}
+
+.about-text-container h4 {
+	font-size: 32px;
+	padding-bottom: 26px;
+}
+
+.about-text-container p {
+	font-size: 18px;
+}

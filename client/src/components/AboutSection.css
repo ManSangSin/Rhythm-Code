@@ -38,3 +38,33 @@
 .about-text-container p {
 	font-size: 18px;
 }
+
+@media screen and (max-width: 768px) {
+	.about-section {
+		width: 100%;
+		height: 1150px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.about-image-container {
+		padding-top: 60px;
+		padding-bottom: 22px;
+		align-self: center;
+	}
+
+	.about-text-container {
+		width: 85%;
+		height: 412px;
+		margin-top: 28px;
+		margin-bottom: 44px;
+		margin-left: 28px;
+		margin-right: 28px;
+		align-self: center;
+	}
+
+	.about-text-container h4 {
+		text-align: center;
+	}
+}

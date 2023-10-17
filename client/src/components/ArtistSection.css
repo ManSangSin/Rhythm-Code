@@ -1,99 +1,135 @@
-.artist-section{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-  
-  .artist-text-container h4{
-    width: 602px;
-    font-family: 'Roboto';
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  
-  .artist-text-container p{
-    font-family: 'Roboto';
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 400;
-    padding-top: 32px;
-    width: 585px;
-  }
-  
-  .artist-text-container span{
-    font-family: 'Roboto';
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-  
-  .artist-text-container{
-    width: 585px;
-  }
-  
-  .artist-backgroundImage{
-    width: 100%;
-    
-    
-  }
-  
-  .artist-image-container{
-    position: relative;
-    left: 15px;
-    width: 539px;
-    height: 539px;
-  }
-  
-  .artist-portrait{
-    width: 396px;
-    height: 396px;
-    position: absolute;
-    border-radius: 198px;
-    margin-left: 16px;
-    margin-top: 72px;
-    margin-right: 207px;
-    margin-bottom: 175px;
-    top: 2%;
-    right: -15%;
-  }
-  
-  .artist-learn{
-    width: 190px;
-    padding: 11px 30px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 8px;
-    background: #000;
-    margin-right: 91px;
-  }
-  
-  .artist-contact{
-    width: 293px;
-    padding: 11px 30px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 8px;
-    background: #CB3100;
-  }
-  
-  .artist-contact img {
-    margin-right: 10px;
-  }
-  
-  .artist-section button{
-    margin-top: 64px;
-    font-weight: 500;
-    font-size: 24px;
-    color: white;
-    font-family: 'Roboto';
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
+.artist-section {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.artist-text-container h4 {
+	font-family: "Roboto";
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.artist-text-container p {
+	font-family: "Roboto";
+	font-size: 21px;
+	font-style: normal;
+	font-weight: 400;
+	padding-top: 32px;
+}
+
+.artist-text-container span {
+	font-family: "Roboto";
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.artist-text-container {
+	width: 585px;
+	margin-left: 83px;
+	line-height: normal;
+}
+
+.artist-image-container {
+	position: relative;
+	left: 15px;
+	width: 539px;
+	height: 539px;
+}
+
+.artist-backgroundImage {
+	width: 100%;
+}
+
+.artist-portrait {
+	width: 396px;
+	height: 396px;
+	position: absolute;
+	border-radius: 198px;
+	margin-left: 16px;
+	margin-top: 72px;
+	margin-right: 207px;
+	margin-bottom: 175px;
+	top: 2%;
+	right: -15%;
+}
+
+.artist-learn {
+	width: 190px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+	background: #000;
+}
+
+.artist-contact {
+	width: 293px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+	background: #cb3100;
+}
+
+.artist-contact img {
+	margin-right: 10px;
+}
+
+.artist-section button {
+	padding: 11px 0;
+	color: white;
+	font-family: "Roboto";
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.artist-buttons-container {
+	margin-top: 64px;
+	width: 574px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+	.artist-section {
+		width: 100%;
+		height: 900px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.artist-image-container {
+		padding-top: 50px;
+		padding-bottom: 10px;
+		width: 45%;
+		height: auto;
+		order: 1;
+	}
+
+	.artist-portrait {
+		width: 80%;
+		height: auto;
+		top: 4%;
+		right: -45%;
+	}
+
+	.artist-text-container {
+		width: 85%;
+		height: auto;
+		margin: 20px 28px;
+		align-self: center;
+		text-align: center;
+		order: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}

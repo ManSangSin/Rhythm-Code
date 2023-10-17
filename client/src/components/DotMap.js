@@ -16667,7 +16667,7 @@ export default function DotMap() {
 				className="map-circle"
 				d="m2145.1,838.29c3,0,5.42,2.42,5.42,5.42s-2.43,5.43-5.42,5.43-5.42-2.43-5.42-5.43c0-3,2.43-5.42,5.42-5.42Z"
 			/>
-			<foreignObject width="100%" height="100%" x="0" y="0">
+			<foreignObject width="100%" height="100%" x="-10" y="-10">
 				<MyMap />
 			</foreignObject>
 		</svg>

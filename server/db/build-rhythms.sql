@@ -29,10 +29,11 @@ CREATE TABLE rhythms (
     CONSTRAINT      rhy_rhythm_code_fk FOREIGN KEY (rhythm_code_id) REFERENCES rhythm_codes (id)
 );
 
-INSERT INTO rhythm_codes (rhythm_code, location, region, leftpx, toppx) VALUES('Rumba', 'Cuba', 'Caribbean', 570, 195);
-INSERT INTO rhythm_codes (rhythm_code, location, region, leftpx, toppx) VALUES('Gwo-Ka', 'Guadeloupe', 'Caribbean', 650, 180);
+INSERT INTO rhythm_codes (rhythm_code, location, region, leftpx, toppx) VALUES('Rumba', 'Cuba', 'Caribbean', 728.61, 742.22);
+INSERT INTO rhythm_codes (rhythm_code, location, region, leftpx, toppx) VALUES('Gwo-Ka', 'Guadeloupe', 'Caribbean', 824.82, 772.72);
 INSERT INTO rhythm_codes (rhythm_code, location, region, leftpx, toppx) VALUES('Second Line', 'NOLA', 'USA', 540, 120);
-INSERT INTO rhythm_codes (rhythm_code, location, region, leftpx, toppx) VALUES('Blues / Early Jazz / Trad Jazz', 'NOLA', 'USA', 560, 140);
+INSERT INTO rhythm_codes (rhythm_code, location, region, leftpx, toppx) VALUES('Gwo-Ka', 'Guadeloupe', 'Caribbean', 824.82, 772.72);
+INSERT INTO rhythm_codes (rhythm_code, location, region, leftpx, toppx) VALUES('Blues / Early Jazz / Trad Jazz', 'NOLA', 'USA', 540, 120);
 INSERT INTO rhythm_codes (rhythm_code, location, region, leftpx, toppx) VALUES('Swing', 'Washington DC', 'USA', 570, 120);
 
 INSERT INTO rhythms (rhythm_code_id, rhythm, language, year_start, year_end, video, description) VALUES(1, 'Columbia', 'Spanish', 1880, 2020, 'https://youtu.be/W4aMl4HpKIQ','Columbia: rápida y solo para hombres, solo tambores y no se canta');

@@ -19,26 +19,3 @@
 #dotmap > path:nth-child(1308) {
 	fill: blue;
 }
-
-#dotmap > path:nth-child(1823),
-#dotmap > path:nth-child(1873),
-#dotmap > path:nth-child(1608),
-#dotmap > path:nth-child(1308) {
-	fill: red;
-	stroke: red;
-	border-radius: 100%;
-	outline: 12px solid pink;
-	stroke-width: 12px;
-	stroke-linejoin: round;
-	transition: 0.3s;
-	cursor: pointer;
-}
-
-#dotmap > path:nth-child(1823):hover,
-#dotmap > path:nth-child(1873):hover,
-#dotmap > path:nth-child(1608):hover,
-#dotmap > path:nth-child(1308):hover {
-	outline: 30px solid pink;
-	stroke-width: 8px;
-	transition: 0.3s;
-}

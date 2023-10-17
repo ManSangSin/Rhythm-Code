@@ -1,11 +1,6 @@
 import "./DotMap.css";
 import MyMap from "./MyMap";
 
-function test() {
-	console.log(event.target);
-	alert(`${event.target.id} clicked`);
-}
-
 export default function DotMap() {
 	return (
 		<svg
@@ -5245,7 +5240,6 @@ export default function DotMap() {
 			<path
 				className="map-circle"
 				id="washingtondc"
-				onClick={test}
 				d="m750.71,560.41c3,0,5.42,2.43,5.42,5.43,0,3-2.42,5.43-5.42,5.43-2.99,0-5.41-2.43-5.41-5.43s2.42-5.43,5.41-5.43Z"
 			/>
 			<path
@@ -6447,7 +6441,6 @@ export default function DotMap() {
 			<path
 				className="map-circle"
 				id="nola"
-				onClick={test}
 				d="m646.67,664.6c3,0,5.42,2.43,5.42,5.43,0,3-2.42,5.42-5.42,5.42-3,0-5.41-2.43-5.41-5.42,0-3,2.42-5.43,5.41-5.43Z"
 			/>
 			<path
@@ -7309,7 +7302,6 @@ export default function DotMap() {
 			<path
 				className="map-circle"
 				id="cuba"
-				onClick={test}
 				d="m728.61,742.22c2.99,0,5.42,2.43,5.42,5.43s-2.43,5.43-5.42,5.43c-2.99,0-5.42-2.43-5.42-5.43s2.43-5.43,5.42-5.43Z"
 			/>
 			<path
@@ -7511,7 +7503,6 @@ export default function DotMap() {
 			<path
 				className="map-circle"
 				id="guadeloupe"
-				onClick={test}
 				d="m824.82,772.72c3,0,5.41,2.42,5.41,5.42s-2.42,5.43-5.41,5.43-5.42-2.43-5.42-5.43,2.42-5.42,5.42-5.42Z"
 			/>
 			<path

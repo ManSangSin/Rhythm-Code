@@ -4,10 +4,10 @@ import MapSection from "./components/MapSection";
 
 const App = () => (
 	<>
-	<Routes>
-	<Route path="/" element={<Home />} />
-	<Route path="/MapSection" element={<MapSection />}></Route>
-	</Routes>
+		<Routes>
+			<Route path="/" element={<Home />} />
+			{/* <Route path="/MapSection" element={<MapSection />}></Route> */}
+		</Routes>
 	</>
 );
 

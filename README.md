@@ -3,32 +3,62 @@
 Rhythm Code Project Setup
 
 About:
-We will be using a standalone docker container to deploy a local SQL database. The database will be prepopulated with specific data on each project start up using a seed file which can be modified to insert whatever data we want to test/use. The database will be seeded with new data at each run instance. A few NPM command are avaiable to simplify the process which will automate the deployment of the docker image prior to starting the rest of the project.  
+We will be using a standalone docker container to deploy a local SQL database. The database will be prepopulated with specific data on each project start up using a seed file which can be modified to insert whatever data we want to test/use. The database will be seeded with new data at each run instance. A few NPM command are avaiable to simplify the process which will automate the deployment of the docker image prior to starting the rest of the project.
 
 Prerequisites:
-  - Docker
-  - .env
-    - set DATABASE_URL = "postgres://postgres:opensesame@localhost:5432/cyf"
+
+- Docker
+- .env
+  - set DATABASE_URL = "postgres://postgres:opensesame@localhost:5432/cyf"
 
 Seed file:
-  - File Name: "build-rhythms.sql"
-  - File Location: "./server/db/"
+
+- File Name: "build-rhythms.sql"
+- File Location: "./server/db/"
 
 Default database structure:
-  - table name: rhythms
-  - table column names:
-    - id (serial - primary key)
-    - title (varchar - with character limit of 255 imposed)
-    - url (varchar - with character limit of 512 imposed)
-    - location (varchar - with character limit of 255 imposed)
+
+- table name: rhythms
+- table column names:
+  - id (serial - primary key)
+  - title (varchar - with character limit of 255 imposed)
+  - url (varchar - with character limit of 512 imposed)
+  - location (varchar - with character limit of 255 imposed)
 
 How to start project locally:
-  - Make sure Docker Desktop is running
-  - Run "npm run dev" at the root of the project directory
+
+- Make sure Docker Desktop is running
+- Run "npm run dev" at the root of the project directory
 
 How to stop project locally:
-  - ctrl + c
-  - Run "npm run docker:stop" (ctrl+c sends sigint to project only. Docker needs to be stopped seperately)
+
+- ctrl + c
+- Run "npm run docker:stop" (ctrl+c sends sigint to project only. Docker needs to be stopped seperately)
+
+Adding a new marker location to the map:
+
+- The markers are plotted inside a svg therefore the x and y data required to plot the markers needs to be relative to the svg map plane
+- Each dot on the map is an individual element and holds its own x and y data which is relative to the map (and also holds other data such as id)
+- We will use this data to plot the new marker
+- A query selector is used with the id to get the data of the specific dot we want our marker to be placed on, which is then parsed using a regex to retrieve the relevent data (x and y)
+  - This is already setup provided a map_id (id of the dot) is stated.
+
+Finding id of specific dot:
+
+- How to get the id:
+  - Open the website homepage and use inspect on your chosen browser
+  - Use the select element tool and click over the map area
+  - A transparent overlay will be selected called "foreignObject" (the layer which the markers are placed on)
+  - This needs to be removed so that the dots under the transparent layer can be selected
+    - To remove the layer, right clicking on the elements panel and select "delete element"
+    - This is not permenant and the overlay will be reloaded when the page is refreshed
+  - Use the select element tool again and now select the dot which you wish to place the new marker on
+    - This will show the dot details including the id
+
+Adding id to database:
+
+- The id is used inside the rhythm_codes table
+- when adding a new row of data, map_id will be set to the id of the dot we want
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 

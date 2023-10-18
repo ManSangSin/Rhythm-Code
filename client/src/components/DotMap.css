@@ -1,25 +1,3 @@
-/* dot map classes & ids */
-
-/* Cuba marker - can also use id #cuba */
-/* #dotmap > path:nth-child(1823) {
-	fill: red;
-} */
-
-/* Guadeloupe marker - can also use id #guadeloupe */
-/* #dotmap > path:nth-child(1873) {
-	fill: green;
-} */
-
-/* NOLA marker - can also use id #nola */
-/* #dotmap > path:nth-child(1608) {
-	fill: yellow;
-} */
-
-/* Washington DC marker - can also use id #washingtondc */
-/* #dotmap > path:nth-child(1308) {
-	fill: blue;
-} */
-
 #dotmap {
 	background-image: linear-gradient(
 		to right,

@@ -5,7 +5,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-  
+
 :root {
 	--font-roboto: "Roboto", sans-serif;
 	--copy-color: #cb3100;
@@ -15,57 +15,4 @@
 	display: flex;
 	max-width: 1440px;
 	font-family: var(--font-roboto);
-}
-
-.map {
-	position: relative;
-	top: 0;
-	left: 0;
-}
-
-.icons svg {
-	width: 20px;
-	height: 20px;
-}
-.dropdown {
-	position: relative;
-}
-
-.menu {
-	position: absolute;
-	list-style-type: none;
-	margin: 5px 0;
-	padding: 0;
-	border: 1px solid #f06a0a;
-	width: 150px;
-}
-
-.menu > li {
-	margin: 0;
-	background-color: white;
-}
-
-.menu > li:hover {
-	background-color: rgb(255, 236, 167);
-}
-
-.menu > li > button {
-	width: 100%;
-	height: 100%;
-	text-align: left;
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 5px;
-	margin: 0;
-	font: inherit;
-	cursor: pointer;
-}
-
-button {
-	padding: 0.5rem 1rem;
-	background-color: #f06a0a;
-	color: antiquewhite;
-	border: 1px #f06a0a solid;
-	border-radius: 6px;
 }

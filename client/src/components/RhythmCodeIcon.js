@@ -22,13 +22,15 @@ function RhythmCodeIcon({
 	const findxy = /(?!=d="m)([0-9]*.[0-9]*),([0-9]*.[0-9]*)/;
 	const xyData = dotSelector.match(findxy);
 	console.log(xyData);
-
+	const xValue = xyData[1];
+	const yValue = xyData[2];
+	console.log(xValue);
 	return (
 		<div
 			style={{
 				position: "absolute",
-				// top: `${toppx}px`,
-				// left: `${leftpx}px`,
+				top: `${yValue}px`,
+				left: `${xValue}px`,
 			}}
 		>
 			<svg

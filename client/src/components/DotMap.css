@@ -1,3 +1,4 @@
+/* change map background colour */
 #dotmap {
 	background-image: linear-gradient(
 		to right,
@@ -10,7 +11,7 @@
 		#0c1330
 	);
 }
-
+/* change map dot colour */
 #dotmap path {
 	fill: black;
 }

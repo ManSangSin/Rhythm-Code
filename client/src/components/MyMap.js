@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "./MyMap.css";
 import ModalVideo from "../components/ModalVideo";
 import RhythmCodeIcon from "../components/RhythmCodeIcon";
+import DotMap from "../components/DotMap";
 
 function MyMap() {
 	const [rhythmCodes, setRhythmCodes] = useState([]);
@@ -40,6 +41,7 @@ function MyMap() {
 
 	return (
 		<div>
+			<DotMap />
 			{rhythmCodes.map((rhythmCodeObject) => (
 				<RhythmCodeIcon
 					key={rhythmCodeObject.rhythm_code}

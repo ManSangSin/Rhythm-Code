@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./MapSection.css";
 import dotMapImage from "../images/dot-map.png";
+import MyMap from "../components/MyMap";
 import ExpandIcon from "../images/ExpandIcon.svg";
 
 function MapSection() {
@@ -34,7 +35,8 @@ function MapSection() {
 						Click to exit full screen mode
 					</div>
 					<div className="full-screen-map">
-						<img src={dotMapImage} alt="Dot Map" />
+						{/* <img src={dotMapImage} alt="Dot Map" /> */}
+						<MyMap />
 					</div>
 				</div>
 			) : (
@@ -52,7 +54,8 @@ function MapSection() {
 						/>
 					</div>
 					<div className="map-container">
-						<img src={dotMapImage} alt="Dot Map" />
+						{/* <img src={dotMapImage} alt="Dot Map" /> */}
+						<MyMap />
 					</div>
 				</div>
 			)}

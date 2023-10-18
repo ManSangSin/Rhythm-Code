@@ -1,7 +1,6 @@
 import React from "react";
 import Group from "../images/Group.png";
-import Deidre from "../images/deidre_profile.png";
-import Dot from "../images/dot_background.png";
+import Deidre from "../images/deidre_full.png";
 import "./ArtistSection.css";
 
 const content = {
@@ -33,7 +32,6 @@ function ArtistSection() {
 				</div>
 			</div>
 			<div className="artist-image-container">
-				<img className="artist-backgroundImage" src={Dot} alt="dots"></img>
 				<img className="artist-portrait" src={Deidre} alt="Deidre Molloy"></img>
 			</div>
 		</div>

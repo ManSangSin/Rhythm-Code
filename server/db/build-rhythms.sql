@@ -7,14 +7,16 @@ DROP TABLE IF EXISTS regions;
 DROP TABLE IF EXISTS mappings;
 DROP TABLE IF EXISTS rhythm_codes;
 
+-- map_id refers to the id of the dot inside the DotMap component
+
 CREATE TABLE rhythm_codes (
     id		        SERIAL NOT NULL PRIMARY KEY,
     rhythm_code     VARCHAR(255),
     region          VARCHAR(255),
     location        VARCHAR(255),
-    leftpx          INTEGER,
-    toppx           INTEGER
+    map_id          INTEGER
 );
+
 
 CREATE TABLE rhythms (
     id		        SERIAL NOT NULL PRIMARY KEY,
@@ -29,12 +31,12 @@ CREATE TABLE rhythms (
     CONSTRAINT      rhy_rhythm_code_fk FOREIGN KEY (rhythm_code_id) REFERENCES rhythm_codes (id)
 );
 
-INSERT INTO rhythm_codes (rhythm_code, location, region, leftpx, toppx) VALUES('Rumba', 'Cuba', 'Caribbean', 728.61, 742.22);
-INSERT INTO rhythm_codes (rhythm_code, location, region, leftpx, toppx) VALUES('Gwo-Ka', 'Guadeloupe', 'Caribbean', 824.82, 772.72);
-INSERT INTO rhythm_codes (rhythm_code, location, region, leftpx, toppx) VALUES('Second Line', 'NOLA', 'USA', 540, 120);
-INSERT INTO rhythm_codes (rhythm_code, location, region, leftpx, toppx) VALUES('Gwo-Ka', 'Guadeloupe', 'Caribbean', 824.82, 772.72);
-INSERT INTO rhythm_codes (rhythm_code, location, region, leftpx, toppx) VALUES('Blues / Early Jazz / Trad Jazz', 'NOLA', 'USA', 540, 120);
-INSERT INTO rhythm_codes (rhythm_code, location, region, leftpx, toppx) VALUES('Swing', 'Washington DC', 'USA', 570, 120);
+INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Rumba', 'Cuba', 'Caribbean', 'dot1822');
+INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Gwo-Ka', 'Guadeloupe', 'Caribbean', 'dot1872');
+INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Second Line', 'NOLA', 'USA', 'dot1607');
+INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Gwo-Ka', 'Guadeloupe', 'Caribbean', 'dot1872');
+INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Blues / Early Jazz / Trad Jazz', 'NOLA', 'USA', 'dot1607');
+INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Swing', 'Washington DC', 'USA', 'dot1307');
 
 INSERT INTO rhythms (rhythm_code_id, rhythm, language, year_start, year_end, video, description) VALUES(1, 'Columbia', 'Spanish', 1880, 2020, 'https://youtu.be/W4aMl4HpKIQ','Columbia: rápida y solo para hombres, solo tambores y no se canta');
 INSERT INTO rhythms (rhythm_code_id, rhythm, language, year_start, year_end, video, description) VALUES(1, 'Yambu', 'Spanish', 1880, 2020, 'https://youtu.be/Mux8ibZWbrg','Yambu: más lento, en pareja (and heteronormative) but traditionally not touching');

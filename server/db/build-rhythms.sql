@@ -34,7 +34,6 @@ CREATE TABLE rhythms (
 INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Rumba', 'Cuba', 'Caribbean', 'dot1822');
 INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Gwo-Ka', 'Guadeloupe', 'Caribbean', 'dot1872');
 INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Second Line', 'NOLA', 'USA', 'dot1607');
-INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Gwo-Ka', 'Guadeloupe', 'Caribbean', 'dot1872');
 INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Blues / Early Jazz / Trad Jazz', 'NOLA', 'USA', 'dot1607');
 INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Swing', 'Washington DC', 'USA', 'dot1307');
 

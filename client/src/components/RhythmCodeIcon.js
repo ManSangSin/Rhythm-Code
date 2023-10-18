@@ -18,6 +18,9 @@ function RhythmCodeIcon({
 		(rhythm) => rhythm.rhythm_code === rhythmCodeName
 	);
 
+	const dotSelector = document.querySelector("#dot1028").outerHTML;
+	console.log(dotSelector);
+
 	return (
 		<div
 			style={{

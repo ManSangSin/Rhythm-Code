@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 import "./MyMap.css";
 import ModalVideo from "../components/ModalVideo";
-import RhythmCodeIcon from "../components/RhythmCodeIcon";
 import DotMap from "../components/DotMap";
 
 function MyMap() {
@@ -41,18 +40,12 @@ function MyMap() {
 
 	return (
 		<div>
-			<DotMap />
-			{rhythmCodes.map((rhythmCodeObject) => (
-				<RhythmCodeIcon
-					key={rhythmCodeObject.rhythm_code}
-					rhythmCodeName={rhythmCodeObject.rhythm_code}
-					rhythmsList={rhythms}
-					toppx={rhythmCodeObject.toppx}
-					leftpx={rhythmCodeObject.leftpx}
-					setModalOpen={setModalOpen}
-					setSelectedRhythm={setSelectedRhythm}
-				/>
-			))}
+			<DotMap
+				rhythmCodes={rhythmCodes}
+				rhythmsList={rhythms}
+				setModalOpen={setModalOpen}
+				setSelectedRhythm={setSelectedRhythm}
+			/>
 			{isModalOpen && (
 				<ModalVideo setModalOpen={setModalOpen} rhythm={selectedRhythm} />
 			)}

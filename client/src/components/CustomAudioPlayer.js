@@ -1,10 +1,24 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./CustomAudioPlayer.css";
 
 function CustomAudioPlayer({ audioUrl }) {
 	const audioRef = useRef(null);
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [currentTime, setCurrentTime] = useState(0);
+
+	useEffect(() => {
+		const audioElement = audioRef.current;
+
+		const onTimeUpdate = () => {
+			setCurrentTime(audioElement.currentTime);
+		};
+
+		audioElement.addEventListener("timeupdate", onTimeUpdate);
+
+		return () => {
+			audioElement.removeEventListener("timeupdate", onTimeUpdate);
+		};
+	}, [audioRef]);
 
 	const playAudio = () => {
 		audioRef.current.play();
@@ -13,7 +27,6 @@ function CustomAudioPlayer({ audioUrl }) {
 
 	const stopAudio = () => {
 		audioRef.current.pause();
-		audioRef.current.currentTime = 0;
 		setIsPlaying(false);
 	};
 

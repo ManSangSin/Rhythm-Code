@@ -4,7 +4,7 @@
 	border-radius: 16px;
 	border: 2px solid #000;
 	background: #fff;
-	padding: 2px 103px;
+	padding: 2px 60px;
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -18,7 +18,7 @@
 }
 .modal-header {
 	border: none;
-	padding-top: 50px;
+	padding-top: 40px;
 }
 .modal-title {
 	font-size: 32px;
@@ -32,6 +32,13 @@
 	right: 15px;
 	cursor: pointer;
 }
-.text {
+.card-thumb {
+	height: 420px;
+}
+.description-text {
 	padding-top: 30px;
+}
+.modal.fade .modal-dialog {
+	transition: none;
+
 }

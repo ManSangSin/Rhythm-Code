@@ -47,7 +47,7 @@ function ModalVideo({ rhythm, setModalOpen }) {
 					<Tab.Pane eventKey="video">
 						<VideoCard url={rhythm.video} />
 					</Tab.Pane>
-					<Tab.Pane className="text" eventKey="description">
+					<Tab.Pane className="description-text" eventKey="description">
 						{rhythm.description}
 					</Tab.Pane>
 				</Tab.Content>
@@ -58,7 +58,9 @@ function ModalVideo({ rhythm, setModalOpen }) {
 			<div>
 				{rhythm.video && <VideoCard url={rhythm.video} />}
 				{rhythm.audio && <CustomAudioPlayer audioUrl={rhythm.audio} />}
-				{rhythm.description && <div className="text">{rhythm.description}</div>}
+				{rhythm.description && (
+					<div className="description-text">{rhythm.description}</div>
+				)}
 			</div>
 		);
 	}

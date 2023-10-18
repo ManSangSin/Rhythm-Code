@@ -6,7 +6,6 @@ const App = () => (
 	<>
 		<Routes>
 			<Route path="/" element={<Home />} />
-			{/* <Route path="/MapSection" element={<MapSection />}></Route> */}
 		</Routes>
 	</>
 );

@@ -14,7 +14,7 @@ CREATE TABLE rhythm_codes (
     rhythm_code     VARCHAR(255),
     region          VARCHAR(255),
     location        VARCHAR(255),
-    map_id          INTEGER
+    map_id          VARCHAR(255)
 );
 
 

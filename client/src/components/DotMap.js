@@ -20770,8 +20770,7 @@ export default function DotMap({
 						key={rhythmCodeObject.rhythm_code}
 						rhythmCodeName={rhythmCodeObject.rhythm_code}
 						rhythmsList={rhythmsList}
-						toppx={rhythmCodeObject.toppx}
-						leftpx={rhythmCodeObject.leftpx}
+						map_id={rhythmCodeObject.map_id}
 						setModalOpen={setModalOpen}
 						setSelectedRhythm={setSelectedRhythm}
 					/>

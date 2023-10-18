@@ -5,8 +5,7 @@ import "./RhythmItem.css";
 import RhythmItem from "./RhythmItem";
 
 function RhythmCodeIcon({
-	toppx,
-	leftpx,
+	map_id,
 	rhythmCodeName,
 	rhythmsList,
 	setModalOpen,
@@ -17,7 +16,7 @@ function RhythmCodeIcon({
 	const filteredRhythms = rhythmsList.filter(
 		(rhythm) => rhythm.rhythm_code === rhythmCodeName
 	);
-
+	console.log(map_id);
 	const dotSelector = document.querySelector("#dot1028").outerHTML;
 	console.log(dotSelector);
 	const findxy = /(?!=d="m)([0-9]*.[0-9]*),([0-9]*.[0-9]*)/;
@@ -28,8 +27,8 @@ function RhythmCodeIcon({
 		<div
 			style={{
 				position: "absolute",
-				top: `${toppx}px`,
-				left: `${leftpx}px`,
+				// top: `${toppx}px`,
+				// left: `${leftpx}px`,
 			}}
 		>
 			<svg

@@ -25,8 +25,7 @@ function MyMap() {
 					if (!existingRhythm) {
 						acc.push({
 							rhythm_code: rhythm.rhythm_code,
-							leftpx: rhythm.leftpx,
-							toppx: rhythm.toppx,
+							map_id: rhythm.map_id,
 						});
 					}
 					return acc;

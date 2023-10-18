@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 
 import "./MyMap.css";
 import ModalVideo from "../components/ModalVideo";
-import RhythmCodeIcon from "../components/RhythmCodeIcon";
 import DotMap from "../components/DotMap";
+import RhythmCodeIcon from "./RhythmCodeIcon";
 
 function MyMap() {
 	const [rhythmCodes, setRhythmCodes] = useState([]);
@@ -26,8 +26,7 @@ function MyMap() {
 					if (!existingRhythm) {
 						acc.push({
 							rhythm_code: rhythm.rhythm_code,
-							leftpx: rhythm.leftpx,
-							toppx: rhythm.toppx,
+							map_id: rhythm.map_id,
 						});
 					}
 					return acc;
@@ -41,18 +40,18 @@ function MyMap() {
 
 	return (
 		<div>
-			<DotMap className="map" />
-			{rhythmCodes.map((rhythmCodeObject) => (
-				<RhythmCodeIcon
-					key={rhythmCodeObject.rhythm_code}
-					rhythmCodeName={rhythmCodeObject.rhythm_code}
-					rhythmsList={rhythms}
-					toppx={rhythmCodeObject.toppx}
-					leftpx={rhythmCodeObject.leftpx}
-					setModalOpen={setModalOpen}
-					setSelectedRhythm={setSelectedRhythm}
-				/>
-			))}
+			<DotMap>
+				{rhythmCodes.map((rhythmCodeObject) => (
+					<RhythmCodeIcon
+						key={rhythmCodeObject.rhythm_code}
+						rhythmCodeName={rhythmCodeObject.rhythm_code}
+						rhythmsList={rhythms}
+						map_id={rhythmCodeObject.map_id}
+						setModalOpen={setModalOpen}
+						setSelectedRhythm={setSelectedRhythm}
+					/>
+				))}
+			</DotMap>
 			{isModalOpen && (
 				<ModalVideo setModalOpen={setModalOpen} rhythm={selectedRhythm} />
 			)}

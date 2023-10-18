@@ -1,0 +1,17 @@
+/* change map background colour */
+#dotmap {
+	background-image: linear-gradient(
+		to right,
+		#0c1330,
+		#0c1330,
+		#182049,
+		#1e2c5f,
+		#182049,
+		#0c1330,
+		#0c1330
+	);
+}
+/* change map dot colour */
+#dotmap path {
+	fill: black;
+}

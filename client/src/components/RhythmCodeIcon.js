@@ -17,7 +17,7 @@ function RhythmCodeIcon({
 		(rhythm) => rhythm.rhythm_code === rhythmCodeName
 	);
 	console.log(map_id);
-	const dotSelector = document.querySelector("#dot1028").outerHTML;
+	const dotSelector = document.querySelector(`#${map_id}`).outerHTML;
 	console.log(dotSelector);
 	const findxy = /(?!=d="m)([0-9]*.[0-9]*),([0-9]*.[0-9]*)/;
 	const xyData = dotSelector.match(findxy);

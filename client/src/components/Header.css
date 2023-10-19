@@ -1,4 +1,5 @@
 header {
+	width: 100%;
 	background-color: #ffffff;
 	height: 4.5em;
 }
@@ -10,20 +11,43 @@ header a:visited {
 }
 
 .header-logo_container {
-	display: flex;
-	align-items: flex-end;
-	flex-shrink: 0;
-	gap: 2.125em;
-	margin-left: 5.125em;
+	margin: auto;
+	padding: 0 16px;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 20px;
+	max-width: 1312px;
+	height: auto;
+	align-items: center;
+	place-items: center;
 }
-
-.header-text {
+.header-logo-decodenoir-container {
+	grid-column: 1 / span 2;
 	font-family: "Oswald", sans-serif;
 	font-weight: bold;
 	font-size: 2em;
+	text-align: center;
 }
 
-.header-logo_cyf {
-	width: 12.5em;
-	height: 3.75em;
+.header-logo-decodenoir {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.header-cross-icon {
+	grid-column: 3 / span 1;
+}
+
+.header-logo-cyf-container {
+	grid-column: 4 / span 2;
+}
+
+.header-logo-cyf {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
 }

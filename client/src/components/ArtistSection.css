@@ -88,20 +88,18 @@
 
 @media screen and (max-width: 768px) {
 	.artist-section {
-		grid-template-columns: repeat(6, 1fr);
+		grid-template-columns: repeat(10, 1fr);
 	}
 
-	/* to continue our work below the mobile breakpoint, I recommend changing both the text and image containers to 1 / span 10 and then styling the button from there */
 	.artist-image-container {
-		/*??  1 / span 10 */
-		grid-column: 2 / span 4;
+		grid-column: 3 / span 6;
 		height: auto;
 		order: 1;
+		margin-top: 60px;
 	}
 
 	.artist-text-container {
-		/*??  1 / span 10 */
-		grid-column: 1 / span 6;
+		grid-column: 1 / span 10;
 		height: auto;
 		align-self: center;
 		text-align: center;
@@ -109,15 +107,16 @@
 	}
 
 	.artist-learn {
-		grid-column: 2 / span 2;
+		grid-column: 3 / span 6;
 	}
 
 	.artist-contact {
-		grid-column: 2 / span 2;
+		grid-column: 3 / span 6;
 	}
 
 	.artist-buttons-container {
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(10, 1fr);
+		margin-top: 40px;
 		margin-bottom: 60px;
 	}
 	.artist-buttons-container button {

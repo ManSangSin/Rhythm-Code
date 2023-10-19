@@ -11,7 +11,6 @@ function RhythmCodeIcon({
 	setModalOpen,
 	setSelectedRhythm,
 	isNightMode,
-	isDropdownShown,
 	toggleDropdownShown,
 	isOn,
 }) {

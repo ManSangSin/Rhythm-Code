@@ -12,7 +12,6 @@ function MyMap({ isNightMode }) {
 	const [isModalOpen, setModalOpen] = useState(false);
 	const [selectedRhythm, setSelectedRhythm] = useState({});
 
-	const [isDropdownShown, setDropdownShown] = useState(false);
 	function toggleDropdownShown(name) {
 		setRhythmCodes((prevRhythmCodes) => {
 			console.log(name);
@@ -76,7 +75,6 @@ function MyMap({ isNightMode }) {
 						setModalOpen={setModalOpen}
 						setSelectedRhythm={setSelectedRhythm}
 						isNightMode={isNightMode}
-						isDropdownShown={isDropdownShown}
 						toggleDropdownShown={toggleDropdownShown}
 						isOn={rhythmCodeObject.isOn}
 					/>

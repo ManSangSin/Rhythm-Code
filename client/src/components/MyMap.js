@@ -27,7 +27,11 @@ function MyMap({ isNightMode }) {
 					};
 					newRhythmCodes.push(updatedRhythmCode);
 				} else {
-					newRhythmCodes.push(currentRhythmCode);
+					const updatedRhythmCode = {
+						...currentRhythmCode,
+						isOn: false,
+					};
+					newRhythmCodes.push(updatedRhythmCode);
 				}
 			}
 			return newRhythmCodes;

@@ -1,10 +1,11 @@
 .modal-content {
-	width: 1014px;
-	height: 640px;
+	max-width: 1014px;
+	width: 80%;
+	height: auto;
 	border-radius: 16px;
 	border: 2px solid #000;
 	background: #fff;
-	padding: 2px 60px;
+	padding: 0 20px 20px 20px;
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -18,7 +19,7 @@
 }
 .modal-header {
 	border: none;
-	padding-top: 40px;
+	padding-top: 10px;
 }
 .modal-title {
 	font-size: 32px;
@@ -32,13 +33,39 @@
 	right: 15px;
 	cursor: pointer;
 }
+.modal-body {
+	padding-top: 0;
+	height: 500px;
+}
 .card-thumb {
-	height: 420px;
+	height: 450px;
 }
 .description-text {
 	padding-top: 30px;
 }
 .modal.fade .modal-dialog {
 	transition: none;
+}
+@media screen and (max-width: 768px) {
+	.modal-content {
+		width: 90%;
+		height: auto;
+		max-width: none;
+		padding: 0px;
+	}
 
+	.modal-title {
+		font-size: 20px;
+	}
+	.modal-body {
+		height: 450px;
+	}
+
+	.card-thumb {
+		height: 400px;
+	}
+
+	.description-text {
+		padding-top: 25px;
+	}
 }

@@ -17,16 +17,22 @@ const content = {
 
 function AboutSection() {
 	return (
-		<div className="about-section">
-			<div className="about-image-container">
-				<img className="about-dancers-image" src={Dancers} alt="dancers"></img>
-			</div>
-			<div className="about-text-container">
-				<h4>{content.title}</h4>
-				<p>{content.firstParagraph}</p>
-				<p>{content.secondParagraph}</p>
-				<p>{content.thirdParagraph}</p>
-				<p>{content.fourthParagraph}</p>
+		<div className="about-background">
+			<div className="about-section">
+				<div className="about-image-container">
+					<img
+						className="about-dancers-image"
+						src={Dancers}
+						alt="dancers"
+					></img>
+				</div>
+				<div className="about-text-container">
+					<h4>{content.title}</h4>
+					<p>{content.firstParagraph}</p>
+					<p>{content.secondParagraph}</p>
+					<p>{content.thirdParagraph}</p>
+					<p>{content.fourthParagraph}</p>
+				</div>
 			</div>
 		</div>
 	);

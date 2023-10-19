@@ -14,11 +14,9 @@ function MyMap({ isNightMode }) {
 
 	function toggleDropdownShown(name) {
 		setRhythmCodes((prevRhythmCodes) => {
-			console.log(name);
 			const newRhythmCodes = [];
 			for (let i = 0; i < prevRhythmCodes.length; i++) {
 				const currentRhythmCode = prevRhythmCodes[i];
-				console.log(currentRhythmCode.rhythm_code);
 				if (currentRhythmCode.rhythm_code === name) {
 					const updatedRhythmCode = {
 						...currentRhythmCode,

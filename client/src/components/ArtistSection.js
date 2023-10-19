@@ -21,11 +21,11 @@ function ArtistSection() {
 				<span>{content.subtitle}</span>
 				<p>{content.paragraph}</p>
 				<div className="artist-buttons-container">
-					<a href={content.learnLink}>
-						<button className="artist-learn">Learn more</button>
+					<a href={content.learnLink} className="artist-learn">
+						<button>Learn more</button>
 					</a>
-					<a href={content.contactLink}>
-						<button className="artist-contact">
+					<a href={content.contactLink} className="artist-contact">
+						<button>
 							<img src={Group} alt="envelope"></img>Get in touch
 						</button>
 					</a>

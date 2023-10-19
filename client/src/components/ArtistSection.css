@@ -1,18 +1,17 @@
 .artist-section {
 	height: auto;
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	gap: 20px;
+	max-width: 1312px;
+	margin: auto;
+	padding: 0 16px;
 	align-items: center;
-	justify-content: center;
 }
 
 .artist-image-container {
-	width: 539px;
 	height: 539px;
-	margin-top: 3%;
-	margin-bottom: 3%;
-	margin-right: 0;
-	margin-left: 8%;
+	grid-column: 7 / span 4;
 }
 
 .artist-portrait {
@@ -22,9 +21,8 @@
 }
 
 .artist-text-container {
-	width: 585px;
 	height: auto;
-	margin: 3% 2%;
+	grid-column: 1 / span 6;
 	font-family: var(--font-roboto);
 	font-weight: 500;
 	text-align: left;
@@ -47,7 +45,10 @@
 }
 
 .artist-learn {
-	width: 190px;
+	grid-column: 1 / span 2;
+}
+.artist-learn > button {
+	width: 100%;
 	justify-content: center;
 	align-items: center;
 	border-radius: 8px;
@@ -55,7 +56,11 @@
 }
 
 .artist-contact {
-	width: 293px;
+	grid-column: 3 / span 2;
+}
+
+.artist-contact > button {
+	width: 100%;
 	justify-content: center;
 	align-items: center;
 	border-radius: 8px;
@@ -68,10 +73,10 @@
 
 .artist-buttons-container {
 	margin-top: 64px;
-	width: 574px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 20px;
 }
 
 .artist-buttons-container button {
@@ -79,49 +84,4 @@
 	color: white;
 	font-weight: 500;
 	font-size: 24px;
-}
-
-@media screen and (max-width: 768px) {
-	.artist-section {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-	}
-
-	.artist-image-container {
-		align-self: center;
-		order: 1;
-	}
-
-	.artist-portrait {
-		width: 100%;
-		height: 100%;
-	}
-
-	.artist-text-container {
-		width: 85%;
-		height: auto;
-		align-self: center;
-		text-align: center;
-		order: 2;
-	}
-
-	.artist-buttons-container {
-		/* margin: 8% 0;
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center; */
-		margin: 2% 0;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.artist-buttons-container button {
-		margin: 4% 0;
-	}
 }

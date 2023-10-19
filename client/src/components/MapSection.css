@@ -30,6 +30,19 @@
 		#0c1330,
 		#0c1330
 	);
+
+	color: antiquewhite;
+}
+
+.bootstrap-light {
+	background-color: white;
+	color: #cb3100;
+}
+
+.bootstrap-night {
+	background-color: #1e2c5f;
+	color: antiquewhite;
+	border: none;
 }
 
 .help-text {

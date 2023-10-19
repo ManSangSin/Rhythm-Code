@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./MapSection.css";
 import MyMap from "../components/MyMap";
 import ExpandIcon from "../images/ExpandIcon.svg";
+import Button from "react-bootstrap/Button";
 
 function MapSection() {
 	const [isFullScreen, setFullScreen] = useState(false);
@@ -12,6 +13,7 @@ function MapSection() {
 	};
 
 	const toggleNightMode = () => {
+		console.log("night mode");
 		setNightMode(!isNightMode);
 	};
 
@@ -29,11 +31,15 @@ function MapSection() {
 		>
 			<div className="help-text">
 				Click on locations to learn more about local rhythms
-			</div>
-			<div>
-				<button onClick={toggleNightMode}>
-					{isNightMode ? "Switch to Day Mode" : "Switch to Night Mode"}
-				</button>
+				<div className="d-flex justify-content-center align-items-end">
+					<Button
+						variant={isNightMode ? "dark" : "light"}
+						onClick={toggleNightMode}
+						className={isNightMode ? "bootstrap-night" : "bootstrap-light"}
+					>
+						{isNightMode ? "Light Map" : "Night Map"}
+					</Button>
+				</div>
 			</div>
 			{isFullScreen ? (
 				<div>
@@ -48,7 +54,7 @@ function MapSection() {
 						Click to exit full screen mode
 					</div>
 					<div className="full-screen-map">
-						<MyMap />
+						<MyMap isNightMode={isNightMode} />
 					</div>
 				</div>
 			) : (

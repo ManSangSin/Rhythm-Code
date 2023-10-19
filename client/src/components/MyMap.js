@@ -32,6 +32,7 @@ function MyMap({ isNightMode }) {
 						acc.push({
 							rhythm_code: rhythm.rhythm_code,
 							map_id: rhythm.map_id,
+							isOn: false,
 						});
 					}
 					return acc;
@@ -57,6 +58,7 @@ function MyMap({ isNightMode }) {
 						isNightMode={isNightMode}
 						isDropdownShown={isDropdownShown}
 						toggleDropdownShown={toggleDropdownShown}
+						isOn={rhythmCodeObject.isOn}
 					/>
 				))}
 			</DotMap>

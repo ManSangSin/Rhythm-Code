@@ -13,6 +13,7 @@ function RhythmCodeIcon({
 	isNightMode,
 	isDropdownShown,
 	toggleDropdownShown,
+	isOn,
 }) {
 	const filteredRhythms = rhythmsList.filter(
 		(rhythm) => rhythm.rhythm_code === rhythmCodeName
@@ -48,7 +49,7 @@ function RhythmCodeIcon({
 			<div
 				className="rhythmItemList"
 				style={{
-					display: isDropdownShown ? "block" : "none",
+					display: isOn ? "block" : "none",
 					top: "0",
 					left: "40px",
 					zIndex: 999,

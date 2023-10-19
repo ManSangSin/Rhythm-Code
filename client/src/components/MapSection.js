@@ -13,7 +13,6 @@ function MapSection() {
 	};
 
 	const toggleNightMode = () => {
-		console.log("night mode");
 		setNightMode(!isNightMode);
 	};
 
@@ -36,7 +35,7 @@ function MapSection() {
 					onClick={toggleNightMode}
 					className={isNightMode ? "bootstrap-night" : "bootstrap-light"}
 				>
-					{isNightMode ? "Light Map" : "Night Map"}
+					{isNightMode ? "Light Mode" : "Mark Mode"}
 				</Button>
 			</div>
 			{isFullScreen ? (

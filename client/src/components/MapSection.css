@@ -39,8 +39,9 @@
 	padding-left: 82px;
 	padding-top: 20px;
 	display: flex;
-	justify-content: space-evenly;
-	align-items: flex-start;
+	justify-content: flex-start;
+	align-content: space-between;
+	gap: 25px;
 }
 
 .bootstrap-container span {
@@ -51,6 +52,7 @@
 	background-color: white;
 	box-shadow: 10px 10px 12px -8px rgba(0, 0, 0, 0.75);
 	color: #cb3100;
+	border: 1px solid black;
 }
 
 .bootstrap-night {
@@ -58,6 +60,7 @@
 	color: antiquewhite;
 	border: #1e2c5f;
 	box-shadow: 10px 10px 12px -8px rgba(0, 0, 0, 0.75);
+	border: 1px solid black;
 }
 
 .expand-button {

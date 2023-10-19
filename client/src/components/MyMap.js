@@ -12,6 +12,11 @@ function MyMap({ isNightMode }) {
 	const [isModalOpen, setModalOpen] = useState(false);
 	const [selectedRhythm, setSelectedRhythm] = useState({});
 
+	const [isDropdownShown, setDropdownShown] = useState(false);
+	function toggleDropdownShown() {
+		setDropdownShown((prevState) => !prevState);
+	}
+
 	const API_Rhythms_URL = "/api/rhythms";
 
 	useEffect(() => {
@@ -50,6 +55,8 @@ function MyMap({ isNightMode }) {
 						setModalOpen={setModalOpen}
 						setSelectedRhythm={setSelectedRhythm}
 						isNightMode={isNightMode}
+						isDropdownShown={isDropdownShown}
+						toggleDropdownShown={toggleDropdownShown}
 					/>
 				))}
 			</DotMap>

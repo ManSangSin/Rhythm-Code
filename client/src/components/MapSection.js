@@ -35,7 +35,7 @@ function MapSection() {
 					onClick={toggleNightMode}
 					className={isNightMode ? "bootstrap-night" : "bootstrap-light"}
 				>
-					{isNightMode ? "Light Mode" : "Mark Mode"}
+					{isNightMode ? "Light Mode" : "Dark Mode"}
 				</Button>
 			</div>
 			{isFullScreen ? (

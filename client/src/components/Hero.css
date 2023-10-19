@@ -66,8 +66,10 @@
 .hero-image {
 	grid-column: 8 / span 3;
 }
+/* I could not fit the image as exactly like the Figma design */
 .hero-image img {
 	vertical-align: 0;
+	height: 100%;
 }
 @media (max-width: 768px) {
 	.hero-container {

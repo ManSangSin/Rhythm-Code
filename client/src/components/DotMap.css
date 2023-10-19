@@ -1,5 +1,5 @@
 /* change map background colour */
-#dotmap {
+.night #dotmap {
 	background-image: linear-gradient(
 		to right,
 		#0c1330,
@@ -11,7 +11,12 @@
 		#0c1330
 	);
 }
+
 /* change map dot colour */
-#dotmap path {
+.day #dotmap path {
 	fill: black;
+}
+
+.night #dotmap path {
+	fill: rgb(185, 158, 1);
 }

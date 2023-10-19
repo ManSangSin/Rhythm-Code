@@ -5,7 +5,7 @@ import ModalVideo from "../components/ModalVideo";
 import DotMap from "../components/DotMap";
 import RhythmCodeIcon from "./RhythmCodeIcon";
 
-function MyMap() {
+function MyMap({ isNightMode }) {
 	const [rhythmCodes, setRhythmCodes] = useState([]);
 	const [rhythms, setRhythms] = useState([]);
 
@@ -49,6 +49,7 @@ function MyMap() {
 						map_id={rhythmCodeObject.map_id}
 						setModalOpen={setModalOpen}
 						setSelectedRhythm={setSelectedRhythm}
+						isNightMode={isNightMode}
 					/>
 				))}
 			</DotMap>

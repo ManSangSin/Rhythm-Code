@@ -2,8 +2,6 @@
 	width: 100%;
 	height: auto;
 	flex-shrink: 0;
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
-		drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	font-size: 16px;
 	font-family: "Roboto", sans-serif;
 	font-weight: 400;
@@ -21,10 +19,48 @@
 	z-index: 2;
 }
 
-.help-text {
+.night {
+	background-image: linear-gradient(
+		to right,
+		#0c1330,
+		#0c1330,
+		#182049,
+		#1e2c5f,
+		#182049,
+		#0c1330,
+		#0c1330
+	);
+
+	color: antiquewhite;
+}
+
+.bootstrap-container {
 	margin-bottom: 70px;
 	padding-left: 82px;
 	padding-top: 20px;
+	display: flex;
+	justify-content: flex-start;
+	align-content: space-between;
+	gap: 25px;
+}
+
+.bootstrap-container span {
+	margin-top: 10px;
+}
+
+.bootstrap-light {
+	background-color: white;
+	box-shadow: 10px 10px 12px -8px rgba(0, 0, 0, 0.75);
+	color: #cb3100;
+	border: 1px solid black;
+}
+
+.bootstrap-night {
+	background-color: #1e2c5f;
+	color: antiquewhite;
+	border: #1e2c5f;
+	box-shadow: 10px 10px 12px -8px rgba(0, 0, 0, 0.75);
+	border: 1px solid black;
 }
 
 .expand-button {

@@ -10,6 +10,7 @@ function RhythmCodeIcon({
 	rhythmsList,
 	setModalOpen,
 	setSelectedRhythm,
+	isNightMode,
 }) {
 	const [isDropdownShown, setDropdownShown] = useState(false);
 
@@ -34,8 +35,18 @@ function RhythmCodeIcon({
 				onClick={() => setDropdownShown(!isDropdownShown)}
 			>
 				<circle cx="20" cy="20" r="20" fill="#FFE6E6" />
-				<circle cx="20.3227" cy="19.6774" r="15.1613" fill="#FFA7A7" />
-				<circle cx="20.3225" cy="19.6774" r="10" fill="#CB3100" />
+				<circle
+					cx="20.3227"
+					cy="19.6774"
+					r="15.1613"
+					fill={isNightMode ? "#006c6c" : "#FFA7A7"}
+				/>
+				<circle
+					cx="20.3225"
+					cy="19.6774"
+					r="10"
+					fill={isNightMode ? "#00cece" : "#ff4d00"}
+				/>
 			</svg>
 			<div
 				className="rhythmItemList"

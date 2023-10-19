@@ -29,15 +29,16 @@
 
 .expand-button {
 	width: 100%;
-	position: absolute;
 	top: 15px;
 	right: 10px;
 }
 
 .expand-icon {
 	width: 40px;
+	position: absolute;
+	top: 150px;
+	right: 40px;
 	height: 40px;
-	margin: 128px 31px 724px 1357px;
 	cursor: pointer;
 }
 

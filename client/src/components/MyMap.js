@@ -13,10 +13,26 @@ function MyMap({ isNightMode }) {
 	const [selectedRhythm, setSelectedRhythm] = useState({});
 
 	const [isDropdownShown, setDropdownShown] = useState(false);
-	function toggleDropdownShown() {
-		setDropdownShown((prevState) => !prevState);
+	function toggleDropdownShown(name) {
+		setRhythmCodes((prevRhythmCodes) => {
+			console.log(name);
+			const newRhythmCodes = [];
+			for (let i = 0; i < prevRhythmCodes.length; i++) {
+				const currentRhythmCode = prevRhythmCodes[i];
+				console.log(currentRhythmCode.rhythm_code);
+				if (currentRhythmCode.rhythm_code === name) {
+					const updatedRhythmCode = {
+						...currentRhythmCode,
+						isOn: !currentRhythmCode.isOn,
+					};
+					newRhythmCodes.push(updatedRhythmCode);
+				} else {
+					newRhythmCodes.push(currentRhythmCode);
+				}
+			}
+			return newRhythmCodes;
+		});
 	}
-
 	const API_Rhythms_URL = "/api/rhythms";
 
 	useEffect(() => {

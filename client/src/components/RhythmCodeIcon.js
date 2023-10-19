@@ -31,7 +31,10 @@ function RhythmCodeIcon({
 				left: `${xValue}px`,
 			}}
 		>
-			<svg className="rhythmCodeIcon" onClick={() => toggleDropdownShown()}>
+			<svg
+				className="rhythmCodeIcon"
+				onClick={() => toggleDropdownShown(rhythmCodeName)}
+			>
 				<circle cx="20" cy="20" r="20" fill="#FFE6E6" />
 				<circle
 					cx="20.3227"

@@ -7,7 +7,7 @@ const OrganisationLink = ({
 	organisationUrl,
 }) => {
 	return (
-		<div className="organisation-container">
+		<div>
 			{/* rel needs to be specified when target is used as security risk for older browsers */}
 			<a href={organisationUrl} target="_blank" rel="noreferrer">
 				<h3 className="organisation-title">{organisationName}</h3>

@@ -90,7 +90,7 @@ const Footer = () => {
 						linkUrl={disclaimerData.url}
 					/>
 				</div>
-				<div className="flex-container">
+				<div className="grid-container">
 					<div className="organisation-links-container">
 						{organisationLinkElements}
 					</div>

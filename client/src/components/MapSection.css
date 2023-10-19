@@ -34,21 +34,30 @@
 	color: antiquewhite;
 }
 
+.bootstrap-container {
+	margin-bottom: 70px;
+	padding-left: 82px;
+	padding-top: 20px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
+
+.bootstrap-container span {
+	margin-top: 10px;
+}
+
 .bootstrap-light {
 	background-color: white;
+	box-shadow: 10px 10px 12px -8px rgba(0, 0, 0, 0.75);
 	color: #cb3100;
 }
 
 .bootstrap-night {
 	background-color: #1e2c5f;
 	color: antiquewhite;
-	border: none;
-}
-
-.help-text {
-	margin-bottom: 70px;
-	padding-left: 82px;
-	padding-top: 20px;
+	border: #1e2c5f;
+	box-shadow: 10px 10px 12px -8px rgba(0, 0, 0, 0.75);
 }
 
 .expand-button {

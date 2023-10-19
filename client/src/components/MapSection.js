@@ -29,17 +29,15 @@ function MapSection() {
 				isNightMode ? "night" : ".map-section"
 			}`}
 		>
-			<div className="help-text">
-				Click on locations to learn more about local rhythms
-				<div className="d-flex justify-content-center align-items-end">
-					<Button
-						variant={isNightMode ? "dark" : "light"}
-						onClick={toggleNightMode}
-						className={isNightMode ? "bootstrap-night" : "bootstrap-light"}
-					>
-						{isNightMode ? "Light Map" : "Night Map"}
-					</Button>
-				</div>
+			<div className="bootstrap-container">
+				<span>Click on locations to learn more about local rhythms</span>
+				<Button
+					variant={isNightMode ? "dark" : "light"}
+					onClick={toggleNightMode}
+					className={isNightMode ? "bootstrap-night" : "bootstrap-light"}
+				>
+					{isNightMode ? "Light Map" : "Night Map"}
+				</Button>
 			</div>
 			{isFullScreen ? (
 				<div>

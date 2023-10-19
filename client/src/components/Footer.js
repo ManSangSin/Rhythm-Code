@@ -81,29 +81,33 @@ const teamLinkedInElements = teamLinkedInData.map((link) => {
 const Footer = () => {
 	return (
 		<footer>
-			<div className="footer-disclaimer">
-				<p>{disclaimerData.content}</p>
-				<ExternalLink
-					companyIcon={disclaimerData.icon}
-					text={disclaimerData.text}
-					linkUrl={disclaimerData.url}
-				/>
-			</div>
-			<div className="flex-container">
-				<div className="organisation-links-container">
-					{organisationLinkElements}
+			<div className="footer-container">
+				<div className="footer-disclaimer">
+					<p>{disclaimerData.content}</p>
+					<ExternalLink
+						companyIcon={disclaimerData.icon}
+						text={disclaimerData.text}
+						linkUrl={disclaimerData.url}
+					/>
 				</div>
-				<div className="external-links-container">
-					<div>
-						<p className="footer-medium-font">Engineered by Team Rhythm Code</p>
-						{teamLinkedInElements}
+				<div className="flex-container">
+					<div className="organisation-links-container">
+						{organisationLinkElements}
 					</div>
-					<div>
-						<ExternalLink
-							companyIcon={projectData.icon}
-							text={projectData.text}
-							linkUrl={projectData.url}
-						/>
+					<div className="external-links-container">
+						<div>
+							<p className="footer-medium-font">
+								Engineered by Team Rhythm Code
+							</p>
+							{teamLinkedInElements}
+						</div>
+						<div>
+							<ExternalLink
+								companyIcon={projectData.icon}
+								text={projectData.text}
+								linkUrl={projectData.url}
+							/>
+						</div>
 					</div>
 				</div>
 			</div>

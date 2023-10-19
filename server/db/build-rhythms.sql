@@ -33,7 +33,7 @@ CREATE TABLE rhythms (
 
 INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Rumba', 'Cuba', 'Caribbean', 'dot1822');
 INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Gwo-Ka', 'Guadeloupe', 'Caribbean', 'dot1872');
-INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Second Line', 'NOLA', 'USA', 'dot1607');
+INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Second Line', 'NOLA', 'USA', 'dot1466');
 INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Blues / Early Jazz / Trad Jazz', 'NOLA', 'USA', 'dot1607');
 INSERT INTO rhythm_codes (rhythm_code, location, region, map_id) VALUES('Swing', 'Washington DC', 'USA', 'dot1307');
 
@@ -46,8 +46,8 @@ INSERT INTO rhythms (rhythm_code_id, rhythm, language, year_start, year_end, aud
 INSERT INTO rhythms (rhythm_code_id, rhythm, language, year_start, year_end, audio, description) VALUES(2, 'Pajabel', 'French', 1700, 2020, 'https://drive.google.com/uc?id=1MoZXjAO2cqPU3IssoP40PYrAsshT4PVm','The padjabèl is the cane cutting dance');
 INSERT INTO rhythms (rhythm_code_id, rhythm, language, year_start, year_end, audio, description) VALUES(2, 'Lewoz', 'French', 1700, 2020, 'https://drive.google.com/uc?id=1MoZXjAO2cqPU3IssoP40PYrAsshT4PVm','The léwôz is the war rhythm, used to give rhythm the attacks against the plantations, but was also an incantation dance');
 INSERT INTO rhythms (rhythm_code_id, rhythm, language, year_start, year_end, audio, description) VALUES(2, 'Tumbla', 'French', 1700, 2020, 'https://drive.google.com/uc?id=1MoZXjAO2cqPU3IssoP40PYrAsshT4PVm','The toumblak, like the kaladja, deals with the love theme, belly dance, fertility dance');
-INSERT INTO rhythms (rhythm_code_id, rhythm, language, year_start, year_end, video, description) VALUES(3, 'Second Line', 'English', NULL, NULL, 'https://www.youtube.com/watch?v=QpKiuVVXXeA', NULL);
-INSERT INTO rhythms (rhythm_code_id, rhythm, language, year_start, year_end, video, description) VALUES(4, 'One Step', 'English', 1870, 2020, 'https://www.youtube.com/watch?v=rF9y2qIbUqw','One step has a single walking rhythm');
+INSERT INTO rhythms (rhythm_code_id, rhythm, language, year_start, year_end, video, description) VALUES(3, 'Second Line', 'English', NULL, NULL, 'https://youtu.be/QpKiuVVXXeA', NULL);
+INSERT INTO rhythms (rhythm_code_id, rhythm, language, year_start, year_end, video, description) VALUES(4, 'One Step', 'English', 1870, 2020, 'https://youtu.be/rF9y2qIbUqw','One step has a single walking rhythm');
 INSERT INTO rhythms (rhythm_code_id, rhythm, language, year_start, year_end, video, description) VALUES(4, 'Two Step', 'English', 1900, 2020, NULL,'Two step combines two rhythms, typically quicks and slows');
 INSERT INTO rhythms (rhythm_code_id, rhythm, language, year_start, year_end, video, description) VALUES(4, 'Tresillo', 'English', 1920, 1960, NULL,'Tresillo inherits from the Habanera rhythm and also has later links to the bo-diddly');
 INSERT INTO rhythms (rhythm_code_id, rhythm, language, year_start, year_end, video, description) VALUES(5, 'DC Hand Dancing', 'English', NULL, NULL, NULL, NULL);

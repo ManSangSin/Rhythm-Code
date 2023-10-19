@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import "./MapSection.css";
-import dotMapImage from "../images/dot-map.png";
 import MyMap from "../components/MyMap";
 import ExpandIcon from "../images/ExpandIcon.svg";
 
 function MapSection() {
 	const [isFullScreen, setFullScreen] = useState(false);
+	const [isNightMode, setNightMode] = useState(false);
 
 	const toggleFullScreen = () => {
 		setFullScreen(!isFullScreen);
+	};
+
+	const toggleNightMode = () => {
+		setNightMode(!isNightMode);
 	};
 
 	const handleKeyDown = (e) => {
@@ -18,9 +22,18 @@ function MapSection() {
 	};
 
 	return (
-		<div className={`map-section ${isFullScreen ? "fullscreen" : ""}`}>
+		<div
+			className={`map-section ${isFullScreen ? "fullscreen" : ""} ${
+				isNightMode ? "night" : ".map-section"
+			}`}
+		>
 			<div className="help-text">
 				Click on locations to learn more about local rhythms
+			</div>
+			<div>
+				<button onClick={toggleNightMode}>
+					{isNightMode ? "Switch to Day Mode" : "Switch to Night Mode"}
+				</button>
 			</div>
 			{isFullScreen ? (
 				<div>
@@ -35,7 +48,6 @@ function MapSection() {
 						Click to exit full screen mode
 					</div>
 					<div className="full-screen-map">
-						{/* <img src={dotMapImage} alt="Dot Map" /> */}
 						<MyMap />
 					</div>
 				</div>
@@ -54,7 +66,6 @@ function MapSection() {
 						/>
 					</div>
 					<div className="map-container">
-						{/* <img src={dotMapImage} alt="Dot Map" /> */}
 						<MyMap />
 					</div>
 				</div>

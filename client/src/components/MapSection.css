@@ -2,8 +2,6 @@
 	width: 100%;
 	height: auto;
 	flex-shrink: 0;
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
-		drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	font-size: 16px;
 	font-family: "Roboto", sans-serif;
 	font-weight: 400;
@@ -19,6 +17,19 @@
 	height: 100%;
 	background-color: white;
 	z-index: 2;
+}
+
+.night {
+	background-image: linear-gradient(
+		to right,
+		#0c1330,
+		#0c1330,
+		#182049,
+		#1e2c5f,
+		#182049,
+		#0c1330,
+		#0c1330
+	);
 }
 
 .help-text {

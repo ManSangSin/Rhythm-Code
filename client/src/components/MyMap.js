@@ -11,13 +11,8 @@ function MyMap() {
 
 	const [isModalOpen, setModalOpen] = useState(false);
 	const [selectedRhythm, setSelectedRhythm] = useState({});
-	const [isNightMode, setNightMode] = useState(false);
 
 	const API_Rhythms_URL = "/api/rhythms";
-
-	const toggleNightMode = () => {
-		setNightMode(!isNightMode);
-	};
 
 	useEffect(() => {
 		fetch(API_Rhythms_URL)
@@ -44,10 +39,7 @@ function MyMap() {
 	}, []);
 
 	return (
-		<div className={`MyMap ${isNightMode ? "night" : "day"}`}>
-			<button onClick={toggleNightMode}>
-				{isNightMode ? "Switch to Day Mode" : "Switch to Night Mode"}
-			</button>
+		<div>
 			<DotMap>
 				{rhythmCodes.map((rhythmCodeObject) => (
 					<RhythmCodeIcon

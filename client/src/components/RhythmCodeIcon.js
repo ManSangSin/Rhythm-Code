@@ -59,7 +59,7 @@ function RhythmCodeIcon({
 				}}
 			>
 				<div className="rhythmCodeName">{rhythmCodeName}</div>
-				{isDropdownShown &&
+				{isOn &&
 					filteredRhythms.map((rhythms) => {
 						return (
 							<RhythmItem

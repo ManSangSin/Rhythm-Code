@@ -12,17 +12,23 @@ function MyMap({ isNightMode }) {
 	const [isModalOpen, setModalOpen] = useState(false);
 	const [selectedRhythm, setSelectedRhythm] = useState({});
 
+	// toggleDropdownShown function is passed down to RhythmCodeIcon as a prop to allow state to be set by child component as setRhythmCodes is inside the toggleDropdownShown function
 	function toggleDropdownShown(name) {
+		// when using setState function we can access the previous state when declaring an arrow function, we called it prevRhythmCodes in this instance. This will have the same data as rhythmCodes
 		setRhythmCodes((prevRhythmCodes) => {
+			// We do not want to directly modify state so instead we will create a new array (called newRhythmCodes) where we can set the isDropdownShown for the specific rhythm code and then use setRhythmCodes function to set the rhythmCodes to this new array
 			const newRhythmCodes = [];
+			// Looping original array
 			for (let i = 0; i < prevRhythmCodes.length; i++) {
 				const currentRhythmCode = prevRhythmCodes[i];
+				// Check if the current rhythm_code key matches the name (name of rhythm code) passed back by the onClick from RhythmCodeIcon. If match, set isDropdownShown to opposite of current value and add to newRhythmCodes array
 				if (currentRhythmCode.rhythm_code === name) {
 					const updatedRhythmCode = {
 						...currentRhythmCode,
 						isDropdownShown: !currentRhythmCode.isDropdownShown,
 					};
 					newRhythmCodes.push(updatedRhythmCode);
+					// else, set isDropdownShown to false and add to newRhythmCode array
 				} else {
 					const updatedRhythmCode = {
 						...currentRhythmCode,
@@ -31,6 +37,7 @@ function MyMap({ isNightMode }) {
 					newRhythmCodes.push(updatedRhythmCode);
 				}
 			}
+			// Return new array to setRythmCodes function which will change the data of rhythmCodes and which tells react to rebuild components with the new array data
 			return newRhythmCodes;
 		});
 	}
@@ -49,6 +56,7 @@ function MyMap({ isNightMode }) {
 						acc.push({
 							rhythm_code: rhythm.rhythm_code,
 							map_id: rhythm.map_id,
+							// Add a new key/value pair to the rhythmCodes array of objects called isDropdownShown
 							isDropdownShown: false,
 						});
 					}

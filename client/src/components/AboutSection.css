@@ -1,33 +1,38 @@
-.about-section {
-	height: 544px;
+.about-background {
 	background-color: #000;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	width: 100%;
+}
+
+.about-section {
+	margin: auto;
+	padding: 16px 16px;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	gap: 20px;
+	max-width: 1312px;
+	height: auto;
+	align-items: center;
 }
 
 .about-image-container {
-	padding-top: 42px;
-	padding-bottom: 42px;
-	padding-right: 142px;
-	padding-left: 94px;
+	height: 502px;
+	grid-column: 1 / span 3;
 }
 
 .about-dancers-image {
 	width: 100%;
 	height: 100%;
+	object-fit: contain;
 }
 
 .about-text-container {
-	width: 735px;
-	height: 412px;
-	margin-top: 78px;
-	margin-bottom: 54px;
+	height: auto;
 	color: #fff;
 	font-family: var(--font-roboto);
 	font-weight: 700;
 	text-align: left;
 	line-height: normal;
+	grid-column: 5 / span 6;
 }
 
 .about-text-container h4 {
@@ -37,4 +42,28 @@
 
 .about-text-container p {
 	font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+	.about-section {
+		grid-template-columns: repeat(6, 1fr);
+		padding: 60px 16px;
+	}
+
+	.about-image-container {
+		grid-column: 2 / span 4;
+		height: auto;
+	}
+
+	.about-text-container {
+		grid-column: 1 / span 6;
+		height: auto;
+		align-self: center;
+		text-align: center;
+		margin-top: 30px;
+	}
+
+	.about-text-container h4 {
+		text-align: center;
+	}
 }

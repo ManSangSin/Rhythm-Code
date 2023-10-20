@@ -2,8 +2,9 @@ header {
 	background-color: #ffffff;
 	height: 4.5em;
 	max-width: 1312px;
-	justify-content: center;
-	align-items: center;
+	max-width: 1312px;
+	margin: auto;
+	padding: 0 16px;
 }
 
 header a,
@@ -16,7 +17,6 @@ header a:visited {
 	display: flex;
 	flex-shrink: 0;
 	gap: 2em;
-	margin-left: 5.125em;
 }
 
 .header-logo-decodenoir {

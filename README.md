@@ -89,6 +89,7 @@ Frontend: React for building a dynamic and responsive user interface.
 Backend: Node.js and Express for implementing a robust and efficient server-side framework.
 Database: PostgreSQL for securely storing and managing the website's data.
 Hosting: Render for seamlessly deploying and hosting the website on the cloud.
+
 By leveraging these cutting-edge technologies, the Our Rhythms team will be able to create a captivating and engaging online experience that caters to the specific needs and interests of rhythm aficionados worldwide. Users will be able to interact with the website in a variety of ways, such as:
 
 Exploring an interactive multimedia map that visualizes the origins of different rhythms.
@@ -113,8 +114,7 @@ By harnessing the power of the internet and the wealth of knowledge available on
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
@@ -144,6 +144,31 @@ DB_URL = "postgres://postgres:opensesame@localhost:5432/cyf"
 ```
 
 5. You are ready to run the project locally
+
+### Running the project locally
+
+To Start:
+
+1. Start Docker Desktop (or Docker Engine)
+2. Run npm startup script
+
+```sh
+   npm run dev
+```
+
+To Stop:
+
+1. send SIGINT signal
+
+```sh
+ctrl + c
+```
+
+2. run npm shutdown script for Docker (Docker needs to be stopped seperately)
+
+```sh
+Run "npm run docker:stop"
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

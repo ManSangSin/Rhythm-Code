@@ -4,6 +4,7 @@ import "./MyMap.css";
 import ModalVideo from "../components/ModalVideo";
 import DotMap from "../components/DotMap";
 import RhythmCodeIcon from "./RhythmCodeIcon";
+import RhythmsWithSlider from "./RhythmsWithSlider";
 
 function MyMap({ isNightMode }) {
 	const [rhythmCodes, setRhythmCodes] = useState([]);
@@ -11,6 +12,9 @@ function MyMap({ isNightMode }) {
 
 	const [isModalOpen, setModalOpen] = useState(false);
 	const [selectedRhythm, setSelectedRhythm] = useState({});
+
+	const [selectedRange, setSelectedRange] = useState([1600, 2023]);
+	const [filteredRhythms, setFilteredRhythms] = useState([]);
 
 	// toggleDropdownShown function is passed down to RhythmCodeIcon as a prop to allow state to be set by child component as setRhythmCodes is inside the toggleDropdownShown function
 	function toggleDropdownShown(name) {
@@ -68,24 +72,48 @@ function MyMap({ isNightMode }) {
 				console.error("NOPE! Rhythms:", error);
 			});
 	}, []);
+	useEffect(() => {
+		const filteredRhythms = rhythms.filter((rhythm) => {
+			const rhythmStartYear = rhythm.year_start;
+			const rhythmEndYear = rhythm.year_end;
+
+			return (
+				(rhythmStartYear >= selectedRange[0] || !rhythmStartYear) &&
+				(rhythmEndYear <= selectedRange[1] || !rhythmEndYear)
+			);
+		});
+
+		setFilteredRhythms(filteredRhythms);
+	}, [rhythms, selectedRange]);
 
 	return (
 		<div>
+			<RhythmsWithSlider
+				selectedRange={selectedRange}
+				onChangeRange={setSelectedRange}
+			/>
 			<DotMap>
-				{rhythmCodes.map((rhythmCodeObject) => (
-					<RhythmCodeIcon
-						key={rhythmCodeObject.rhythm_code}
-						rhythmCodeName={rhythmCodeObject.rhythm_code}
-						rhythmsList={rhythms}
-						map_id={rhythmCodeObject.map_id}
-						setModalOpen={setModalOpen}
-						setSelectedRhythm={setSelectedRhythm}
-						isNightMode={isNightMode}
-						toggleDropdownShown={toggleDropdownShown}
-						isDropdownShown={rhythmCodeObject.isDropdownShown}
-					/>
-				))}
+				{rhythmCodes
+					.filter((rhythmCodeObject) =>
+						filteredRhythms.some(
+							(rhythm) => rhythm.rhythm_code === rhythmCodeObject.rhythm_code
+						)
+					)
+					.map((rhythmCodeObject) => (
+						<RhythmCodeIcon
+							key={rhythmCodeObject.rhythm_code}
+							rhythmCodeName={rhythmCodeObject.rhythm_code}
+							rhythmsList={filteredRhythms}
+							map_id={rhythmCodeObject.map_id}
+							setModalOpen={setModalOpen}
+							setSelectedRhythm={setSelectedRhythm}
+							isNightMode={isNightMode}
+							toggleDropdownShown={toggleDropdownShown}
+							isDropdownShown={rhythmCodeObject.isDropdownShown}
+						/>
+					))}
 			</DotMap>
+
 			{isModalOpen && (
 				<ModalVideo setModalOpen={setModalOpen} rhythm={selectedRhythm} />
 			)}

@@ -1,45 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import DualRangeSlider from "./DualRangeSlider";
 
-const RhythmsWithSlider = ({ rhythms }) => {
-	const [selectedRange, setSelectedRange] = useState([1400, 2023]);
-	const [filteredRhythms, setFilteredRhythms] = useState([]);
-
-	// Update rhythms when user change the slider
-	// This strictly just shows the rhythms in selected range(for now!)
-	useEffect(() => {
-		const updatedRhythms = rhythms.filter((rhythm) => {
-			const rhythmStartYear = parseInt(rhythm.timePeriod.split("-")[0]);
-			const rhythmEndYear = parseInt(rhythm.timePeriod.split("-")[1]);
-			return (
-				rhythmStartYear >= selectedRange[0] && rhythmEndYear <= selectedRange[1]
-			);
-		});
-		setFilteredRhythms(updatedRhythms);
-	}, [selectedRange, rhythms]);
-
+const RhythmsWithSlider = ({ rhythms, selectedRange, onChangeRange }) => {
 	return (
 		<div>
 			<DualRangeSlider
 				selectedRange={selectedRange}
-				onChangeRange={setSelectedRange}
+				onChangeRange={onChangeRange}
 			/>
-			<div style={{ display: "flex", flexDirection: "column" }}>
-				{filteredRhythms.map((rhythm, index) => (
-					<div key={index} style={{ display: "flex", alignItems: "center" }}>
-						<div
-							// all inline styles are just for testing
-							style={{
-								width: "20px",
-								height: "20px",
-								backgroundColor: "blue",
-								borderRadius: "50%",
-								marginRight: "10px",
-							}}
-						></div>
-						<span>{rhythm.title} {rhythm.timePeriod }</span>
-					</div>
-				))}
+			<div>
+				{rhythms &&
+					rhythms.length > 0 &&
+					rhythms.map((rhythm, index) => (
+						<div key={index}>{rhythm.rhythm}</div>
+					))}
 			</div>
 		</div>
 	);

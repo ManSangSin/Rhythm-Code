@@ -1,6 +1,9 @@
 header {
 	background-color: #ffffff;
 	height: 4.5em;
+	max-width: 1312px;
+	justify-content: center;
+	align-items: center;
 }
 
 header a,
@@ -11,19 +14,44 @@ header a:visited {
 
 .header-logo_container {
 	display: flex;
-	align-items: flex-end;
 	flex-shrink: 0;
-	gap: 2.125em;
+	gap: 2em;
 	margin-left: 5.125em;
 }
 
-.header-text {
+.header-logo-decodenoir {
 	font-family: "Oswald", sans-serif;
 	font-weight: bold;
 	font-size: 2em;
 }
 
-.header-logo_cyf {
+.header-logo-cyf {
 	width: 12.5em;
 	height: 3.75em;
+}
+
+@media screen and (max-width: 768px) {
+	/* header {
+        align-items: center; 
+        display: flex;
+        flex-direction: column; 
+        height: auto; 
+    }
+    .header-logo_container {
+        align-items: center;
+        display: flex;
+        flex-direction: column; 
+        margin: 2%;
+    } */
+
+	header {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.header-logo_container {
+		align-items: center;
+		display: flex;
+		margin: 2%;
+	}
 }

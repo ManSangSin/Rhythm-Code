@@ -27,26 +27,26 @@ const organisationLinksData = [
 	},
 ];
 
-const teamGithubData = [
+const teamLinkedInData = [
 	{
 		icon: linkedinIcon,
 		text: "Christina Mifsud",
-		url: "https://github.com/christina-mifsud",
+		url: "https://www.linkedin.com/in/christinamifsud/",
 	},
 	{
 		icon: linkedinIcon,
 		text: "Delnia Alipour",
-		url: "https://github.com/DelniaAlipour",
+		url: "https://www.linkedin.com/in/delnia-alipour-848b57106/",
 	},
 	{
 		icon: linkedinIcon,
 		text: "Irianni Munoz",
-		url: "https://github.com/munozirianni1988",
+		url: "https://www.linkedin.com/in/irianni-munoz-693a36164/",
 	},
 	{
 		icon: linkedinIcon,
 		text: "Man Sang Sin",
-		url: "https://github.com/ManSangSin",
+		url: "https://www.linkedin.com/in/man-sang-sin/",
 	},
 ];
 
@@ -67,7 +67,7 @@ const organisationLinkElements = organisationLinksData.map((organisation) => {
 	);
 });
 
-const teamGithubElements = teamGithubData.map((link) => {
+const teamLinkedInElements = teamLinkedInData.map((link) => {
 	return (
 		<ExternalLink
 			key={link.text}
@@ -81,29 +81,33 @@ const teamGithubElements = teamGithubData.map((link) => {
 const Footer = () => {
 	return (
 		<footer>
-			<div className="footer-disclaimer">
-				<p>{disclaimerData.content}</p>
-				<ExternalLink
-					companyIcon={disclaimerData.icon}
-					text={disclaimerData.text}
-					linkUrl={disclaimerData.url}
-				/>
-			</div>
-			<div className="flex-container">
-				<div className="organisation-links-container">
-					{organisationLinkElements}
+			<div className="footer-container">
+				<div className="footer-disclaimer">
+					<p>{disclaimerData.content}</p>
+					<ExternalLink
+						companyIcon={disclaimerData.icon}
+						text={disclaimerData.text}
+						linkUrl={disclaimerData.url}
+					/>
 				</div>
-				<div className="external-links-container">
-					<div>
-						<p className="footer-medium-font">Engineered by Team Rhythm Code</p>
-						{teamGithubElements}
+				<div className="grid-container">
+					<div className="organisation-links-container">
+						{organisationLinkElements}
 					</div>
-					<div>
-						<ExternalLink
-							companyIcon={projectData.icon}
-							text={projectData.text}
-							linkUrl={projectData.url}
-						/>
+					<div className="external-links-container">
+						<div>
+							<p className="footer-medium-font">
+								Engineered by Team Rhythm Code
+							</p>
+							{teamLinkedInElements}
+						</div>
+						<div>
+							<ExternalLink
+								companyIcon={projectData.icon}
+								text={projectData.text}
+								linkUrl={projectData.url}
+							/>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -11,12 +11,22 @@ const Header = () => {
 		<header>
 			<div className="header-logo_container">
 				{/* rel needs to be specified when target is used as security risk for older browsers */}
-				<a href={decodenoir_url} target="_blank" rel="noreferrer">
-					<span className="header-text">decodenoir.org</span>
+				<a
+					href={decodenoir_url}
+					target="_blank"
+					rel="noreferrer"
+					className="header-logo-decodenoir-container"
+				>
+					<span className="header-logo-decodenoir">decodenoir.org</span>
 				</a>
-				<img src={cross} alt="cross icon" />
-				<a href={cyf_url} target="_blank" rel="noreferrer">
-					<img className="header-logo_cyf" src={logo} alt="cyf logo" />
+				<img src={cross} alt="cross icon" className="header-cross-icon" />
+				<a
+					href={cyf_url}
+					target="_blank"
+					rel="noreferrer"
+					className="header-logo-cyf-container"
+				>
+					<img className="header-logo-cyf" src={logo} alt="cyf logo" />
 				</a>
 			</div>
 		</header>

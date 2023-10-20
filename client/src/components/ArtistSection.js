@@ -4,7 +4,7 @@ import Deidre from "../images/deidre_full.png";
 import "./ArtistSection.css";
 
 const content = {
-	title: "Artist & Dance Researcher Deidre Molloy",
+	title: "Artist & Dance Researcher Deirdre Molloy",
 	subtitle: "Doctoral student at University College Cork",
 	paragraph:
 		"Deirdre has always danced. Her research centres dance as a decolonising resource of collective knowledge and innovation.This Afrocentric arts research is suited to film, photography, music and performance collaborations – so be in touch!",

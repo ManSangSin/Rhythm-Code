@@ -36,21 +36,7 @@
 <h3 align="center">Rhythm Code</h3>
 
   <p align="center">
-    This project will involve a variety of tools and programming languages to achieve the desired outcome. Here's a breakdown of the project's proposed structure and how it can be developed:
-
-Backend: A PostgreSQL database will be used to store the data. The database will be pre-populated with the necessary information on each rhythm code. A Node.js and Express server will be responsible for interacting with the database and providing the data to the frontend.
-
-Frontend: The frontend will be built using React.js, a popular JavaScript library for building user interfaces. The website will feature an interactive multimedia map with markers representing the rhythm codes. Each marker will be clickable, allowing users to view a list of related rhythms and their corresponding media content.
-
-Database Schema: The database will contain two tables, one for the rhythm codes and another for the rhythms themselves. The rhythm codes table will have columns for the unique identifier of each code, the name of the code, and the coordinates of the marker on the map. The rhythms table will have columns for the unique identifier of each rhythm, the title of the rhythm, a URL linking to more information about the rhythm, and the coordinates of the marker on the map.
-
-Data Seeding: The database will be seeded with data using a seed file, which will contain SQL commands to insert the necessary information into the database. This seed file will be used each time the project is started to ensure that the database has the latest data.
-
-Docker Deployment: The project will be deployed using Docker, a tool that simplifies the process of creating, deploying, and running applications. A standalone Docker container will be used to deploy the PostgreSQL database. The container will be configured to run automatically whenever the project is started.
-
-NPM Commands: The project will include a series of NPM commands that can be used to automate various tasks. These commands will be stored in a "scripts" section of the project's "package.json" file. For example, the "npm run dev" command will be used to start the project in development mode, while the "npm run docker:stop" command will be used to stop the Docker container.
-
-Deployment: The project will be hosted on Render, a cloud platform that specializes in hosting static websites and serverless applications.
+desc
 <br />
 <a href="https://github.com/ManSangSin/Rhythm-Code"><strong>Explore the docs »</strong></a>
 <br />
@@ -95,21 +81,31 @@ Deployment: The project will be hosted on Render, a cloud platform that speciali
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
+We are building a unique and interactive multimedia map website that serves as a visual representation of the diverse and complex rhythms originating from various geographical locations. This innovative website aims to cater to both curious listeners and experienced rhythm enthusiasts by providing a user-friendly platform to explore, interact with, and learn about the various rhythms from around the world.
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `ManSangSin`done, `Rhythm-Code`done, `twitter_handle`, `linkedin_username`, `gmail`, `man.sang.sin`, `Rhythm Code`, `project_description`
+To ensure the website's technical functionality, we will employ the following technologies:
+
+Frontend: React for building a dynamic and responsive user interface.
+Backend: Node.js and Express for implementing a robust and efficient server-side framework.
+Database: PostgreSQL for securely storing and managing the website's data.
+Hosting: Render for seamlessly deploying and hosting the website on the cloud.
+By leveraging these cutting-edge technologies, the Our Rhythms team will be able to create a captivating and engaging online experience that caters to the specific needs and interests of rhythm aficionados worldwide. Users will be able to interact with the website in a variety of ways, such as:
+
+Exploring an interactive multimedia map that visualizes the origins of different rhythms.
+Clicking on markers/pins on the map to view a list of related rhythms.
+Clicking on individual rhythms to access a modal that displays relevant media content and additional information.
+With a responsive design that works seamlessly on both mobile and desktop layouts, the Our Rhythms website will cater to a diverse audience and ensure an optimal user experience, regardless of the device or platform being used.
+
+By harnessing the power of the internet and the wealth of knowledge available online, the Our Rhythms team aims to create a truly revolutionary website that serves as a dynamic and comprehensive platform for exploring, learning about, and appreciating the diverse and fascinating world of rhythms
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-- [![Next][Next.js]][Next-url]
 - [![React][React.js]][React-url]
-- [![Vue][Vue.js]][Vue-url]
-- [![Angular][Angular.io]][Angular-url]
-- [![Svelte][Svelte.dev]][Svelte-url]
-- [![Laravel][Laravel.com]][Laravel-url]
-- [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-- [![JQuery][JQuery.com]][JQuery-url]
+- [![Postgres][Postgres]][Postgres-url]
+- [![Node][Node.js]][Node-url]
+- [![Docker][Docker]][Docker-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -247,3 +243,11 @@ Project Link: [https://github.com/ManSangSin/Rhythm-Code](https://github.com/Man
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com
+[Postgres]: https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white
+[Postgres-url]: https://www.postgresql.org/
+[Node.js]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
+[Node-url]: https://nodejs.org/en
+[JavaScript]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[JavaScript-url]: https://www.javascript.com/
+[Docker]: https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white
+[Docker-url]: https://www.docker.com/

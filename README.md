@@ -118,6 +118,7 @@ By harnessing the power of the internet and the wealth of knowledge available on
 To get a local copy up and running follow these simple steps.
 
 
+
 ### Prerequisites
 
 The following list of things are required to use the software:
@@ -127,6 +128,7 @@ The following list of things are required to use the software:
   npm install npm@latest -g
   ```
 - Docker
+
 
 
 ### Installation
@@ -147,6 +149,7 @@ DB_URL = "postgres://postgres:opensesame@localhost:5432/cyf"
 ```
 
 5. You are ready to run the project locally
+
 
 
 ### Running the project locally

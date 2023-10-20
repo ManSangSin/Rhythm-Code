@@ -26,32 +26,26 @@ header a:visited {
 }
 
 .header-logo-cyf {
-	width: 12.5em;
-	height: 3.75em;
+	width: 11.5em;
+	height: auto;
 }
 
 @media screen and (max-width: 768px) {
-	/* header {
-        align-items: center; 
-        display: flex;
-        flex-direction: column; 
-        height: auto; 
-    }
-    .header-logo_container {
-        align-items: center;
-        display: flex;
-        flex-direction: column; 
-        margin: 2%;
-    } */
-
 	header {
 		justify-content: center;
 		align-items: center;
 	}
 
 	.header-logo_container {
-		align-items: center;
 		display: flex;
-		margin: 2%;
+		margin: 0 16px;
+		transform: scale(0.7);
+	}
+
+	.header-cross-icon {
+		margin-right: -19px;
+	}
+	.header-logo-cyf {
+		transform: scale(0.9);
 	}
 }

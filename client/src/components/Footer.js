@@ -1,10 +1,10 @@
 import React from "react";
 import "./Footer.css";
 import OrganisationLink from "./OrganisationLink";
-import linkedinIcon from "../assets/linkedin-icon.svg";
-import githubIcon from "../assets/github-icon.svg";
+import linkedinIcon from "../images/linkedin-icon.svg";
+import githubIcon from "../images/github-icon.svg";
 import ExternalLink from "./ExternalLink";
-import instagramIcon from "../assets/instagram-icon.svg";
+import instagramIcon from "../images/instagram-icon.svg";
 
 const disclaimerData = {
 	content:

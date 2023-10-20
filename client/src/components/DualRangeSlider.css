@@ -1,5 +1,5 @@
 .dual-range-container {
-	margin: 20px;
+	margin: 82px;
 	max-width: 500px;
 	padding: 20px;
 	border: 1px solid #ccc;
@@ -42,4 +42,9 @@
 .range-values {
 	display: flex;
 	justify-content: space-between;
+}
+@media (max-width: 768px) {
+	.dual-range-container {
+		display: none;
+	}
 }

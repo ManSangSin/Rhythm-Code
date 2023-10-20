@@ -5,7 +5,7 @@
 	background-color: rgba(255, 255, 255, 0.8);
 	border: 1px solid transparent;
 	border-radius: 10px;
-	width: 120px;
+	width: 16em;
 	color: var(--copy-color);
 }
 
@@ -16,6 +16,7 @@
 
 .rhythmCodeName {
 	font-weight: 700;
+	font-size: 2.5em;
 	list-style-type: none;
 	margin: 5px 0;
 	padding-bottom: 8px;
@@ -29,7 +30,7 @@
 	padding: 1px;
 	font: var(--font-roboto);
 	color: var(--copy-color);
-	font-size: 16px;
+	font-size: 2.5em;
 	cursor: pointer;
 }
 
@@ -39,4 +40,16 @@
 
 .rhythmItemList > li:hover {
 	font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+	.rhythmCodeName {
+		font-size: 4em;
+	}
+	.rhythmItemList > li > button {
+		font-size: 4em;
+	}
+	.rhythmItemList {
+		width: 25em;
+	}
 }

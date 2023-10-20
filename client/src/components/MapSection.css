@@ -35,7 +35,6 @@
 }
 
 .bootstrap-container {
-	margin-bottom: 70px;
 	padding-left: 82px;
 	padding-top: 20px;
 	display: flex;
@@ -72,8 +71,8 @@
 .expand-icon {
 	width: 40px;
 	position: absolute;
-	top: 150px;
-	right: 40px;
+	top: 4em;
+	right: 2.5em;
 	height: 40px;
 	cursor: pointer;
 }

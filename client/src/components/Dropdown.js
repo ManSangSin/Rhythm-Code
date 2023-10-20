@@ -1,7 +1,10 @@
-// import React from "react";
-
-const Dropdown = ({ open, trigger, handleCloseDropdown, handleShowModal, rhythms }) => {
-
+const Dropdown = ({
+	open,
+	trigger,
+	handleCloseDropdown,
+	handleShowModal,
+	rhythms,
+}) => {
 	return (
 		<div className="dropdown">
 			{trigger}
@@ -23,6 +26,5 @@ const Dropdown = ({ open, trigger, handleCloseDropdown, handleShowModal, rhythms
 		</div>
 	);
 };
-
 
 export default Dropdown;

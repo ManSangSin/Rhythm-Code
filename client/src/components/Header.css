@@ -34,11 +34,12 @@ header a:visited {
 	header {
 		justify-content: center;
 		align-items: center;
+		height: 3.5em;
 	}
 
 	.header-logo_container {
 		display: flex;
-		margin: 0 16px;
+		margin-left: -25px;
 		transform: scale(0.7);
 	}
 

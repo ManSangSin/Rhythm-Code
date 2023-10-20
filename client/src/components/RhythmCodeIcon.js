@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import "./RhythmCodeIcon.css";
 import "./RhythmItem.css";
 import RhythmItem from "./RhythmItem";

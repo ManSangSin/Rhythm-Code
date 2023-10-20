@@ -20,3 +20,7 @@
 .night #dotmap path {
 	fill: rgb(185, 158, 1);
 }
+
+#dotmap {
+	margin: 1em;
+}

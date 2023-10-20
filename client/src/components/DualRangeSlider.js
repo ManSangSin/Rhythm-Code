@@ -1,5 +1,6 @@
 import React from "react";
 import { Range } from "react-range";
+import "./DualRangeSlider.css";
 
 const DualRangeSlider = ({ selectedRange, onChangeRange }) => {
 	const min = 1600;
@@ -13,18 +14,11 @@ const DualRangeSlider = ({ selectedRange, onChangeRange }) => {
 	const railLabels = [1700, 1800, 1900];
 
 	return (
-		<div style={{ margin: "20px", maxWidth: "400px" }}>
-			<h2>
+		<div className="dual-range-container">
+			<h3 className="range-title">
 				Range: {selectedRange[0]} - {selectedRange[1]}
-			</h2>
-			<div
-				style={{
-					display: "flex",
-					justifyContent: "center",
-					alignItems: "center",
-					position: "relative",
-				}}
-			>
+			</h3>
+			<div className="range-wrapper">
 				<Range
 					step={step}
 					min={min}
@@ -32,37 +26,22 @@ const DualRangeSlider = ({ selectedRange, onChangeRange }) => {
 					values={selectedRange}
 					onChange={handleChange}
 					renderTrack={({ props, children }) => (
-						<div
-							{...props}
-							style={{
-								...props.style,
-								height: "6px",
-								width: "100%",
-								backgroundColor: "#ddd",
-								position: "relative",
-							}}
-						>
+						<div {...props} className="range-track">
 							{children}
 							<div
+								className="range-highlight"
 								style={{
-									position: "absolute",
-									height: "6px",
 									width: `${
 										((selectedRange[1] - selectedRange[0]) / (max - min)) * 100
 									}%`,
-									backgroundColor: "#007bbb",
 									left: `${((selectedRange[0] - min) / (max - min)) * 100}%`,
 								}}
 							></div>
 							{railLabels.map((label, index) => (
 								<div
 									key={index}
-									style={{
-										position: "absolute",
-										bottom: "-25px",
-										left: `${((label - min) / (max - min)) * 100}%`,
-										transform: "translateX(-50%)",
-									}}
+									className="range-label"
+									style={{ left: `${((label - min) / (max - min)) * 100}%` }}
 								>
 									{label}
 								</div>
@@ -70,21 +49,11 @@ const DualRangeSlider = ({ selectedRange, onChangeRange }) => {
 						</div>
 					)}
 					renderThumb={({ props }) => (
-						<div
-							{...props}
-							style={{
-								...props.style,
-								height: "20px",
-								width: "20px",
-								backgroundColor: "#007bbb",
-								borderRadius: "50%",
-								outline: "none",
-							}}
-						/>
+						<div {...props} className="range-thumb" />
 					)}
 				/>
 			</div>
-			<div style={{ display: "flex", justifyContent: "space-between" }}>
+			<div className="range-values">
 				<span>{min}</span>
 				<span>{max}</span>
 			</div>
@@ -93,4 +62,3 @@ const DualRangeSlider = ({ selectedRange, onChangeRange }) => {
 };
 
 export default DualRangeSlider;
-// src: https://codesandbox.io/s/multi-range-slider-react-js-forked-4uq1uo?file=/src/component/multiRangeSlider/MultiRangeSlider.js:529-589

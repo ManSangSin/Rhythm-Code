@@ -20,13 +20,13 @@ function MyMap({ isNightMode }) {
 				if (currentRhythmCode.rhythm_code === name) {
 					const updatedRhythmCode = {
 						...currentRhythmCode,
-						isOn: !currentRhythmCode.isOn,
+						isDropdownShown: !currentRhythmCode.isDropdownShown,
 					};
 					newRhythmCodes.push(updatedRhythmCode);
 				} else {
 					const updatedRhythmCode = {
 						...currentRhythmCode,
-						isOn: false,
+						isDropdownShown: false,
 					};
 					newRhythmCodes.push(updatedRhythmCode);
 				}
@@ -49,7 +49,7 @@ function MyMap({ isNightMode }) {
 						acc.push({
 							rhythm_code: rhythm.rhythm_code,
 							map_id: rhythm.map_id,
-							isOn: false,
+							isDropdownShown: false,
 						});
 					}
 					return acc;
@@ -74,7 +74,7 @@ function MyMap({ isNightMode }) {
 						setSelectedRhythm={setSelectedRhythm}
 						isNightMode={isNightMode}
 						toggleDropdownShown={toggleDropdownShown}
-						isOn={rhythmCodeObject.isOn}
+						isDropdownShown={rhythmCodeObject.isDropdownShown}
 					/>
 				))}
 			</DotMap>

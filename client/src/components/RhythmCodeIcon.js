@@ -12,7 +12,7 @@ function RhythmCodeIcon({
 	setSelectedRhythm,
 	isNightMode,
 	toggleDropdownShown,
-	isOn,
+	isDropdownShown,
 }) {
 	const filteredRhythms = rhythmsList.filter(
 		(rhythm) => rhythm.rhythm_code === rhythmCodeName
@@ -51,14 +51,14 @@ function RhythmCodeIcon({
 			<div
 				className="rhythmItemList"
 				style={{
-					display: isOn ? "block" : "none",
+					display: isDropdownShown ? "block" : "none",
 					top: "0",
 					left: "40px",
 					zIndex: 999,
 				}}
 			>
 				<div className="rhythmCodeName">{rhythmCodeName}</div>
-				{isOn &&
+				{isDropdownShown &&
 					filteredRhythms.map((rhythms) => {
 						return (
 							<RhythmItem

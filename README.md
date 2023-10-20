@@ -156,18 +156,24 @@ To Start:
    npm run dev
 ```
 
-To Stop:
-
-1. send SIGINT signal
+3. Open your browser and go to localhost
 
 ```sh
-ctrl + c
+  http://localhost:3000/
 ```
 
-2. run npm shutdown script for Docker (Docker needs to be stopped seperately)
+To Stop:
+
+1. Send SIGINT signal
 
 ```sh
-Run "npm run docker:stop"
+  ctrl + c
+```
+
+2. Run npm shutdown script for Docker (Docker needs to be stopped seperately)
+
+```sh
+  npm run docker:stop
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

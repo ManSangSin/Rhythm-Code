@@ -1,22 +1,25 @@
 import React, { useState, useEffect } from "react";
 import DualRangeSlider from "./DualRangeSlider";
 
-const RhythmsWithSlider = ({ rhythms }) => {
+const RhythmsWithSlider = ({
+	rhythms,
+	filteredRhythms,
+	setFilteredRhythms,
+}) => {
 	const [selectedRange, setSelectedRange] = useState([1400, 2023]);
-	const [filteredRhythms, setFilteredRhythms] = useState([]);
 
 	// Update rhythms when user change the slider
 	// This strictly just shows the rhythms in selected range(for now!)
 	useEffect(() => {
 		const updatedRhythms = rhythms.filter((rhythm) => {
-			const rhythmStartYear = parseInt(rhythm.timePeriod.split("-")[0]);
-			const rhythmEndYear = parseInt(rhythm.timePeriod.split("-")[1]);
+			const rhythmStartYear = parseInt(rhythm.year_start);
+			const rhythmEndYear = parseInt(rhythm.year_end);
 			return (
 				rhythmStartYear >= selectedRange[0] && rhythmEndYear <= selectedRange[1]
 			);
 		});
 		setFilteredRhythms(updatedRhythms);
-	}, [selectedRange, rhythms]);
+	}, [selectedRange]);
 
 	return (
 		<div>
@@ -37,7 +40,9 @@ const RhythmsWithSlider = ({ rhythms }) => {
 								marginRight: "10px",
 							}}
 						></div>
-						<span>{rhythm.title} {rhythm.timePeriod }</span>
+						<span>
+							{rhythm.title} {rhythm.timePeriod}
+						</span>
 					</div>
 				))}
 			</div>

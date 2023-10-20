@@ -4,6 +4,7 @@ import "./MyMap.css";
 import ModalVideo from "../components/ModalVideo";
 import DotMap from "../components/DotMap";
 import RhythmCodeIcon from "./RhythmCodeIcon";
+import DualRangeSlider from "./DualRangeSlider";
 
 function MyMap({ isNightMode }) {
 	const [rhythmCodes, setRhythmCodes] = useState([]);
@@ -11,6 +12,22 @@ function MyMap({ isNightMode }) {
 
 	const [isModalOpen, setModalOpen] = useState(false);
 	const [selectedRhythm, setSelectedRhythm] = useState({});
+
+	const [selectedRange, setSelectedRange] = useState([1400, 2023]);
+	const [filteredRhythms, setFilteredRhythms] = useState([]);
+
+	// Update rhythms when user change the slider
+	// This strictly just shows the rhythms in selected range(for now!)
+	useEffect(() => {
+		const updatedRhythms = rhythms.filter((rhythm) => {
+			const rhythmStartYear = parseInt(rhythm.year_start);
+			const rhythmEndYear = parseInt(rhythm.year_end);
+			return (
+				rhythmStartYear >= selectedRange[0] && rhythmEndYear <= selectedRange[1]
+			);
+		});
+		setFilteredRhythms(updatedRhythms);
+	}, [selectedRange, rhythms]);
 
 	// toggleDropdownShown function is passed down to RhythmCodeIcon as a prop to allow state to be set by child component as setRhythmCodes is inside the toggleDropdownShown function
 	function toggleDropdownShown(name) {
@@ -76,7 +93,7 @@ function MyMap({ isNightMode }) {
 					<RhythmCodeIcon
 						key={rhythmCodeObject.rhythm_code}
 						rhythmCodeName={rhythmCodeObject.rhythm_code}
-						rhythmsList={rhythms}
+						rhythmsList={filteredRhythms}
 						map_id={rhythmCodeObject.map_id}
 						setModalOpen={setModalOpen}
 						setSelectedRhythm={setSelectedRhythm}
@@ -86,6 +103,10 @@ function MyMap({ isNightMode }) {
 					/>
 				))}
 			</DotMap>
+			<DualRangeSlider
+				selectedRange={selectedRange}
+				onChangeRange={setSelectedRange}
+			/>
 			{isModalOpen && (
 				<ModalVideo setModalOpen={setModalOpen} rhythm={selectedRhythm} />
 			)}

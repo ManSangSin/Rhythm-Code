@@ -14,19 +14,21 @@ const Content = {
 
 const Hero = () => {
 	return (
-		<div className="hero-container">
-			<div className="hero-text">
-				<div className="subheader">
-					<h1>{Content.text1.h1}</h1>
-					<h2>{Content.text1.h2}</h2>
+		<div className="hero">
+			<div className="hero-container">
+				<div className="hero-text">
+					<div className="subheader">
+						<h1>{Content.text1.h1}</h1>
+						<h2>{Content.text1.h2}</h2>
+					</div>
+					<div className="quote">
+						<p className="sentence">{Content.text2.quote}</p>
+						<p className="name">{Content.text2.name}</p>
+					</div>
 				</div>
-				<div className="quote">
-					<p className="sentence">{Content.text2.quote}</p>
-					<p className="name">{Content.text2.name}</p>
+				<div className="hero-image">
+					<img src={heroImage} alt="dancer" />
 				</div>
-			</div>
-			<div className="hero-image">
-				<img src={heroImage} alt="dancer" />
 			</div>
 		</div>
 	);

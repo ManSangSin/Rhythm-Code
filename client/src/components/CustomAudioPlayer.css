@@ -21,7 +21,9 @@
 	fill: #cb3100;
 	background-color: transparent;
 }
-
+.stop-button {
+	width: 20px;
+}
 .stop-rectangles {
 	width: 13.92px;
 	height: 50.617px;
@@ -74,4 +76,16 @@
 	border-radius: 50%;
 	background: #cb3100;
 	cursor: pointer;
+}
+@media (max-width: 768px) {
+	.custom-audio-player {
+		align-items: center;
+		padding: 30px;
+	}
+	.stop-button {
+		width: 20px;
+	}
+	.seek-bar {
+		width: 250px;
+	}
 }

@@ -55,3 +55,20 @@ header a:visited {
 		margin: 2%;
 	}
 }
+
+@media screen and (max-width: 500px) {
+	.header-logo_container {
+		gap: 1em;
+		width: 100%;
+		padding: 5%;
+	}
+
+	.header-logo-decodenoir {
+		font-size: 1.5em;
+	}
+
+	.header-logo-cyf {
+		width: 100%;
+		height: auto;
+	}
+}

@@ -5,7 +5,7 @@
 
 .about-section {
 	margin: auto;
-	padding: 0 16px;
+	padding: 16px 16px;
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
 	gap: 20px;
@@ -47,12 +47,12 @@
 @media screen and (max-width: 768px) {
 	.about-section {
 		grid-template-columns: repeat(6, 1fr);
+		padding: 60px 16px;
 	}
 
 	.about-image-container {
 		grid-column: 2 / span 4;
 		height: auto;
-		margin-top: 60px;
 	}
 
 	.about-text-container {
@@ -60,7 +60,7 @@
 		height: auto;
 		align-self: center;
 		text-align: center;
-		margin-bottom: 60px;
+		margin-top: 30px;
 	}
 
 	.about-text-container h4 {

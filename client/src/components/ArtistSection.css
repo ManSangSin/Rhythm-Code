@@ -1,6 +1,6 @@
 .artist-section {
 	margin: auto;
-	padding: 0 16px;
+	padding: 16px 16px;
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
 	gap: 20px;
@@ -89,13 +89,13 @@
 @media screen and (max-width: 768px) {
 	.artist-section {
 		grid-template-columns: repeat(10, 1fr);
+		padding: 60px 16px;
 	}
 
 	.artist-image-container {
 		grid-column: 3 / span 6;
 		height: auto;
 		order: 1;
-		margin-top: 60px;
 	}
 
 	.artist-text-container {
@@ -117,7 +117,6 @@
 	.artist-buttons-container {
 		grid-template-columns: repeat(10, 1fr);
 		margin-top: 40px;
-		margin-bottom: 60px;
 	}
 	.artist-buttons-container button {
 		width: 100%;

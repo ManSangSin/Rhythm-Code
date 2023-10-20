@@ -9,7 +9,7 @@ footer {
 
 .footer-container {
 	margin: auto;
-	padding: 0 16px;
+	padding: 60px 16px;
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
 	gap: 20px;
@@ -33,7 +33,7 @@ footer .grid-container {
 }
 
 .organisation-links-container {
-	grid-column: 1 / span 4;
+	grid-column: 1 / span 5;
 }
 
 .external-links-container {
@@ -52,6 +52,7 @@ footer a:hover {
 @media screen and (max-width: 768px) {
 	.footer-container {
 		grid-template-columns: repeat(6, 1fr);
+		padding: 60px 16px;
 	}
 
 	.footer-disclaimer {

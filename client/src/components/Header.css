@@ -1,7 +1,9 @@
 header {
-	width: 100%;
 	background-color: #ffffff;
 	height: 4.5em;
+	max-width: 1312px;
+	justify-content: center;
+	align-items: center;
 }
 
 header a,
@@ -11,43 +13,45 @@ header a:visited {
 }
 
 .header-logo_container {
-	margin: auto;
-	padding: 0 16px;
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	gap: 20px;
-	max-width: 1312px;
-	height: auto;
-	align-items: center;
-	place-items: center;
-}
-.header-logo-decodenoir-container {
-	grid-column: 1 / span 2;
-	font-family: "Oswald", sans-serif;
-	font-weight: bold;
-	font-size: 2em;
-	text-align: center;
+	display: flex;
+	flex-shrink: 0;
+	gap: 2em;
+	margin-left: 5.125em;
 }
 
 .header-logo-decodenoir {
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-}
-
-.header-cross-icon {
-	grid-column: 3 / span 1;
-}
-
-.header-logo-cyf-container {
-	grid-column: 4 / span 2;
+	font-family: "Oswald", sans-serif;
+	font-weight: bold;
+	font-size: 2em;
 }
 
 .header-logo-cyf {
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
+	width: 12.5em;
+	height: 3.75em;
 }
 
 @media screen and (max-width: 768px) {
+	/* header {
+        align-items: center; 
+        display: flex;
+        flex-direction: column; 
+        height: auto; 
+    }
+    .header-logo_container {
+        align-items: center;
+        display: flex;
+        flex-direction: column; 
+        margin: 2%;
+    } */
+
+	header {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.header-logo_container {
+		align-items: center;
+		display: flex;
+		margin: 2%;
+	}
 }

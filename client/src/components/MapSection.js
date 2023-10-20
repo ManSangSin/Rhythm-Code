@@ -69,7 +69,7 @@ function MapSection() {
 						/>
 					</div>
 					<div className="map-container">
-						<MyMap />
+						<MyMap isNightMode={isNightMode} />
 					</div>
 				</div>
 			)}

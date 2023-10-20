@@ -2,7 +2,7 @@ import React from "react";
 import { Range } from "react-range";
 
 const DualRangeSlider = ({ selectedRange, onChangeRange }) => {
-	const min = 1400;
+	const min = 1600;
 	const max = 2023;
 	const step = 50;
 
@@ -10,7 +10,7 @@ const DualRangeSlider = ({ selectedRange, onChangeRange }) => {
 		onChangeRange(newValues);
 	};
 
-	const railLabels = [1500, 1600, 1700, 1800, 1900];
+	const railLabels = [1700, 1800, 1900];
 
 	return (
 		<div style={{ margin: "20px", maxWidth: "400px" }}>

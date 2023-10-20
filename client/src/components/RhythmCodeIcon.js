@@ -11,9 +11,9 @@ function RhythmCodeIcon({
 	setModalOpen,
 	setSelectedRhythm,
 	isNightMode,
+	toggleDropdownShown,
+	isDropdownShown,
 }) {
-	const [isDropdownShown, setDropdownShown] = useState(false);
-
 	const filteredRhythms = rhythmsList.filter(
 		(rhythm) => rhythm.rhythm_code === rhythmCodeName
 	);
@@ -32,7 +32,7 @@ function RhythmCodeIcon({
 		>
 			<svg
 				className="rhythmCodeIcon"
-				onClick={() => setDropdownShown(!isDropdownShown)}
+				onClick={() => toggleDropdownShown(rhythmCodeName)}
 			>
 				<circle cx="20" cy="20" r="20" fill="#FFE6E6" />
 				<circle

@@ -89,3 +89,16 @@
 	width: 100%;
 	height: auto;
 }
+@media (max-width: 768px) {
+	.bootstrap-container {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		z-index: 3;
+	}
+
+	.expand-icon {
+		top: 10px;
+		right: 10px;
+	}
+}

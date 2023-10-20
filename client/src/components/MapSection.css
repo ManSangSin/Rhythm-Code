@@ -1,7 +1,5 @@
 .map-section {
-	max-width: 1312px;
-	margin: auto;
-	padding: 0 16px;
+	width: 100%;
 	height: auto;
 	flex-shrink: 0;
 	font-size: 16px;
@@ -37,6 +35,7 @@
 }
 
 .bootstrap-container {
+	padding-left: 82px;
 	padding-top: 20px;
 	display: flex;
 	justify-content: flex-start;

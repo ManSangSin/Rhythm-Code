@@ -267,10 +267,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Christina Mifsud  - [LinkdIn](https://www.linkedin.com/in/christinamifsud/) - christina.mifsud@gmail.com
-Delnia Alipour    - [LinkdIn](https://www.linkedin.com/in/delnia-alipour-848b57106/) - delniaalipur@gmail.com
-Irianni Munoz     - [LinkdIn](https://www.linkedin.com/in/irianni-munoz-693a36164/) - munozirianni@gmail.com
-Man Sang Sin      - [LinkdIn](https://www.linkedin.com/in/man-sang-sin/) - man.sang.sin@gmail.com
+1. Christina Mifsud  - [LinkdIn](https://www.linkedin.com/in/christinamifsud/) - christina.mifsud@gmail.com
+2. Delnia Alipour    - [LinkdIn](https://www.linkedin.com/in/delnia-alipour-848b57106/) - delniaalipur@gmail.com
+3. Irianni Munoz     - [LinkdIn](https://www.linkedin.com/in/irianni-munoz-693a36164/) - munozirianni@gmail.com
+4. Man Sang Sin      - [LinkdIn](https://www.linkedin.com/in/man-sang-sin/) - man.sang.sin@gmail.com
 
 Project Link: [https://github.com/ManSangSin/Rhythm-Code](https://github.com/ManSangSin/Rhythm-Code)
 

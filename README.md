@@ -189,9 +189,39 @@ To Stop:
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+The seed file, "build-rhythms.sql", will contain the data necessary to populate the PostgreSQL database with information on each rhythm code. The data will be stored in a table named "rhythms" with columns for id, title, url, and location.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+To deploy the local SQL database, we will use a standalone Docker container. Docker Desktop will be required to run the Docker container.
+
+To add a new marker location to the map, the x and y data for the desired location must be obtained. This data is relative to the SVG map plane and will be used to plot the new marker.
+
+The process of finding the id of a specific dot on the map will involve inspecting the website's source code using the browser's developer tools. The id is then used to populate the "map_id" field in the rhythm_codes table. The following set of instructions will walk you through the process.
+
+Adding a new marker location to the map:
+
+1. The markers are plotted inside a svg therefore the x and y data required to plot the markers needs to be relative to the svg map plane
+2. Each dot on the map is an individual element and holds its own x and y data which is relative to the map (and also holds other data such as id)
+3. We will use this data to plot the new marker
+4. A query selector is used with the id to get the data of the specific dot we want our marker to be placed on, which is then parsed using a regex to retrieve the relevent data (x and y)
+6. This is already setup provided a map_id (id of the dot) is stated.
+
+
+Finding id of specific dot:
+
+1. Open the website homepage and use inspect on your chosen browser
+2. Use the select element tool and click over the map area
+3. A transparent overlay will be selected called "foreignObject" (the layer which the markers are placed on)
+4. This needs to be removed so that the dots under the transparent layer can be selected
+5. To remove the layer, right clicking on the elements panel and select "delete element"
+6. This is not permenant and the overlay will be reloaded when the page is refreshed
+7. Use the select element tool again and now select the dot which you wish to place the new marker on
+8. This will show the dot details including the id
+
+
+Adding id to database:
+
+1. The id is used inside the rhythm_codes table
+2. when adding a new row of data, map_id will be set to the id of the dot we want
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

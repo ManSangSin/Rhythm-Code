@@ -237,7 +237,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - man.sang.sin@gmail.com
+Christina Mifsud  - christina.mifsud@gmail.com
+Delnia Alipour    - delniaalipur@gmail.com
+Irianni Munoz     - munozirianni@gmail.com
+Man Sang Sin      - man.sang.sin@gmail.com
 
 Project Link: [https://github.com/ManSangSin/Rhythm-Code](https://github.com/ManSangSin/Rhythm-Code)
 

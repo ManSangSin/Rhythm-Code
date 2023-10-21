@@ -36,7 +36,21 @@
 <h3 align="center">Rhythm Code</h3>
 
   <p align="center">
-A Joint project with Deirdre Malloy to showcase the origins of rhythms and the African Atlantic Diaspora
+    This project will involve a variety of tools and programming languages to achieve the desired outcome. Here's a breakdown of the project's proposed structure and how it can be developed:
+
+Backend: A PostgreSQL database will be used to store the data. The database will be pre-populated with the necessary information on each rhythm code. A Node.js and Express server will be responsible for interacting with the database and providing the data to the frontend.
+
+Frontend: The frontend will be built using React.js, a popular JavaScript library for building user interfaces. The website will feature an interactive multimedia map with markers representing the rhythm codes. Each marker will be clickable, allowing users to view a list of related rhythms and their corresponding media content.
+
+Database Schema: The database will contain two tables, one for the rhythm codes and another for the rhythms themselves. The rhythm codes table will have columns for the unique identifier of each code, the name of the code, and the coordinates of the marker on the map. The rhythms table will have columns for the unique identifier of each rhythm, the title of the rhythm, a URL linking to more information about the rhythm, and the coordinates of the marker on the map.
+
+Data Seeding: The database will be seeded with data using a seed file, which will contain SQL commands to insert the necessary information into the database. This seed file will be used each time the project is started to ensure that the database has the latest data.
+
+Docker Deployment: The project will be deployed using Docker, a tool that simplifies the process of creating, deploying, and running applications. A standalone Docker container will be used to deploy the PostgreSQL database. The container will be configured to run automatically whenever the project is started.
+
+NPM Commands: The project will include a series of NPM commands that can be used to automate various tasks. These commands will be stored in a "scripts" section of the project's "package.json" file. For example, the "npm run dev" command will be used to start the project in development mode, while the "npm run docker:stop" command will be used to stop the Docker container.
+
+Deployment: The project will be hosted on Render, a cloud platform that specializes in hosting static websites and serverless applications.
 <br />
 <a href="https://github.com/ManSangSin/Rhythm-Code"><strong>Explore the docs »</strong></a>
 <br />
@@ -81,107 +95,55 @@ A Joint project with Deirdre Malloy to showcase the origins of rhythms and the A
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
-We are building a unique and interactive multimedia map website that serves as a visual representation of the diverse and complex rhythms originating from various geographical locations. This innovative website aims to cater to both curious listeners and experienced rhythm enthusiasts by providing a user-friendly platform to explore, interact with, and learn about the various rhythms from around the world.
 
-To ensure the website's technical functionality, we will employ the following technologies:
-
-Frontend: React for building a dynamic and responsive user interface.
-Backend: Node.js and Express for implementing a robust and efficient server-side framework.
-Database: PostgreSQL for securely storing and managing the website's data.
-Hosting: Render for seamlessly deploying and hosting the website on the cloud.
-
-By leveraging these cutting-edge technologies, the Our Rhythms team will be able to create a captivating and engaging online experience that caters to the specific needs and interests of rhythm aficionados worldwide. Users will be able to interact with the website in a variety of ways, such as:
-
-Exploring an interactive multimedia map that visualizes the origins of different rhythms.
-Clicking on markers/pins on the map to view a list of related rhythms.
-Clicking on individual rhythms to access a modal that displays relevant media content and additional information.
-With a responsive design that works seamlessly on both mobile and desktop layouts, the Our Rhythms website will cater to a diverse audience and ensure an optimal user experience, regardless of the device or platform being used.
-
-By harnessing the power of the internet and the wealth of knowledge available online, the Our Rhythms team aims to create a truly revolutionary website that serves as a dynamic and comprehensive platform for exploring, learning about, and appreciating the diverse and fascinating world of rhythms
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `ManSangSin`done, `Rhythm-Code`done, `twitter_handle`, `linkedin_username`, `gmail`, `man.sang.sin`, `Rhythm Code`, `project_description`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
+- [![Next][Next.js]][Next-url]
 - [![React][React.js]][React-url]
-- [![Postgres][Postgres]][Postgres-url]
-- [![Node][Node.js]][Node-url]
-- [![Docker][Docker]][Docker-url]
+- [![Vue][Vue.js]][Vue-url]
+- [![Angular][Angular.io]][Angular-url]
+- [![Svelte][Svelte.dev]][Svelte-url]
+- [![Laravel][Laravel.com]][Laravel-url]
+- [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+- [![JQuery][JQuery.com]][JQuery-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
-
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
-
-
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-The following list of things are required to use the software:
+This is an example of how to list things you need to use the software and how to install them.
 
 - npm
   ```sh
   npm install npm@latest -g
   ```
-- Docker
-
-
 
 ### Installation
 
-1. Clone the repo
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
    ```sh
    git clone https://github.com/ManSangSin/Rhythm-Code.git
    ```
-2. Install NPM packages
+3. Install NPM packages
    ```sh
    npm install
    ```
-3. Create .env at the root of repo
-4. Enter database url in .env
-
-```sh
-DB_URL = "postgres://postgres:opensesame@localhost:5432/cyf"
-```
-
-5. You are ready to run the project locally
-
-
-
-### Running the project locally
-
-To Start:
-
-1. Start Docker Desktop (or Docker Engine)
-2. Run npm startup script
-
-```sh
-   npm run dev
-```
-
-3. Open your browser and go to localhost
-
-```sh
-  http://localhost:3000/
-```
-
-To Stop:
-
-1. Send SIGINT signal
-
-```sh
-  ctrl + c
-```
-
-2. Run npm shutdown script for Docker (Docker needs to be stopped seperately)
-
-```sh
-  npm run docker:stop
-```
+4. Enter your API in `config.js`
+   ```js
+   const API_KEY = "ENTER YOUR API";
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -189,39 +151,9 @@ To Stop:
 
 ## Usage
 
-The seed file, "build-rhythms.sql", will contain the data necessary to populate the PostgreSQL database with information on each rhythm code. The data will be stored in a table named "rhythms" with columns for id, title, url, and location.
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-To deploy the local SQL database, we will use a standalone Docker container. Docker Desktop will be required to run the Docker container.
-
-To add a new marker location to the map, the x and y data for the desired location must be obtained. This data is relative to the SVG map plane and will be used to plot the new marker.
-
-The process of finding the id of a specific dot on the map will involve inspecting the website's source code using the browser's developer tools. The id is then used to populate the "map_id" field in the rhythm_codes table. The following set of instructions will walk you through the process.
-
-Adding a new marker location to the map:
-
-1. The markers are plotted inside a svg therefore the x and y data required to plot the markers needs to be relative to the svg map plane
-2. Each dot on the map is an individual element and holds its own x and y data which is relative to the map (and also holds other data such as id)
-3. We will use this data to plot the new marker
-4. A query selector is used with the id to get the data of the specific dot we want our marker to be placed on, which is then parsed using a regex to retrieve the relevent data (x and y)
-6. This is already setup provided a map_id (id of the dot) is stated.
-
-
-Finding id of specific dot:
-
-1. Open the website homepage and use inspect on your chosen browser
-2. Use the select element tool and click over the map area
-3. A transparent overlay will be selected called "foreignObject" (the layer which the markers are placed on)
-4. This needs to be removed so that the dots under the transparent layer can be selected
-5. To remove the layer, right clicking on the elements panel and select "delete element"
-6. This is not permenant and the overlay will be reloaded when the page is refreshed
-7. Use the select element tool again and now select the dot which you wish to place the new marker on
-8. This will show the dot details including the id
-
-
-Adding id to database:
-
-1. The id is used inside the rhythm_codes table
-2. when adding a new row of data, map_id will be set to the id of the dot we want
+_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -229,10 +161,10 @@ Adding id to database:
 
 ## Roadmap
 
-- [ ] Add migration arrows
-- [ ] Make map responsive
-- [ ] Add more Data
-- [ ] Deployment issues
+- [ ] Feature 1
+- [ ] Feature 2
+- [ ] Feature 3
+  - [ ] Nested Feature
 
 See the [open issues](https://github.com/ManSangSin/Rhythm-Code/issues) for a full list of proposed features (and known issues).
 
@@ -267,10 +199,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-- Christina Mifsud  - [LinkdIn](https://www.linkedin.com/in/christinamifsud/) - christina.mifsud@gmail.com
-- Delnia Alipour    - [LinkdIn](https://www.linkedin.com/in/delnia-alipour-848b57106/) - delniaalipur@gmail.com
-- Irianni Munoz     - [LinkdIn](https://www.linkedin.com/in/irianni-munoz-693a36164/) - munozirianni@gmail.com
-- Man Sang Sin      - [LinkdIn](https://www.linkedin.com/in/man-sang-sin/) - man.sang.sin@gmail.com
+Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - man.sang.sin@gmail.com
 
 Project Link: [https://github.com/ManSangSin/Rhythm-Code](https://github.com/ManSangSin/Rhythm-Code)
 
@@ -280,8 +209,9 @@ Project Link: [https://github.com/ManSangSin/Rhythm-Code](https://github.com/Man
 
 ## Acknowledgments
 
-- [CodeYourFuture](https://codeyourfuture.io/)
-- [decodenoir.org](https://www.decodenoir.org/)
+- []()
+- []()
+- []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -317,11 +247,3 @@ Project Link: [https://github.com/ManSangSin/Rhythm-Code](https://github.com/Man
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com
-[Postgres]: https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white
-[Postgres-url]: https://www.postgresql.org/
-[Node.js]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
-[Node-url]: https://nodejs.org/en
-[JavaScript]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
-[JavaScript-url]: https://www.javascript.com/
-[Docker]: https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white
-[Docker-url]: https://www.docker.com/

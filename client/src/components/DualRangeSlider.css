@@ -43,8 +43,3 @@
 	display: flex;
 	justify-content: space-between;
 }
-@media (max-width: 768px) {
-	.dual-range-container {
-		display: none;
-	}
-}

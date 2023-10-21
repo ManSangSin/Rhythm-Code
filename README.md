@@ -36,7 +36,7 @@
 <h3 align="center">Rhythm Code</h3>
 
   <p align="center">
-desc
+A Joint project with Deirdre Malloy to showcase the origins of rhythms and the African Atlantic Diaspora
 <br />
 <a href="https://github.com/ManSangSin/Rhythm-Code"><strong>Explore the docs »</strong></a>
 <br />

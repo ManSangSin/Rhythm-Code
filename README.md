@@ -229,10 +229,10 @@ Adding id to database:
 
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Nested Feature
+- [ ] Add migration arrows
+- [ ] Make map responsive
+- [ ] Add more Data
+- [ ] Deployment issues
 
 See the [open issues](https://github.com/ManSangSin/Rhythm-Code/issues) for a full list of proposed features (and known issues).
 

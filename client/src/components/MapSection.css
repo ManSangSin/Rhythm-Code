@@ -1,13 +1,13 @@
 .map-section {
-	max-width: 1312px;
 	height: auto;
 	flex-shrink: 0;
 	font-size: 16px;
-	padding: 16px;
 	font-family: "Roboto", sans-serif;
 	font-weight: 400;
 	color: #cb3100;
 	position: relative;
+	margin: auto;
+	text-align: center;
 }
 
 .fullscreen {
@@ -41,6 +41,8 @@
 	justify-content: flex-start;
 	align-content: space-between;
 	gap: 25px;
+	max-width: 1312px;
+	margin: auto;
 }
 
 .bootstrap-container span {
@@ -63,11 +65,11 @@
 }
 
 .expand-button {
-	position: relative;
 	max-width: 1312px;
 	padding: 0 16px;
-	float: right;
 	top: 140px;
+	text-align: right;
+	margin: auto;
 }
 
 .expand-icon {

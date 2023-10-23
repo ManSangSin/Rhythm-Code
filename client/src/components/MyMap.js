@@ -88,10 +88,12 @@ function MyMap({ isNightMode }) {
 
 	return (
 		<div>
-			<RhythmsWithSlider
-				selectedRange={selectedRange}
-				onChangeRange={setSelectedRange}
-			/>
+			<div className="slider-container">
+				<RhythmsWithSlider
+					selectedRange={selectedRange}
+					onChangeRange={setSelectedRange}
+				/>
+			</div>
 			<DotMap>
 				{rhythmCodes
 					.filter((rhythmCodeObject) =>

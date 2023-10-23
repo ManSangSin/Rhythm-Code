@@ -1,8 +1,9 @@
 .map-section {
-	width: 100%;
+	max-width: 1312px;
 	height: auto;
 	flex-shrink: 0;
 	font-size: 16px;
+	padding: 16px;
 	font-family: "Roboto", sans-serif;
 	font-weight: 400;
 	color: #cb3100;
@@ -15,6 +16,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
+	margin: auto;
 	background-color: white;
 	z-index: 2;
 }
@@ -35,8 +37,6 @@
 }
 
 .bootstrap-container {
-	padding-left: 82px;
-	padding-top: 20px;
 	display: flex;
 	justify-content: flex-start;
 	align-content: space-between;
@@ -63,16 +63,15 @@
 }
 
 .expand-button {
-	width: 100%;
-	top: 15px;
-	right: 10px;
+	position: relative;
+	max-width: 1312px;
+	padding: 0 16px;
+	float: right;
+	top: 140px;
 }
 
 .expand-icon {
 	width: 40px;
-	position: absolute;
-	top: 4em;
-	right: 2.5em;
 	height: 40px;
 	cursor: pointer;
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { Range } from "react-range";
 import "./DualRangeSlider.css";
 
-const DualRangeSlider = ({ selectedRange, onChangeRange }) => {
+const DualRangeSlider = ({ selectedRange, onChangeRange, isNightMode }) => {
 	const min = 1600;
 	const max = 2023;
 	const step = 50;
@@ -35,6 +35,7 @@ const DualRangeSlider = ({ selectedRange, onChangeRange }) => {
 										((selectedRange[1] - selectedRange[0]) / (max - min)) * 100
 									}%`,
 									left: `${((selectedRange[0] - min) / (max - min)) * 100}%`,
+									background: isNightMode ? "#B99E01" : "#000",
 								}}
 							></div>
 							{railLabels.map((label, index) => (
@@ -49,7 +50,12 @@ const DualRangeSlider = ({ selectedRange, onChangeRange }) => {
 						</div>
 					)}
 					renderThumb={({ props }) => (
-						<div {...props} className="range-thumb" />
+						<div
+							{...props}
+							className={`range-thumb ${
+								isNightMode ? "night-mode" : "day-mode"
+							}`}
+						/>
 					)}
 				/>
 			</div>

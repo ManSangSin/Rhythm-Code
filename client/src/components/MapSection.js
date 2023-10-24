@@ -1,7 +1,9 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 import React, { useState } from "react";
 import "./MapSection.css";
 import MyMap from "../components/MyMap";
-import ExpandIcon from "../images/ExpandIcon.svg";
+import ExpandIconDay from "../images/ExpandIconDay.svg";
+import ExpandIconNight from "../images/ExpandIconNight.svg";
 import Button from "react-bootstrap/Button";
 
 function MapSection() {
@@ -22,10 +24,12 @@ function MapSection() {
 		}
 	};
 
+	const expandIcon = isNightMode ? ExpandIconNight : ExpandIconDay;
+
 	return (
 		<div
 			className={`map-section ${isFullScreen ? "fullscreen" : ""} ${
-				isNightMode ? "night" : ".map-section"
+				isNightMode ? "night" : "day"
 			}`}
 		>
 			<div className="bootstrap-container">
@@ -59,7 +63,7 @@ function MapSection() {
 					<div className="expand-button">
 						<img
 							className="expand-icon"
-							src={ExpandIcon}
+							src={expandIcon}
 							alt="Expand Icon"
 							onClick={toggleFullScreen}
 							onKeyDown={handleKeyDown}

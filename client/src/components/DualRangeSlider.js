@@ -1,29 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Range } from "react-range";
 import "./DualRangeSlider.css";
 
-const DualRangeSlider = ({ selectedRange, onChangeRange, isNightMode }) => {
+const DualRangeSlider = ({ onChangeRange, isNightMode }) => {
 	const min = 1600;
-	const max = 2023;
-	const step = 50;
+	const max = 2050;
+	const step = 150;
+
+	const labels = ["Pre-colonial", "Pre-civil war", "Post civil war", "Present"];
+
+	const [values, setValues] = useState([min, max]);
 
 	const handleChange = (newValues) => {
+		setValues(newValues);
 		onChangeRange(newValues);
 	};
 
-	const railLabels = [1700, 1800, 1900];
+	const getLabelForValue = (value) => {
+		// work out index of current label based on value and step count to be used in title
+		const index = Math.floor((value - min) / step);
+		return labels[index];
+	};
 
 	return (
 		<div className="dual-range-container">
 			<h3 className="range-title">
-				Range: {selectedRange[0]} - {selectedRange[1]}
+				Range: {getLabelForValue(values[0])} - {getLabelForValue(values[1])}
 			</h3>
 			<div className="range-wrapper">
 				<Range
 					step={step}
 					min={min}
 					max={max}
-					values={selectedRange}
+					values={values}
 					onChange={handleChange}
 					renderTrack={({ props, children }) => (
 						<div {...props} className="range-track">
@@ -31,22 +40,11 @@ const DualRangeSlider = ({ selectedRange, onChangeRange, isNightMode }) => {
 							<div
 								className="range-highlight"
 								style={{
-									width: `${
-										((selectedRange[1] - selectedRange[0]) / (max - min)) * 100
-									}%`,
-									left: `${((selectedRange[0] - min) / (max - min)) * 100}%`,
+									width: `${((values[1] - values[0]) / (max - min)) * 100}%`,
+									left: `${((values[0] - min) / (max - min)) * 100}%`,
 									background: isNightMode ? "#B99E01" : "#000",
 								}}
 							></div>
-							{railLabels.map((label, index) => (
-								<div
-									key={index}
-									className="range-label"
-									style={{ left: `${((label - min) / (max - min)) * 100}%` }}
-								>
-									{label}
-								</div>
-							))}
 						</div>
 					)}
 					renderThumb={({ props }) => (
@@ -56,6 +54,13 @@ const DualRangeSlider = ({ selectedRange, onChangeRange, isNightMode }) => {
 								isNightMode ? "night-mode" : "day-mode"
 							}`}
 						/>
+					)}
+					renderMark={({ props, index }) => (
+						<div className="range-label-container">
+							<div className="range-label" {...props}>
+								{labels[index]}
+							</div>
+						</div>
 					)}
 				/>
 			</div>

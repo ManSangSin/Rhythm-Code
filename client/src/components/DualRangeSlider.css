@@ -24,10 +24,10 @@
 	background-color: #000;
 }
 
-.range-label {
+.range-label-container {
 	position: absolute;
 	bottom: -25px;
-	transform: translateX(-50%);
+	width: 500px;
 }
 
 .range-thumb {
@@ -48,4 +48,6 @@
 .range-values {
 	display: flex;
 	justify-content: space-between;
+	color: green;
+	display: none;
 }

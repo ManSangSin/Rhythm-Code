@@ -22,6 +22,35 @@ const DualRangeSlider = ({ onChangeRange, isNightMode }) => {
 		return labels[index];
 	};
 
+	const renderThumb = ({ props }) => (
+		<div
+			{...props}
+			className={`range-thumb ${isNightMode ? "night-mode" : "day-mode"}`}
+		/>
+	);
+
+	const renderTrack = ({ props, children }) => (
+		<div {...props} className="range-track">
+			{children}
+			<div
+				className="range-highlight"
+				style={{
+					width: `${((values[1] - values[0]) / (max - min)) * 100}%`,
+					left: `${((values[0] - min) / (max - min)) * 100}%`,
+					background: isNightMode ? "#B99E01" : "#000",
+				}}
+			></div>
+		</div>
+	);
+
+	const renderMark = ({ props, index }) => (
+		<div className="range-label-container">
+			<div className="range-label" {...props}>
+				{labels[index]}
+			</div>
+		</div>
+	);
+
 	return (
 		<div className="dual-range-container">
 			<h3 className="range-title">
@@ -34,34 +63,9 @@ const DualRangeSlider = ({ onChangeRange, isNightMode }) => {
 					max={max}
 					values={values}
 					onChange={handleChange}
-					renderTrack={({ props, children }) => (
-						<div {...props} className="range-track">
-							{children}
-							<div
-								className="range-highlight"
-								style={{
-									width: `${((values[1] - values[0]) / (max - min)) * 100}%`,
-									left: `${((values[0] - min) / (max - min)) * 100}%`,
-									background: isNightMode ? "#B99E01" : "#000",
-								}}
-							></div>
-						</div>
-					)}
-					renderThumb={({ props }) => (
-						<div
-							{...props}
-							className={`range-thumb ${
-								isNightMode ? "night-mode" : "day-mode"
-							}`}
-						/>
-					)}
-					renderMark={({ props, index }) => (
-						<div className="range-label-container">
-							<div className="range-label" {...props}>
-								{labels[index]}
-							</div>
-						</div>
-					)}
+					renderTrack={renderTrack}
+					renderThumb={renderThumb}
+					renderMark={renderMark}
 				/>
 			</div>
 			<div className="range-values">

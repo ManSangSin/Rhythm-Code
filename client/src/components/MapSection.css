@@ -89,3 +89,16 @@
 	width: 100%;
 	height: auto;
 }
+@media (max-width: 768px) {
+	.bootstrap-night,
+	.bootstrap-light {
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		font-size: 12px;
+		padding: 5px 10px;
+	}
+	.exit-fullscreen-button {
+		padding: 2rem;
+	}
+}

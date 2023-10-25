@@ -91,6 +91,7 @@ function MyMap({ isNightMode }) {
 			<RhythmsWithSlider
 				selectedRange={selectedRange}
 				onChangeRange={setSelectedRange}
+				isNightMode={isNightMode}
 			/>
 			<DotMap>
 				{rhythmCodes

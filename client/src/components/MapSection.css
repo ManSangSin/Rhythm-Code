@@ -45,6 +45,8 @@
 	align-content: space-between;
 	justify-items: center;
 	gap: 25px;
+	max-width: 1312px;
+	margin: auto;
 }
 
 .bootstrap-container span {

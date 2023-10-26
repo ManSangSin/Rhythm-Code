@@ -9,6 +9,7 @@
 	position: relative;
 	max-width: 1312px;
 	margin: auto;
+	padding: 0 16px;
 }
 
 .fullscreen {

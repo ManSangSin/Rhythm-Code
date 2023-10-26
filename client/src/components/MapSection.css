@@ -6,6 +6,7 @@
 	font-weight: 400;
 	color: #cb3100;
 	position: relative;
+	max-width: 1312px;
 	margin: auto;
 	text-align: center;
 }
@@ -19,6 +20,7 @@
 	margin: auto;
 	background-color: white;
 	z-index: 2;
+	max-width: none;
 }
 
 .night {
@@ -41,8 +43,6 @@
 	justify-content: flex-start;
 	align-content: space-between;
 	gap: 25px;
-	max-width: 1312px;
-	margin: auto;
 }
 
 .bootstrap-container span {
@@ -65,11 +65,9 @@
 }
 
 .expand-button {
-	max-width: 1312px;
 	padding: 0 16px;
 	top: 140px;
 	text-align: right;
-	margin: auto;
 }
 
 .expand-icon {

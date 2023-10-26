@@ -7,6 +7,7 @@
 	color: #cb3100;
 	position: relative;
 	max-width: 1312px;
+	padding: 16px;
 	margin: auto;
 	text-align: center;
 }
@@ -42,11 +43,12 @@
 	display: flex;
 	justify-content: flex-start;
 	align-content: space-between;
+	justify-items: center;
 	gap: 25px;
 }
 
 .bootstrap-container span {
-	margin-top: 10px;
+	margin: auto 0;
 }
 
 .bootstrap-light {
@@ -65,7 +67,6 @@
 }
 
 .expand-button {
-	padding: 0 16px;
 	top: 140px;
 	text-align: right;
 }

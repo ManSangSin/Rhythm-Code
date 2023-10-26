@@ -38,6 +38,10 @@
 	color: antiquewhite;
 }
 
+.night-container {
+	background-color: #0c1330;
+}
+
 .bootstrap-container {
 	padding-left: 82px;
 	padding-top: 20px;

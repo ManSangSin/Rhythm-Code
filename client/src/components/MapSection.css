@@ -7,6 +7,8 @@
 	font-weight: 400;
 	color: #cb3100;
 	position: relative;
+	max-width: 1312px;
+	margin: auto;
 }
 
 .fullscreen {

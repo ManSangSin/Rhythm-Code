@@ -90,4 +90,8 @@
 }
 
 .full-screen-map {
+	position: relative;
+	top: -1.5em;
+	width: 91%;
+	margin: auto;
 }

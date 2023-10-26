@@ -8,7 +8,7 @@
 .range-title {
 	text-align: center;
 	margin-bottom: 20px;
-	font-size: 1.5em;
+	font-size: 1.4em;
 }
 
 .range-track {
@@ -50,4 +50,12 @@
 	justify-content: space-between;
 	color: green;
 	display: none;
+}
+@media (max-width: 768px) {
+	.range-title {
+		font-size: 1em;
+	}
+	.range-label {
+		font-size: 15px;
+	}
 }

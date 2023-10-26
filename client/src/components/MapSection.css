@@ -67,7 +67,9 @@
 }
 
 .expand-button {
-	top: 140px;
+	position: absolute;
+	top: 15em;
+	right: 3em;
 	text-align: right;
 }
 
@@ -85,7 +87,5 @@
 	text-decoration: underline;
 }
 
-.full-screen-map img {
-	width: 100%;
-	height: auto;
+.full-screen-map {
 }

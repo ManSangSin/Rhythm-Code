@@ -7,6 +7,9 @@
 	font-weight: 400;
 	color: #cb3100;
 	position: relative;
+	max-width: 1312px;
+	margin: auto;
+	padding: 0 16px;
 }
 
 .fullscreen {
@@ -17,6 +20,7 @@
 	height: 100%;
 	background-color: white;
 	z-index: 2;
+	max-width: none;
 }
 
 .night {
@@ -32,6 +36,10 @@
 	);
 
 	color: antiquewhite;
+}
+
+.night-container {
+	background-color: #0c1330;
 }
 
 .bootstrap-container {

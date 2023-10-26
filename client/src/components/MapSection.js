@@ -1,7 +1,9 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 import React, { useState } from "react";
 import "./MapSection.css";
 import MyMap from "../components/MyMap";
-import ExpandIcon from "../images/ExpandIcon.svg";
+import ExpandIconDay from "../images/ExpandIconDay.svg";
+import ExpandIconNight from "../images/ExpandIconNight.svg";
 import Button from "react-bootstrap/Button";
 
 function MapSection() {
@@ -22,57 +24,65 @@ function MapSection() {
 		}
 	};
 
+	const expandIcon = isNightMode ? ExpandIconNight : ExpandIconDay;
+
 	return (
 		<div
-			className={`map-section ${isFullScreen ? "fullscreen" : ""} ${
-				isNightMode ? "night" : ".map-section"
+			className={`map-section-container ${isFullScreen ? "fullscreen" : ""} ${
+				isNightMode ? "night-container" : ""
 			}`}
 		>
-			<div className="bootstrap-container">
-				<span>Click on locations to learn more about local rhythms</span>
-				<Button
-					variant={isNightMode ? "dark" : "light"}
-					onClick={toggleNightMode}
-					className={isNightMode ? "bootstrap-night" : "bootstrap-light"}
-				>
-					{isNightMode ? "Light Mode" : "Dark Mode"}
-				</Button>
-			</div>
-			{isFullScreen ? (
-				<div>
-					<div
-						className="exit-fullscreen-button"
-						onClick={toggleFullScreen}
-						onKeyDown={handleKeyDown}
-						tabIndex={0}
-						role="button"
-						aria-pressed={isFullScreen}
+			<div
+				className={`map-section ${isFullScreen ? "fullscreen" : ""} ${
+					isNightMode ? "night" : "day"
+				}`}
+			>
+				<div className="bootstrap-container">
+					<span>Click on locations to learn more about local rhythms</span>
+					<Button
+						variant={isNightMode ? "dark" : "light"}
+						onClick={toggleNightMode}
+						className={isNightMode ? "bootstrap-night" : "bootstrap-light"}
 					>
-						Click to exit full screen mode
-					</div>
-					<div className="full-screen-map">
-						<MyMap isNightMode={isNightMode} />
-					</div>
+						{isNightMode ? "Light Mode" : "Dark Mode"}
+					</Button>
 				</div>
-			) : (
-				<div>
-					<div className="expand-button">
-						<img
-							className="expand-icon"
-							src={ExpandIcon}
-							alt="Expand Icon"
+				{isFullScreen ? (
+					<div>
+						<div
+							className="exit-fullscreen-button"
 							onClick={toggleFullScreen}
 							onKeyDown={handleKeyDown}
 							tabIndex={0}
 							role="button"
 							aria-pressed={isFullScreen}
-						/>
+						>
+							Click to exit full screen mode
+						</div>
+						<div className="full-screen-map">
+							<MyMap isNightMode={isNightMode} />
+						</div>
 					</div>
-					<div className="map-container">
-						<MyMap isNightMode={isNightMode} />
+				) : (
+					<div>
+						<div className="expand-button">
+							<img
+								className="expand-icon"
+								src={expandIcon}
+								alt="Expand Icon"
+								onClick={toggleFullScreen}
+								onKeyDown={handleKeyDown}
+								tabIndex={0}
+								role="button"
+								aria-pressed={isFullScreen}
+							/>
+						</div>
+						<div className="map-container">
+							<MyMap isNightMode={isNightMode} />
+						</div>
 					</div>
-				</div>
-			)}
+				)}
+			</div>
 		</div>
 	);
 }

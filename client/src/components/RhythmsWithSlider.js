@@ -1,12 +1,18 @@
 import React from "react";
 import DualRangeSlider from "./DualRangeSlider";
 
-const RhythmsWithSlider = ({ rhythms, selectedRange, onChangeRange }) => {
+const RhythmsWithSlider = ({
+	rhythms,
+	selectedRange,
+	onChangeRange,
+	isNightMode,
+}) => {
 	return (
 		<div>
 			<DualRangeSlider
 				selectedRange={selectedRange}
 				onChangeRange={onChangeRange}
+				isNightMode={isNightMode}
 			/>
 			<div>
 				{rhythms &&

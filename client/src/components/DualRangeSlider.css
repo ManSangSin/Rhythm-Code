@@ -1,15 +1,14 @@
 .dual-range-container {
-	margin: 82px;
+	margin: 20px 80px;
 	max-width: 500px;
-	padding: 20px;
-	border: 1px solid #ccc;
+	padding: 10px;
 	border-radius: 10px;
-	margin-top: 30px;
 }
 
 .range-title {
 	text-align: center;
 	margin-bottom: 20px;
+	font-size: 1.5em;
 }
 
 .range-track {
@@ -22,24 +21,33 @@
 .range-highlight {
 	position: absolute;
 	height: 6px;
-	background-color: #007bbb;
+	background-color: #000;
 }
 
-.range-label {
+.range-label-container {
 	position: absolute;
-	bottom: -25px;
-	transform: translateX(-50%);
+	bottom: -20px;
+	width: 500px;
 }
 
 .range-thumb {
 	height: 20px;
 	width: 20px;
-	background-color: #007bbb;
 	border-radius: 50%;
 	outline: none;
+}
+
+.range-thumb.day-mode {
+	background: #000;
+}
+
+.range-thumb.night-mode {
+	background: #b99e01;
 }
 
 .range-values {
 	display: flex;
 	justify-content: space-between;
+	color: green;
+	display: none;
 }

@@ -111,11 +111,12 @@
 		right: 25px;
 	}
 	.exit-fullscreen-button {
-		padding: 2rem;
-		right: 27px;
+		right: 10.5em;
+		top: 4em;
+		font-size: 15px;
 	}
 	.bootstrap-container span {
 		margin-left: -25px;
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 	}
 }

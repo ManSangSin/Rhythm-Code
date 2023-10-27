@@ -23,7 +23,7 @@ function RhythmCodeIcon({
 	return (
 		<div
 			style={{
-				position: "absolute",
+				position: "fixed",
 				top: `${yValue}px`,
 				left: `${xValue}px`,
 			}}

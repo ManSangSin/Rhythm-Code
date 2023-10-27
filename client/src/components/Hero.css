@@ -65,6 +65,7 @@
 }
 .hero-image {
 	grid-column: 8 / span 3;
+	overflow: hidden;
 }
 /* I could not fit the image as exactly like the Figma design */
 .hero-image img {

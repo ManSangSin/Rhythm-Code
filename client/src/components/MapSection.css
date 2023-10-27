@@ -120,3 +120,15 @@
 		margin-bottom: 2rem;
 	}
 }
+@media (min-width: 320px) and (max-width: 480px) {
+	.exit-fullscreen-button {
+		right: 10.5em;
+		top: 4em;
+		font-size: 12px;
+	}
+	.bootstrap-container span {
+		margin-left: -3.5rem;
+		margin-bottom: 2rem;
+		font-size: 13px;
+	}
+}

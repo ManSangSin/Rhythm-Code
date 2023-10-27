@@ -59,3 +59,11 @@
 		font-size: 15px;
 	}
 }
+@media (min-width: 320px) and (max-width: 480px) {
+	.range-title {
+		font-size: 0.7em;
+	}
+	.range-label {
+		font-size: 9px;
+	}
+}

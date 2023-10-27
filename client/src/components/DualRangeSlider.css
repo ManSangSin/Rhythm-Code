@@ -26,8 +26,8 @@
 
 .range-label-container {
 	position: absolute;
-	bottom: -20px;
-	width: 500px;
+	bottom: -30px;
+	max-width: 500px;
 }
 
 .range-thumb {

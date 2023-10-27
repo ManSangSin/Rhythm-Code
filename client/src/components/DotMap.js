@@ -7,6 +7,8 @@ export default function DotMap({ children }) {
 			data-name="Dot Map"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 2853.81 1426.91"
+			width="100%"
+			height="100%"
 		>
 			<path
 				id="dot0"

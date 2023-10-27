@@ -6,4 +6,5 @@
 
 .foreign-object-container {
 	position: fixed;
+	transform-origin: 0px 0px;
 }

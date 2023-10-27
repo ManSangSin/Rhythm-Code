@@ -17,9 +17,8 @@ const DualRangeSlider = ({ onChangeRange, isNightMode }) => {
 	};
 
 	const getLabelForValue = (value) => {
-		// work out index of current label based on value and step count to be used in title
 		const index = Math.floor((value - min) / step);
-		return labels[index];
+		return labels[Math.min(index, labels.length - 1)];
 	};
 
 	const renderThumb = ({ props }) => (
@@ -44,10 +43,8 @@ const DualRangeSlider = ({ onChangeRange, isNightMode }) => {
 	);
 
 	const renderMark = ({ props, index }) => (
-		<div className="range-label-container">
-			<div className="range-label" {...props}>
-				{labels[index]}
-			</div>
+		<div {...props} className="range-label-container">
+			<div className="range-label">{labels[index]}</div>
 		</div>
 	);
 

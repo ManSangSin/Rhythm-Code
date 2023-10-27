@@ -97,3 +97,38 @@
 	width: 100%;
 	height: auto;
 }
+@media (max-width: 768px) {
+	.bootstrap-night,
+	.bootstrap-light {
+		position: absolute;
+		bottom: 10px;
+		right: 25px;
+		font-size: 12px;
+		padding: 5px 10px;
+	}
+	.expand-icon {
+		position: absolute;
+		right: 25px;
+	}
+	.exit-fullscreen-button {
+		right: 10.5em;
+		top: 4em;
+		font-size: 15px;
+	}
+	.bootstrap-container span {
+		margin-left: -25px;
+		margin-bottom: 2rem;
+	}
+}
+@media (min-width: 320px) and (max-width: 480px) {
+	.exit-fullscreen-button {
+		right: 10.5em;
+		top: 4em;
+		font-size: 12px;
+	}
+	.bootstrap-container span {
+		margin-left: -3.5rem;
+		margin-bottom: 2rem;
+		font-size: 13px;
+	}
+}

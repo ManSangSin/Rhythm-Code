@@ -8,7 +8,7 @@
 .range-title {
 	text-align: center;
 	margin-bottom: 20px;
-	font-size: 1.5em;
+	font-size: 1.4em;
 }
 
 .range-track {
@@ -26,8 +26,8 @@
 
 .range-label-container {
 	position: absolute;
-	bottom: -20px;
-	width: 500px;
+	bottom: -30px;
+	max-width: 500px;
 }
 
 .range-thumb {
@@ -50,4 +50,20 @@
 	justify-content: space-between;
 	color: green;
 	display: none;
+}
+@media (max-width: 768px) {
+	.range-title {
+		font-size: 1em;
+	}
+	.range-label {
+		font-size: 15px;
+	}
+}
+@media (min-width: 320px) and (max-width: 480px) {
+	.range-title {
+		font-size: 0.7em;
+	}
+	.range-label {
+		font-size: 9px;
+	}
 }

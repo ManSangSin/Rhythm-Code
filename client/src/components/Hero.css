@@ -100,3 +100,11 @@
 		display: none;
 	}
 }
+@media (min-width: 320px) and (max-width: 480px) {
+	.subheader h1 {
+		font-size: 1.7em;
+	}
+	.subheader h2 {
+		font-size: 1.4em;
+	}
+}

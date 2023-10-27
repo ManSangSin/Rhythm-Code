@@ -3,3 +3,7 @@
 	top: 0;
 	left: 0;
 }
+
+.foreign-object-container {
+	position: fixed;
+}

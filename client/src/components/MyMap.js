@@ -94,25 +94,27 @@ function MyMap({ isNightMode }) {
 				isNightMode={isNightMode}
 			/>
 			<DotMap>
-				{rhythmCodes
-					.filter((rhythmCodeObject) =>
-						filteredRhythms.some(
-							(rhythm) => rhythm.rhythm_code === rhythmCodeObject.rhythm_code
+				<div className="foreign-object-container">
+					{rhythmCodes
+						.filter((rhythmCodeObject) =>
+							filteredRhythms.some(
+								(rhythm) => rhythm.rhythm_code === rhythmCodeObject.rhythm_code
+							)
 						)
-					)
-					.map((rhythmCodeObject) => (
-						<RhythmCodeIcon
-							key={rhythmCodeObject.rhythm_code}
-							rhythmCodeName={rhythmCodeObject.rhythm_code}
-							rhythmsList={filteredRhythms}
-							map_id={rhythmCodeObject.map_id}
-							setModalOpen={setModalOpen}
-							setSelectedRhythm={setSelectedRhythm}
-							isNightMode={isNightMode}
-							toggleDropdownShown={toggleDropdownShown}
-							isDropdownShown={rhythmCodeObject.isDropdownShown}
-						/>
-					))}
+						.map((rhythmCodeObject) => (
+							<RhythmCodeIcon
+								key={rhythmCodeObject.rhythm_code}
+								rhythmCodeName={rhythmCodeObject.rhythm_code}
+								rhythmsList={filteredRhythms}
+								map_id={rhythmCodeObject.map_id}
+								setModalOpen={setModalOpen}
+								setSelectedRhythm={setSelectedRhythm}
+								isNightMode={isNightMode}
+								toggleDropdownShown={toggleDropdownShown}
+								isDropdownShown={rhythmCodeObject.isDropdownShown}
+							/>
+						))}
+				</div>
 			</DotMap>
 
 			{isModalOpen && (

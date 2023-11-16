@@ -112,12 +112,9 @@ By harnessing the power of the internet and the wealth of knowledge available on
 
 <!-- GETTING STARTED -->
 
-
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
-
-
 
 ### Prerequisites
 
@@ -128,8 +125,6 @@ The following list of things are required to use the software:
   npm install npm@latest -g
   ```
 - Docker
-
-
 
 ### Installation
 
@@ -145,25 +140,19 @@ The following list of things are required to use the software:
 4. Enter database url in .env
 
 ```sh
-DB_URL = "postgres://postgres:opensesame@localhost:5432/cyf"
+DATABASE_URL = "postgres://postgres:opensesame@localhost:5432/cyf"
 ```
 
 5. You are ready to run the project locally
-
-
 
 ### Running the project locally
 
 To Start:
 
 1. Start Docker Desktop (or Docker Engine)
-2. Run npm startup script
-
-```sh
-   npm run dev
-```
-
-3. Open your browser and go to localhost
+2. Run `npm run docker:run` to start the database
+3. Run `npm run dev` to start the application
+4. Open your browser and go to localhost
 
 ```sh
   http://localhost:3000/
@@ -203,8 +192,7 @@ Adding a new marker location to the map:
 2. Each dot on the map is an individual element and holds its own x and y data which is relative to the map (and also holds other data such as id)
 3. We will use this data to plot the new marker
 4. A query selector is used with the id to get the data of the specific dot we want our marker to be placed on, which is then parsed using a regex to retrieve the relevent data (x and y)
-6. This is already setup provided a map_id (id of the dot) is stated.
-
+5. This is already setup provided a map_id (id of the dot) is stated.
 
 Finding id of specific dot:
 
@@ -216,7 +204,6 @@ Finding id of specific dot:
 6. This is not permenant and the overlay will be reloaded when the page is refreshed
 7. Use the select element tool again and now select the dot which you wish to place the new marker on
 8. This will show the dot details including the id
-
 
 Adding id to database:
 
@@ -267,10 +254,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-- Christina Mifsud  - [LinkdIn](https://www.linkedin.com/in/christinamifsud/) - christina.mifsud@gmail.com
-- Delnia Alipour    - [LinkdIn](https://www.linkedin.com/in/delnia-alipour-848b57106/) - delniaalipur@gmail.com
-- Irianni Munoz     - [LinkdIn](https://www.linkedin.com/in/irianni-munoz-693a36164/) - munozirianni@gmail.com
-- Man Sang Sin      - [LinkdIn](https://www.linkedin.com/in/man-sang-sin/) - man.sang.sin@gmail.com
+- Christina Mifsud - [LinkdIn](https://www.linkedin.com/in/christinamifsud/) - christina.mifsud@gmail.com
+- Delnia Alipour - [LinkdIn](https://www.linkedin.com/in/delnia-alipour-848b57106/) - delniaalipur@gmail.com
+- Irianni Munoz - [LinkdIn](https://www.linkedin.com/in/irianni-munoz-693a36164/) - munozirianni@gmail.com
+- Man Sang Sin - [LinkdIn](https://www.linkedin.com/in/man-sang-sin/) - man.sang.sin@gmail.com
 
 Project Link: [https://github.com/ManSangSin/Rhythm-Code](https://github.com/ManSangSin/Rhythm-Code)
 

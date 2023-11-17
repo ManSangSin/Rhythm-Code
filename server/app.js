@@ -1,6 +1,7 @@
 import express from "express";
 import swaggerUi from "swagger-ui-express";
-import apiRouter, { swaggerSpec } from "./api";
+import swaggerJsDoc from "swagger-jsdoc";
+import apiRouter from "./api";
 import config from "./utils/config";
 import {
 	clientRouter,
@@ -11,6 +12,18 @@ import {
 } from "./utils/middleware";
 
 const apiRoot = "/api";
+
+const swaggerSpec = swaggerJsDoc({
+	definition: {
+		openapi: "3.0.0",
+		info: {
+			title: process.env.npm_package_name,
+			version: process.env.npm_package_version,
+		},
+		servers: [{ url: "/api", description: "base path for API proxy" }],
+	},
+	apis: ["./server/api.js"],
+});
 
 const app = express();
 

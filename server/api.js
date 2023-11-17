@@ -1,21 +1,18 @@
 import { Router } from "express";
-import swaggerJsDoc from "swagger-jsdoc";
 import logger from "./utils/logger";
 import db from "./db";
 
-export const swaggerSpec = swaggerJsDoc({
-	definition: {
-		openapi: "3.0.0",
-		info: {
-			title: process.env.npm_package_name,
-			version: process.env.npm_package_version,
-		},
-	},
-	apis: ["./api.js"],
-});
-
 const router = Router();
 
+/**
+ * @openapi
+ * /:
+ *   get:
+ *     description: Welcome to rhythm-code!
+ *     responses:
+ *       200:
+ *         description: Returns a hello world.
+ */
 router.get("/", (_, res) => {
 	logger.debug("Welcoming everyone...");
 	res.json({ message: "Hello, world!" });

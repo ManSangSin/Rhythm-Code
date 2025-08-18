@@ -22,7 +22,7 @@
 		"lint:fix": "npm run lint:eslint -- --fix && npm run lint:prettier -- --write",
 		"lint:prettier": "prettier .",
 		"docker:run": "docker compose up --detach",
-		"docker:stop": "docker-compose down --volumes",
+		"docker:stop": "docker compose down --volumes",
 		"dev": "npm run docker:stop && npm run docker:run && npm run devOld",
 		"prestart": "node \"./server/db/seed.js\""
 	},

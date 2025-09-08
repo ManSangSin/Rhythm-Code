@@ -3,4 +3,5 @@ dist/
 node_modules/
 .DS_Store
 .env
-PROJECT_ANALYSIS.md
+project_overview.md
+.github/instructions.md

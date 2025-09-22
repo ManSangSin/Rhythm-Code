@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { getAudioUrl } from "../assets/audio/index.js";
 import "./CustomAudioPlayer.css";
 
 function CustomAudioPlayer({ audioUrl }) {
@@ -6,23 +7,45 @@ function CustomAudioPlayer({ audioUrl }) {
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [currentTime, setCurrentTime] = useState(0);
 
+	// get actual webpack url for audio file
+	const resolvedAudioUrl = getAudioUrl(audioUrl);
+
 	useEffect(() => {
 		const audioElement = audioRef.current;
+		if (!audioElement) {
+			return;
+		}
 
 		const onTimeUpdate = () => {
 			setCurrentTime(audioElement.currentTime);
 		};
 
+		const onError = (e) => {
+			console.error("Audio error:", e);
+		};
+
+		const onCanPlay = () => {
+			console.log("Audio can play:", audioElement.src);
+		};
+
 		audioElement.addEventListener("timeupdate", onTimeUpdate);
+		audioElement.addEventListener("error", onError);
+		audioElement.addEventListener("canplay", onCanPlay);
 
 		return () => {
 			audioElement.removeEventListener("timeupdate", onTimeUpdate);
+			audioElement.removeEventListener("error", onError);
+			audioElement.removeEventListener("canplay", onCanPlay);
 		};
-	}, [audioRef]);
+	}, [audioRef, resolvedAudioUrl]);
 
-	const playAudio = () => {
-		audioRef.current.play();
-		setIsPlaying(true);
+	const playAudio = async () => {
+		try {
+			await audioRef.current.play();
+			setIsPlaying(true);
+		} catch (error) {
+			console.error("Error playing audio:", error);
+		}
 	};
 
 	const stopAudio = () => {
@@ -64,7 +87,8 @@ function CustomAudioPlayer({ audioUrl }) {
 				/>
 				<div className="seek-bar-end"></div>
 			</div>
-			<audio ref={audioRef} src={audioUrl}>
+			{/* Uses resolved URL in audio element */}
+			<audio ref={audioRef} src={resolvedAudioUrl}>
 				<track
 					kind="captions"
 					src="captions.vtt"

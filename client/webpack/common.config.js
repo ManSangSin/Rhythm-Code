@@ -19,6 +19,13 @@ module.exports = {
 				loader: "file-loader",
 			},
 			{
+				test: /\.(mp3|wav|ogg|m4a)$/,
+				loader: "file-loader",
+				options: {
+					name: "assets/audio/[name].[ext]",
+				},
+			},
+			{
 				test: /\.css$/,
 				use: ["style-loader", "css-loader"],
 			},

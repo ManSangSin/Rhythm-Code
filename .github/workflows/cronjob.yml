@@ -1,0 +1,16 @@
+name: Ping Server
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Ping Script
+        run: /usr/bin/node  /server/serverPing.js
